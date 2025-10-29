@@ -141,52 +141,48 @@ const questions = [
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "materials",
-        text: `Una família que anualment generava 525 kg d’envasos, en un any ha aconseguit reduir aquesta quantitat un 60 %. Quina reducció en emissions de GEH ha obtingut respecte a l’any anterior, tenint en compte que el factor d’emissió dels envasos és de 120,09 g CO2eq/kg residu?`,
+        category: "organitzacio",
+        text: `Un tren de fira té una capacitat nominal de 48 passatgers. L’interval entre sortides consecutives és 15 minuts i el temps de trajecte, 5 minuts. Quin nombre màxim de passatgers pot transportar el tren en una hora?`,
         options: [
-            { text: "25,22 kg CO2eq", value: "a" },
-            { text: "37,83 kg CO2eq", value: "b" },
-            { text: "63,05 kg CO2eq", value: "c" },
-            { text: "88,27 kg CO2eq", value: "d" }
+            { text: "96", value: "a" },
+            { text: "576", value: "b" },
+            { text: "288", value: "c" },
+            { text: "192", value: "d" }
         ],
-        correctAnswer: "b",
-        steps: `
-            \\[
-            \\text{Quantitat inicial d’envasos} = 525 \\, \\text{kg}
-            \\]
-            \\[
-            \\text{Percentatge de reducció} = 60\\%
-            \\]
-            \\[
-            \\text{Quantitat reduïda} = 525 \\, \\text{kg} \\times 0{,}60 = 315 \\, \\text{kg}
-            \\]
-            \\[
-            \\text{Quantitat de residu restant} = 525 \\, \\text{kg} - 315 \\, \\text{kg} = 210 \\, \\text{kg}
-            \\]
-            \\[
-            \\text{Emissions inicials} = 525 \, \\text{kg} \\times 120{,}09 \, \\text{g CO2eq/kg}
-            \\]
-            \\[
-            \\text{Emissions inicials} = 63047,25 \, \\text{g CO2eq}
-            \\]
-            \\[
-            \\text{Emissions inicials} = 63{,}05 \, \\text{kg CO2eq}
-            \\]
-            \\[
-            \\text{Emissions després de la reducció} = 210 \, \\text{kg} \\times 120{,}09 \, \\text{g CO2eq/kg}
-            \\]
-            \\[
-            \\text{Emissions després de la reducció} = 25218{,}9 \, \\text{g CO2eq}
-            \\]
-            \\[
-            \\text{Emissions després de la reducció} = 25{,}22 \, \\text{kg CO2eq}
-            \\]
-            \\[
-            \\text{Reducció en emissions} = 63{,}05 \, \\text{kg CO2eq} - 25{,}22 \, \\text{kg CO2eq} = 37{,}83 \, \\text{kg CO2eq}
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
-    }
+        correctAnswer: "d",
+       steps = r"""
+\[
+\text{Capacitat nominal del tren} = 48 \, \text{passatgers}
+\]
+\[
+\text{Interval entre sortides} = 15 \, \text{minuts}
+\]
+\[
+\text{Temps disponible (1 hora)} = 60 \, \text{minuts}
+\]
+\[
+\text{Nombre de sortides per hora} = \frac{60}{15} = 4
+\]
+\[
+\text{Descomposició de la capacitat: } 48 = 40 + 8
+\]
+\[
+40 \times 4 = 160
+\]
+\[
+8 \times 4 = 32
+\]
+\[
+160 + 32 = 192
+\]
+\[
+\text{Comprovació: el temps de trajecte (5 min) és menor que l'interval (15 min), per tant no limita la capacitat horària.}
+\]
+\[
+\text{Nombre màxim de passatgers per hora} = 48 \times 4 = 192
+\]
+<br><br>
+"""
+ }
 ];
 
