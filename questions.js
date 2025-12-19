@@ -150,7 +150,7 @@ const questions = [
             { text: "192", value: "d" }
         ],
         correctAnswer: "d",
-       steps = `
+       steps: `
 \\[
 \\text{Capacitat nominal del tren} = 48 \\, \\text{passatgers}
 \\]
