@@ -181,8 +181,9 @@ const questions = [
 \\[
 \\text{Nombre màxim de passatgers per hora} = 48 \times 4 = 192
 \\]
-<br><br>
-`
+ <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">` 
  }
 ];
 
