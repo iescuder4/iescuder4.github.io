@@ -150,7 +150,7 @@ const questions = [
             { text: "192", value: "d" }
         ],
         correctAnswer: "d",
-       steps = r"""
+       steps = `
 \[
 \text{Capacitat nominal del tren} = 48 \, \text{passatgers}
 \]
@@ -182,7 +182,7 @@ const questions = [
 \text{Nombre màxim de passatgers per hora} = 48 \times 4 = 192
 \]
 <br><br>
-"""
+`
  }
 ];
 
