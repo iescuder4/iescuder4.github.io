@@ -127,7 +127,7 @@ const questions = [
     {
         type: "questions",
         category: "metrologia i normalitzacio",
-        text: `Qüestió 6<br>En un plànol s'especifica que la longitud d'una peça ha de ser (146 ± 0,8) mm. S'acceptaran totes les peces de longitud:`,
+        text: `En un plànol s'especifica que la longitud d'una peça ha de ser (146 ± 0,8) mm. S'acceptaran totes les peces de longitud:`,
         options: [
             { text: "superior a 146,8 mm.", value: "a" },
             { text: "compresa entre 146 mm i 146,8 mm.", value: "b" },
@@ -150,7 +150,7 @@ const questions = [
     {
         type: "questions",
         category: "maquines i sistemes electrics i electrotecnics",
-        text: `Qüestió 7<br>Un fil de coure de 5 mm² de secció té una resistència de 0,05 Ω. La resistivitat del coure és ρ = 0,0171 μΩ·m. Quina és la longitud del fil?`,
+        text: `Un fil de coure de 5 mm² de secció té una resistència de 0,05 Ω. La resistivitat del coure és ρ = 0,0171 μΩ·m. Quina és la longitud del fil?`,
         options: [
             { text: "0,324 m", value: "a" },
             { text: "14,62 m", value: "b" },
@@ -174,7 +174,7 @@ const questions = [
     {
         type: "questions",
         category: "material i assaig",
-        text: `Qüestió 8<br>L'acer inoxidable AISI 316 té una tensió de ruptura σr = 620 MPa. Quina és la força axial màxima que es pot aplicar a una barra massissa de 12 mm de diàmetre sense que es trenqui?`,
+        text: `L'acer inoxidable AISI 316 té una tensió de ruptura σr = 620 MPa. Quina és la força axial màxima que es pot aplicar a una barra massissa de 12 mm de diàmetre sense que es trenqui?`,
         options: [
             { text: "70,12 kN", value: "a" },
             { text: "140,8 kN", value: "b" },
@@ -199,7 +199,7 @@ const questions = [
     {
         type: "questions",
         category: "sistemes pneumatics i oleohidraulics",
-        text: `Qüestió 9<br>Un cilindre hidràulic ha d'exercir una força de 20 kN en l'avanç. Si el diàmetre del cilindre és 50 mm i el de la tija 32 mm, quina pressió ha de proporcionar el grup?`,
+        text: `Un cilindre hidràulic ha d'exercir una força de 20 kN en l'avanç. Si el diàmetre del cilindre és 50 mm i el de la tija 32 mm, quina pressió ha de proporcionar el grup?`,
         options: [
             { text: "3,79 MPa", value: "a" },
             { text: "10,19 MPa", value: "b" },
@@ -224,7 +224,7 @@ const questions = [
     {
         type: "questions",
         category: "organitzacio industrial",
-        text: `Qüestió 10<br>Un sistema de pintatge permet obtenir un màxim de 130 unitats/h. Sobre cada unitat es fan dues operacions simultànies de t1=23s i t2=15s. Quin és el temps mort o d'espera entre unitats?`,
+        text: `Un sistema de pintatge permet obtenir un màxim de 130 unitats/h. Sobre cada unitat es fan dues operacions simultànies de t1=23s i t2=15s. Quin és el temps mort o d'espera entre unitats?`,
         options: [
             { text: "4,69 s", value: "a" },
             { text: "12,70 s", value: "b" },
