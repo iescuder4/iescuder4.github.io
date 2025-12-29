@@ -1,7 +1,7 @@
 const questions = [
     {
         type: "questions",
-        category: "organitzacio",
+        category: "organitzacio industrial",
         text: `Un tren de fira té una capacitat nominal de 48 passatgers. L’interval entre sortides consecutives és 15 minuts i el temps de trajecte, 5 minuts. Quin nombre màxim de passatgers pot transportar el tren en una hora?`,
         options: [
             { text: "96", value: "a" },
@@ -16,7 +16,7 @@ const questions = [
             \\[ \\text{Sortides per hora} = \\frac{60 \\, \\text{min}}{15 \\, \\text{min/sortida}} = 4 \\, \\text{sortides} \\]
 
             <strong>2. Verificació del temps de trajecte:</strong><br>
-            El tren triga 5 minuts a fer el recorregut. Com que 5 minuts és menor que l'interval de 15 minuts, el tren té temps suficient per anar, tornar i estar llest per a la següent sortida. Per tant, el temps de trajecte no limita la capacitat.
+            El tren triga 5 minuts a fer el recorregut. Com que 5 minuts és menor que l'interval de 15 minuts, el tren té temps suficient per anar, tornar i estar llest per a la següent sortida.
 
             <strong>3. Càlcul de la capacitat total:</strong><br>
             Multipliquem la capacitat de cada viatge pel nombre de sortides:
@@ -36,17 +36,14 @@ const questions = [
         correctAnswer: "c",
         steps: `
             <strong>1. Càlcul de la Resistència Equivalent:</strong><br>
-            En un circuit en sèrie, la resistència total (equivalent) és la suma algebraica de les resistències individuals:
+            En un circuit en sèrie, la resistència total és la suma de les resistències individuals:
             \\[ R_{eq} = R_1 + R_2 = 1,1 \\, \\text{k}\\Omega + 3,3 \\, \\text{k}\\Omega = 4,4 \\, \\text{k}\\Omega \\]
 
             <strong>2. Determinació de la Tolerància:</strong><br>
-            Ambdues resistències tenen una tolerància del 5%. En sumar components del mateix tipus i tolerància, la tolerància relativa es manté sobre el total:
-            \\[ \\text{Tolerància Absoluta} = R_{eq} \\times \\text{Tolerància \\%} \\]
-            \\[ 4,4 \\, \\text{k}\\Omega \\times 0,05 = 0,22 \\, \\text{k}\\Omega \\]
+            Ambdues tenen un 5% de tolerància. Quan sumem, la tolerància relativa es manté sobre la suma total:
+            \\[ \\text{Error} = 4,4 \\, \\text{k}\\Omega \\times 0,05 = 0,22 \\, \\text{k}\\Omega \\]
 
-            <strong>3. Expressió del Resultat:</strong><br>
-            La resistència es defineix com el valor nominal més/menys el marge d'error:
-            \\[ R = (4,4 \\pm 0,22) \\, \\text{k}\\Omega \\]
+            <strong>3. Resultat:</strong>\\[ R = (4,4 \\pm 0,22) \\, \\text{k}\\Omega \\]
         `
     },
     {
@@ -61,26 +58,16 @@ const questions = [
         ],
         correctAnswer: "b",
         steps: `
-            <strong>1. Relació entre Tensió, Força i Secció:</strong><br>
-            La tensió (\\( \\sigma \\)) es defineix com la força aplicada dividida per l'àrea de la secció transversal:
-            \\[ \\sigma = \\frac{F}{S} \\implies S = \\frac{F}{\\sigma} \\]
-
-            <strong>2. Homogeneïtzació d'unitats (SI):</strong><br>
-            Hem de passar la tensió de MegaPascals (MPa) a Pascals (N/m²):
-            \\[ 75 \\, \\text{MPa} = 75 \\times 10^6 \\, \\text{N/m}^2 \\]
-
-            <strong>3. Càlcul de la Secció (S):</strong><br>
-            \\[ S = \\frac{750 \\, \\text{N}}{75 \\times 10^6 \\, \\text{N/m}^2} = 10^{-5} \\, \\text{m}^2 \\]
-
-            <strong>4. Conversió a unitats pràctiques (mm²):</strong><br>
-            Sabem que \\( 1 \\, \\text{m}^2 = 10^6 \\, \\text{mm}^2 \\):
-            \\[ S = 10^{-5} \\, \\text{m}^2 \\times 10^6 = 10 \\, \\text{mm}^2 \\]
+            <strong>1. Fórmula de la tensió:</strong>\\[ \\sigma = \\frac{F}{S} \\implies S = \\frac{F}{\\sigma} \\]
+            <strong>2. Unitats:</strong>\\[ 75 \\, \\text{MPa} = 75 \\times 10^6 \\, \\text{N/m}^2 \\]
+            <strong>3. Càlcul:</strong>\\[ S = \\frac{750}{75 \\times 10^6} = 10^{-5} \\, \\text{m}^2 \\]
+            <strong>4. Conversió:</strong>\\[ 10^{-5} \\, \\text{m}^2 \\times 10^6 = 10 \\, \\text{mm}^2 \\]
         `
     },
     {
         type: "questions",
         category: "energia",
-        text: `Un cotxe que consumeix 7,1 L/100 km i produeix 2,45 kg de CO₂ per litre de benzina fa un viatge de 925 km a 100 km/h. Quina quantitat de CO₂ emet?`,
+        text: `Un cotxe que consumeix 7,1 L/100 km i produeix 2,45 kg de CO₂ per litre de benzina fa un viatge de 925 km. Quina quantitat de CO₂ emet?`,
         options: [
             { text: "1 609 kg", value: "a" },
             { text: "160,9 kg", value: "b" },
@@ -89,15 +76,8 @@ const questions = [
         ],
         correctAnswer: "b",
         steps: `
-            <strong>1. Consum de combustible:</strong><br>
-            Primer calculem el total de litres consumits en el trajecte de 925 km:
-            \\[ \\text{Litres totals} = \\frac{7,1 \\, \\text{L}}{100 \\, \\text{km}} \\times 925 \\, \\text{km} = 65,675 \\, \\text{L} \\]
-
-            <strong>2. Càlcul d'emissions:</strong><br>
-            Si cada litre emet 2,45 kg de CO₂, multipliquem el consum total per aquest factor:
-            \\[ \\text{Massa de CO}_2 = 65,675 \\, \\text{L} \\times 2,45 \\, \\text{kg/L} = 160,903 \\dots \\, \\text{kg} \\]
-
-            <strong>Nota:</strong> La dada de la velocitat (100 km/h) no és necessària per a aquest càlcul, ja que el consum per distància ja està definit.
+            <strong>1. Consum total:</strong>\\[ L = \\frac{7,1}{100} \\times 925 = 65,675 \\, \\text{L} \\]
+            <strong>2. Emissions:</strong>\\[ CO_2 = 65,675 \\times 2,45 = 160,9 \\, \\text{kg} \\]
         `
     },
     {
@@ -112,16 +92,7 @@ const questions = [
         ],
         correctAnswer: "a",
         steps: `
-            <strong>1. Concepte de Fiabilitat:</strong><br>
-            La fiabilitat (R) és la probabilitat que un sistema realitzi la seva funció sota unes condicions i temps determinats. En aquest cas, R = 0,92 (92%).
-
-            <strong>2. Càlcul del nombre esperat d'unitats:</strong><br>
-            Per conèixer el nombre d'artefactes que sobreviuran a les 2.400 hores, apliquem el percentatge al total del lot inicial:
-            \\[ N_{final} = N_{inicial} \\times R \\]
-            \\[ N_{final} = 1400 \\, \\text{unitats} \\times 0,92 = 1288 \\, \\text{unitats} \\]
-
-            <strong>3. Interpretació del resultat:</strong><br>
-            D'acord amb la probabilitat, s'espera que 1.288 unitats continuïn operatives, mentre que la resta (112 unitats) haurien fallat.
+            <strong>1. Càlcul de supervivència:</strong>\\[ N = 1400 \\times 0,92 = 1288 \\, \\text{unitats} \\]
         `
     },
     {
@@ -136,15 +107,9 @@ const questions = [
         ],
         correctAnswer: "d",
         steps: `
-            <strong>1. Concepte de tolerància dimensional:</strong><br>
-            La tolerància indica el marge d'error acceptable sobre una mesura nominal. El símbol ± ens indica que hem de sumar i restar aquest valor a la mesura base per trobar l'interval de valors vàlids.
-            
-            <strong>2. Càlcul dels límits:</strong><br>
-            \\[ \\text{Límit superior} = 146 + 0,8 = 146,8 \\, \\text{mm} \\]
-            \\[ \\text{Límit inferior} = 146 - 0,8 = 145,2 \\, \\text{mm} \\]
-            
-            <strong>3. Conclusió:</strong><br>
-            S'acceptarà qualsevol peça que estigui dins de l'interval [145,2 , 146,8] mm. Qualsevol mesura fora d'aquest rang es considera fora de tolerància. 
+            <strong>1. Límits:</strong><br>
+            Límit superior: 146 + 0,8 = 146,8 mm.<br>
+            Límit inferior: 146 - 0,8 = 145,2 mm.
         `
     },
     {
@@ -159,22 +124,15 @@ const questions = [
         ],
         correctAnswer: "b",
         steps: `
-            <strong>1. Llei de Pouillet:</strong><br>
-            La resistència d'un conductor depèn de la seva resistivitat (ρ), la seva longitud (L) i la seva secció (S). La fórmula és: 
-            \\[ R = \\rho \\frac{L}{S} \\implies L = \\frac{R \\cdot S}{\\rho} \\]
-            
-            <strong>2. Conversió d'unitats al Sistema Internacional:</strong><br>
-            - Secció (S): \\( 5 \\, \\text{mm}^2 = 5 \\times 10^{-6} \\, \\text{m}^2 \\)
-            - Resistivitat (ρ): \\( 0,0171 \\, \\mu\\Omega\\cdot m = 0,0171 \\times 10^{-6} \\, \\Omega\\cdot m \\)
-            
-            <strong>3. Càlcul de la longitud:</strong><br>
-        \\[ L = \\frac{0,05 \\cdot 5 \\times 10^{-6}}{0,0171 \\times 10^{-6}} = \\frac{0,25}{0,0171} = 14,62 \\, \\text{m} \\] 
+            <strong>1. Llei de Pouillet:</strong>\\[ L = \\frac{R \\cdot S}{\\rho} \\]
+            <strong>2. Unitats:</strong>\\[ S = 5 \\times 10^{-6} \\, \\text{m}^2 ; \\rho = 0,0171 \\times 10^{-6} \\, \\Omega\\cdot m \\]
+            <strong>3. Càlcul:</strong>\\[ L = \\frac{0,05 \\cdot 5}{0,0171} = 14,62 \\, \\text{m} \\]
         `
     },
     {
         type: "questions",
         category: "material i assaig",
-        text: `L'acer inoxidable AISI 316 té una tensió de ruptura σr = 620 MPa. Quina és la força axial màxima que es pot aplicar a una barra massissa de 12 mm de diàmetre sense que es trenqui?`,
+        text: `L'acer inoxidable AISI 316 té σr = 620 MPa. Quina és la força axial màxima per a 12 mm de diàmetre?`,
         options: [
             { text: "70,12 kN", value: "a" },
             { text: "140,8 kN", value: "b" },
@@ -183,23 +141,14 @@ const questions = [
         ],
         correctAnswer: "a",
         steps: `
-            <strong>1. Àrea de la secció circular:</strong><br>
-            La barra és massissa i circular, per tant la seva superfície es calcula amb el diàmetre (d = 12 mm):
-            \\[ S = \\frac{\\pi \\cdot d^2}{4} = \\frac{\\pi \\cdot 12^2}{4} = 113,1 \\, \\text{mm}^2 \\]
-            
-            <strong>2. Relació Força i Tensió:</strong><br>
-            La força màxima (F) abans de la ruptura es defineix com:
-            \\[ F = \\sigma_r \\cdot S \\]
-            
-            <strong>3. Càlcul final:</strong><br>
-            \\[ F = 620 \\, \\text{N/mm}^2 \\times 113,1 \\, \\text{mm}^2 = 70122 \\, \\text{N} \\]
-          Convertint a quilonewtons (dividir per 1000): \\( F \\approx 70,12 \\, \\text{kN} \\).
+            <strong>1. Àrea:</strong>\\[ S = \\frac{\\pi \\cdot 12^2}{4} = 113,1 \\, \\text{mm}^2 \\]
+            <strong>2. Força:</strong>\\[ F = 620 \\times 113,1 = 70122 \\, \\text{N} = 70,12 \\, \\text{kN} \\]
         `
     },
     {
         type: "questions",
         category: "sistemes pneumatics i oleohidraulics",
-        text: `Un cilindre hidràulic ha d'exercir una força de 20 kN en l'avanç. Si el diàmetre del cilindre és 50 mm i el de la tija 32 mm, quina pressió ha de proporcionar el grup?`,
+        text: `Cilindre de 50 mm diàmetre per exercir 20 kN. Quina pressió necessita?`,
         options: [
             { text: "3,79 MPa", value: "a" },
             { text: "10,19 MPa", value: "b" },
@@ -208,23 +157,14 @@ const questions = [
         ],
         correctAnswer: "b",
         steps: `
-            <strong>1. Superfície de treball en l'avanç:</strong><br>
-            En la cursa d'avanç, el fluid actua sobre tota la cara del pistó. El diàmetre és 50 mm:
-            \\[ S = \\frac{\\pi \\cdot 50^2}{4} = 1963,5 \\, \\text{mm}^2 = 1,9635 \\times 10^{-3} \\, \\text{m}^2 \\]
-            
-            <strong>2. Càlcul de la pressió:</strong><br>
-           Utilitzem la fórmula de la pressió hidràulica \\( p = \\frac{F}{S} \\):
-            \\[ p = \\frac{20000 \\, \\text{N}}{1,9635 \\times 10^{-3} \\, \\text{m}^2} = 10.185.892 \\, \\text{Pa} \\]
-            
-            <strong>3. Resultat en MegaPascals:</strong><br>
-           \\( 10.185.892 \\, \\text{Pa} \\approx 10,19 \\, \\text{MPa} \\).
-            <br><em>Nota: El diàmetre de la tija només s'utilitzaria si ens demanessin el retrocés.</em>
+            <strong>1. Àrea:</strong>\\[ S = \\frac{\\pi \\cdot 0,05^2}{4} = 1,963 \\times 10^{-3} \\, \\text{m}^2 \\]
+            <strong>2. Pressió:</strong>\\[ p = \\frac{20000}{1,963 \\times 10^{-3}} = 10,19 \\, \\text{MPa} \\]
         `
     },
     {
         type: "questions",
         category: "organitzacio industrial",
-        text: `Un sistema de pintatge permet obtenir un màxim de 130 unitats/h. Sobre cada unitat es fan dues operacions simultànies de t1=23s i t2=15s. Quin és el temps mort o d'espera entre unitats?`,
+        text: `130 unitats/h. Operacions simultànies de 23s i 15s. Temps mort?`,
         options: [
             { text: "4,69 s", value: "a" },
             { text: "12,70 s", value: "b" },
@@ -233,76 +173,35 @@ const questions = [
         ],
         correctAnswer: "a",
         steps: `
-            <strong>1. Temps de cicle total (T):</strong><br>
-            Calculem el temps total assignat a cada unitat segons la producció horària (3600 segons):
-            \\[ T_{total} = \\frac{3600 \\, \\text{s}}{130 \\, \\text{unitats}} = 27,69 \\, \\text{s/unitat} \\]
-            
-            <strong>2. Temps d'operació real:</strong><br>
-            Com que les operacions són <strong>simultànies</strong>, el temps de treball real és el de la tasca més llarga:
-            \\[ T_{treball} = \\max(23, 15) = 23 \\, \\text{s} \\]
-            
-            <strong>3. Càlcul del temps mort:</strong><br>
-            El temps mort és el temps que el sistema espera entre acabar una unitat i començar la següent:
-           \\[ T_{mort} = T_{total} - T_{treball} = 27,69 - 23 = 4,69 \\, \\text{s} \\]
+            <strong>1. Temps cicle:</strong> 3600 / 130 = 27,69 s.<br>
+            <strong>2. Treball real:</strong> max(23, 15) = 23 s.<br>
+            <strong>3. Mort:</strong> 27,69 - 23 = 4,69 s.
         `
-    },
+    }, // <-- AQUESTA COMA ÉS MOLT IMPORTANT
     {
-    type: "exercicis",
-    category: "control logic i funcions logiques",
-    text: `Una bodega de vi té dues premses (\\(p_1\\) i \\(p_2\\)) i un equip d'embotellament (\\(p_e\\)). Per raons elèctriques, s'ha de controlar el funcionament d'aquests equips mitjançant un sistema d'alarma (\\(r\\)) que s'activarà (\\(r=1\\)) en els casos següents:
-           <br>– Quan funcionin simultàniament les dues premses i l'equip d'embotellament.
-           <br>– Quan funcionin les dues premses, però no l'equip d'embotellament, i un interruptor general (\\(g_{12}\\)) estigui activat.
-           <br>– Quan funcioni l'equip d'embotellament i una de les dues premses (només una), i un interruptor general (\\(g_{15}\\)) estigui activat.
-           <br><br>
-           A més, s'ha de tenir en compte que l'estat en què només funciona una de les dues premses i l'equip d'embotellament no funciona és una situació impossible (\\(X\\)).
-           <br><br>
-           Determineu:
-           <br><strong>a)</strong> La taula de veritat del sistema. [1 punt]
-           <br><strong>b)</strong> La funció lògica simplificada \\(r\\) si la situació impossible es considera que no ha d'activar l'alarma (\\(X=0\\)). [0,5 punts]
-           <br><strong>c)</strong> L'esquema lògic mitjançant portes lògiques. [1 punt]`,
-    correctAnswer: "", 
-    steps: `
-        <strong>a) Taula de veritat del sistema:</strong>
-        <br>
-        Definim <em>ac</em> (ambdues connectades: \\(p_1 \\cdot p_2\\)) i <em>so</em> (només una: \\(p_1 \\oplus p_2\\)) per simplificar segons la pauta oficial:
-        <br><br>
-        <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
-            <tr style="background-color: #f2f2f2;">
-                <td><strong>Premses</strong></td>
-                <td><strong>\\(p_e\\)</strong></td>
-                <td><strong>Interruptor</strong></td>
-                <td><strong>Alarma (\\(r\\))</strong></td>
-            </tr>
-            <tr><td>Cap</td><td>0</td><td>-</td><td>0</td></tr>
-            <tr><td>Cap</td><td>1</td><td>-</td><td>0</td></tr>
-            <tr><td>Només una (so)</td><td>0</td><td>-</td><td><strong>X</strong></td></tr>
-            <tr><td>Només una (so)</td><td>1</td><td>\\(g_{15}=0\\)</td><td>0</td></tr>
-            <tr><td>Només una (so)</td><td>1</td><td>\\(g_{15}=1\\)</td><td>1</td></tr>
-            <tr><td>Ambdues (ac)</td><td>0</td><td>\\(g_{12}=0\\)</td><td>0</td></tr>
-            <tr><td>Ambdues (ac)</td><td>1</td><td>-</td><td>1</td></tr>
-            <tr><td>Ambdues (ac)</td><td>0</td><td>\\(g_{12}=1\\)</td><td>1</td></tr>
-        </table>
-        <br>
-        <strong>b) Funció lògica simplificada (considerant \\(X=0\\)):</strong>
-        <br>
-        Sumem els productes de les combinacions que donen 1 a la sortida:
-        \\[
-        r = (ac \\cdot p_e) + (ac \\cdot \\overline{p_e} \\cdot g_{12}) + (so \\cdot p_e \\cdot g_{15})
-        \\]
-        Substituint <em>ac</em> i <em>so</em> per les seves variables originals:
-        \\[
-        r = (p_1 \\cdot p_2 \\cdot p_e) + (p_1 \\cdot p_2 \\cdot \\overline{p_e} \\cdot g_{12}) + ((p_1 \\oplus p_2) \\cdot p_e \\cdot g_{15})
-        \\]
-        <br>
-        <strong>c) Esquema lògic:</strong>
-        <br>
-        L'esquema s'obté implementant la funció anterior amb:
-        <br>- Portes <strong>AND</strong> per als productes.
-        <br>- Portes <strong>OR</strong> per a la suma final.
-        <br>- Una porta <strong>XOR</strong> per detectar "només una premsa" (\\(p_1 \\oplus p_2\\)).
-        <br>- Un inversor <strong>NOT</strong> per a la variable \\(\\overline{p_e}\\).
-        <br><br>
-        <img src="img/esquema_logic_bodega.png" alt="Esquema de portes lògiques">`
-}
+        type: "exercicis",
+        category: "control logic i funcions logiques",
+        text: `<strong>Exercici: Control de la Bodega de Vi</strong><br>
+               Determineu:<br>
+               <strong>a)</strong> La taula de veritat del sistema.<br>
+               <strong>b)</strong> La funció lògica simplificada (r).<br>
+               <strong>c)</strong> L'esquema lògic.`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Taula de veritat:</strong><br>
+            <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
+                <tr style="background-color: #f2f2f2;">
+                    <td><strong>Premses</strong></td><td><strong>pe</strong></td><td><strong>Interruptor</strong></td><td><strong>Alarma (r)</strong></td>
+                </tr>
+                <tr><td>Cap</td><td>0</td><td>-</td><td>0</td></tr>
+                <tr><td>Només una</td><td>1</td><td>g15=1</td><td>1</td></tr>
+                <tr><td>Ambdues</td><td>1</td><td>-</td><td>1</td></tr>
+                <tr><td>Ambdues</td><td>0</td><td>g12=1</td><td>1</td></tr>
+            </table>
+            <br>
+            <strong>b) Funció lògica:</strong>\\[ r = (ac \\cdot p_e) + (ac \\cdot \\overline{p_e} \\cdot g_{12}) + (so \\cdot p_e \\cdot g_{15}) \\]
+            <br>
+            <strong>c) Esquema:</strong> S'implementa amb portes AND, OR, XOR i NOT.
+        `
+    }
 ];
-
