@@ -144,7 +144,7 @@ const questions = [
             \\[ \\text{Límit inferior} = 146 - 0,8 = 145,2 \\, \\text{mm} \\]
             
             <strong>3. Conclusió:</strong><br>
-            S'acceptarà qualsevol peça que estigui dins de l'interval [145,2 , 146,8] mm. [cite_start]Qualsevol mesura fora d'aquest rang es considera fora de tolerància. [cite: 2]
+            S'acceptarà qualsevol peça que estigui dins de l'interval [145,2 , 146,8] mm. Qualsevol mesura fora d'aquest rang es considera fora de tolerància. 
         `
     },
     {
@@ -168,7 +168,7 @@ const questions = [
             - Resistivitat (ρ): \\( 0,0171 \\, \\mu\\Omega\\cdot m = 0,0171 \\times 10^{-6} \\, \\Omega\\cdot m \\)
             
             <strong>3. Càlcul de la longitud:</strong><br>
-            [cite_start]\\[ L = \\frac{0,05 \\cdot 5 \\times 10^{-6}}{0,0171 \\times 10^{-6}} = \\frac{0,25}{0,0171} = 14,62 \\, \\text{m} \\] [cite: 2]
+        \\[ L = \\frac{0,05 \\cdot 5 \\times 10^{-6}}{0,0171 \\times 10^{-6}} = \\frac{0,25}{0,0171} = 14,62 \\, \\text{m} \\] 
         `
     },
     {
@@ -188,12 +188,12 @@ const questions = [
             \\[ S = \\frac{\\pi \\cdot d^2}{4} = \\frac{\\pi \\cdot 12^2}{4} = 113,1 \\, \\text{mm}^2 \\]
             
             <strong>2. Relació Força i Tensió:</strong><br>
-            [cite_start]La força màxima (F) abans de la ruptura es defineix com: [cite: 1]
+            La força màxima (F) abans de la ruptura es defineix com:
             \\[ F = \\sigma_r \\cdot S \\]
             
             <strong>3. Càlcul final:</strong><br>
             \\[ F = 620 \\, \\text{N/mm}^2 \\times 113,1 \\, \\text{mm}^2 = 70122 \\, \\text{N} \\]
-            [cite_start]Convertint a quilonewtons (dividir per 1000): \\( F \\approx 70,12 \\, \\text{kN} \\). [cite: 2]
+          Convertint a quilonewtons (dividir per 1000): \\( F \\approx 70,12 \\, \\text{kN} \\).
         `
     },
     {
@@ -213,11 +213,11 @@ const questions = [
             \\[ S = \\frac{\\pi \\cdot 50^2}{4} = 1963,5 \\, \\text{mm}^2 = 1,9635 \\times 10^{-3} \\, \\text{m}^2 \\]
             
             <strong>2. Càlcul de la pressió:</strong><br>
-            [cite_start]Utilitzem la fórmula de la pressió hidràulica \\( p = \\frac{F}{S} \\): [cite: 1]
+           Utilitzem la fórmula de la pressió hidràulica \\( p = \\frac{F}{S} \\):
             \\[ p = \\frac{20000 \\, \\text{N}}{1,9635 \\times 10^{-3} \\, \\text{m}^2} = 10.185.892 \\, \\text{Pa} \\]
             
             <strong>3. Resultat en MegaPascals:</strong><br>
-            [cite_start]\\( 10.185.892 \\, \\text{Pa} \\approx 10,19 \\, \\text{MPa} \\). [cite: 2]
+           \\( 10.185.892 \\, \\text{Pa} \\approx 10,19 \\, \\text{MPa} \\).
             <br><em>Nota: El diàmetre de la tija només s'utilitzaria si ens demanessin el retrocés.</em>
         `
     },
@@ -234,7 +234,7 @@ const questions = [
         correctAnswer: "a",
         steps: `
             <strong>1. Temps de cicle total (T):</strong><br>
-            [cite_start]Calculem el temps total assignat a cada unitat segons la producció horària (3600 segons): [cite: 1]
+            Calculem el temps total assignat a cada unitat segons la producció horària (3600 segons):
             \\[ T_{total} = \\frac{3600 \\, \\text{s}}{130 \\, \\text{unitats}} = 27,69 \\, \\text{s/unitat} \\]
             
             <strong>2. Temps d'operació real:</strong><br>
@@ -243,7 +243,7 @@ const questions = [
             
             <strong>3. Càlcul del temps mort:</strong><br>
             El temps mort és el temps que el sistema espera entre acabar una unitat i començar la següent:
-            [cite_start]\\[ T_{mort} = T_{total} - T_{treball} = 27,69 - 23 = 4,69 \\, \\text{s} \\] [cite: 2]
+           \\[ T_{mort} = T_{total} - T_{treball} = 27,69 - 23 = 4,69 \\, \\text{s} \\]
         `
     }
 ];
