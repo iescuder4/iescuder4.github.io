@@ -45,16 +45,18 @@ const questions = [
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
         images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">` 
  },
-          {
+     {
         type: "questions",
         category: "metrologia i normalitzacio",
         text: `Qüestió 2<br>
         En un circuit elèctric es connecten en sèrie dues resistències de tolerància ±5 % i
-        valors nominals 1,1 kΩ i 3,3 kΩ. La resistència equivalent d’aquest circuit és:
-        <br>a) (4,4 ± 0,055) kΩ
-        <br>b) (4,4 ± 0,11) kΩ
-        <br>c) (4,4 ± 0,22) kΩ
-        <br>d) (4,4 ± 0,44) kΩ`,
+        valors nominals 1,1 kΩ i 3,3 kΩ. La resistència equivalent d’aquest circuit és:`,
+        options: [
+            { text: "(4,4 ± 0,055) kΩ", value: "a" },
+            { text: "(4,4 ± 0,11) kΩ", value: "b" },
+            { text: "(4,4 ± 0,22) kΩ", value: "c" },
+            { text: "(4,4 ± 0,44) kΩ", value: "d" }
+        ],
         correctAnswer: "c",
         steps: `
             <strong>Càlcul de la resistència total:</strong><br>
@@ -75,11 +77,13 @@ const questions = [
         text: `Qüestió 3<br>
         La tensió de ruptura del titani comercial sense aliar és σ<sub>r</sub> = 75 MPa.
         Si apliquem una força axial de 750 N a una barra d’aquest titani, quina secció mínima
-        ha de tenir perquè no es trenqui?
-        <br>a) 1 mm²
-        <br>b) 10 mm²
-        <br>c) 100 mm²
-        <br>d) 1 000 mm²`,
+        ha de tenir perquè no es trenqui?`,
+        options: [
+            { text: "1 mm²", value: "a" },
+            { text: "10 mm²", value: "b" },
+            { text: "100 mm²", value: "c" },
+            { text: "1 000 mm²", value: "d" }
+        ],
         correctAnswer: "b",
         steps: `
             <strong>Càlcul de la secció mínima:</strong><br>
@@ -95,11 +99,13 @@ const questions = [
         category: "energia",
         text: `Qüestió 4<br>
         Un cotxe que consumeix 7,1 L/100 km i produeix 2,45 kg de CO₂ per litre de benzina
-        fa un viatge de 925 km a 100 km/h. Quina quantitat de CO₂ emet?
-        <br>a) 1 609 kg
-        <br>b) 160,9 kg
-        <br>c) 188,1 kg
-        <br>d) 1 881 kg`,
+        fa un viatge de 925 km a 100 km/h. Quina quantitat de CO₂ emet?`,
+        options: [
+            { text: "1 609 kg", value: "a" },
+            { text: "160,9 kg", value: "b" },
+            { text: "188,1 kg", value: "c" },
+            { text: "1 881 kg", value: "d" }
+        ],
         correctAnswer: "b",
         steps: `
             <strong>Càlcul del consum de benzina:</strong><br>
@@ -119,11 +125,13 @@ const questions = [
         category: "organitzacio industrial",
         text: `Qüestió 5<br>
         La fiabilitat d’un artefacte és del 92 % per a 2 400 h.
-        D’un lot inicial de 1 400 unitats, quants artefactes és probable que continuïn funcionant?
-        <br>a) 1 288
-        <br>b) 1 260
-        <br>c) 192
-        <br>d) 112`,
+        D’un lot inicial de 1 400 unitats, quants artefactes és probable que continuïn funcionant?`,
+        options: [
+            { text: "1 288", value: "a" },
+            { text: "1 260", value: "b" },
+            { text: "192", value: "c" },
+            { text: "112", value: "d" }
+        ],
         correctAnswer: "a",
         steps: `
             <strong>Càlcul de la quantitat d'artefactes funcionant:</strong><br>
