@@ -247,7 +247,7 @@ const questions = [
         `
     }
 ];
-const exerciseBodega = {
+const questions = {
     type: "exercicis",
     category: "control logic i funcions logiques",
     text: `Una bodega de vi té dues premses (\\(p_1\\) i \\(p_2\\)) i un equip d'embotellament (\\(p_e\\)). Per raons elèctriques, s'ha de controlar el funcionament d'aquests equips mitjançant un sistema d'alarma (\\(r\\)) que s'activarà (\\(r=1\\)) en els casos següents:
