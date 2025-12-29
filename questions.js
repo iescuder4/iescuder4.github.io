@@ -11,24 +11,17 @@ const questions = [
         ],
         correctAnswer: "d",
         steps: `
-            \\[
-            \\text{Capacitat nominal del tren} = 48 \\, \\text{passatgers}
-            \\]
-            \\[
-            \\text{Interval entre sortides} = 15 \\, \\text{minuts}
-            \\]
-            \\[
-            \\text{Temps disponible (1 hora)} = 60 \\, \\text{minuts}
-            \\]
-            \\[
-            \\text{Nombre de sortides per hora} = \\frac{60}{15} = 4
-            \\]
-            \\[
-            \\text{Nombre màxim de passatgers per hora} = 48 \\times 4 = 192
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,
-        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`
+            <strong>1. Anàlisi de la freqüència de sortides:</strong><br>
+            La capacitat de transport depèn de quantes vegades surt el tren en una hora. L'interval és de 15 minuts.
+            \\[ \\text{Sortides per hora} = \\frac{60 \\, \\text{min}}{15 \\, \\text{min/sortida}} = 4 \\, \\text{sortides} \\]
+
+            <strong>2. Verificació del temps de trajecte:</strong><br>
+            El tren triga 5 minuts a fer el recorregut. Com que 5 minuts és menor que l'interval de 15 minuts, el tren té temps de sobra per tornar i tornar a carregar passatgers abans de la següent sortida. El temps de trajecte no és una limitació aquí.
+
+            <strong>3. Càlcul de la capacitat total:</strong><br>
+            Multipliquem la capacitat de cada viatge pel nombre de viatges realitzats en una hora:
+            \\[ 48 \\, \\text{passatgers/viatge} \\times 4 \\, \\text{viatges/h} = 192 \\, \\text{passatgers/h} \\]
+        `
     },
     {
         type: "questions",
@@ -44,10 +37,18 @@ const questions = [
         ],
         correctAnswer: "c",
         steps: `
-            <strong>Càlcul de la resistència total:</strong><br>
-            \\[ R_{\\text{total}} = 1,1 + 3,3 = 4,4 \\, \\text{k}\\Omega \\]
-            <br><strong>Càlcul de la tolerància total:</strong><br>
-            \\[ \\text{Tolerància} = 0,05 \\times 4,4 = 0,22 \\, \\text{k}\\Omega \\]`
+            <strong>1. Resistència equivalent (Sèrie):</strong><br>
+            En un circuit en sèrie, la resistència total és la suma de les resistències individuals:
+            \\[ R_{eq} = R_1 + R_2 = 1,1 \\, \\text{k}\\Omega + 3,3 \\, \\text{k}\\Omega = 4,4 \\, \\text{k}\\Omega \\]
+
+            <strong>2. Càlcul de la tolerància absoluta:</strong><br>
+            Totes dues resistències tenen una tolerància del 5% (0,05). Quan sumem components, l'error o tolerància total s'aplica sobre el valor final de la suma:
+            \\[ \\text{Tolerància} = 4,4 \\, \\text{k}\\Omega \\times 0,05 = 0,22 \\, \\text{k}\\Omega \\]
+
+            <strong>3. Resultat final:</strong><br>
+            Expressem el valor nominal seguit del seu marge d'error:
+            \\[ R = (4,4 \\pm 0,22) \\, \\text{k}\\Omega \\]
+        `
     },
     {
         type: "questions",
@@ -64,7 +65,21 @@ const questions = [
         ],
         correctAnswer: "b",
         steps: `
-            \\[ S = \\frac{F}{\\sigma} = \\frac{750}{75 \\times 10^6} = 10 \\, \\text{mm}^2 \\]`
+            <strong>1. Definició de tensió (σ):</strong><br>
+            La tensió és la força aplicada per unitat de superfície. La fórmula és:
+            \\[ \\sigma = \\frac{F}{S} \\implies S = \\frac{F}{\\sigma} \\]
+
+            <strong>2. Conversió d'unitats:</strong><br>
+            És vital treballar en unitats del SI. Sabem que 1 MPa = 1.000.000 Pa (N/m²).
+            \\[ 75 \\, \\text{MPa} = 75 \\times 10^6 \\, \\text{N/m}^2 \\]
+
+            <strong>3. Càlcul de la secció en m²:</strong><br>
+            \\[ S = \\frac{750 \\, \\text{N}}{75 \\times 10^6 \\, \\text{N/m}^2} = 10^{-5} \\, \\text{m}^2 \\]
+
+            <strong>4. Conversió a mm²:</strong><br>
+            Com que \\( 1 \\, \\text{m}^2 = 10^6 \\, \\text{mm}^2 \\):
+            \\[ 10^{-5} \\, \\text{m}^2 \\times 10^6 = 10 \\, \\text{mm}^2 \\]
+        `
     },
     {
         type: "questions",
@@ -80,8 +95,16 @@ const questions = [
         ],
         correctAnswer: "b",
         steps: `
-            \\[ 7,1 \\, \\text{L/100km} \\times 925 \\, \\text{km} = 65,675 \\, \\text{L} \\]
-            \\[ 65,675 \\times 2,45 = 160,9 \\, \\text{kg CO}_2 \\]`
+            <strong>1. Consum total de combustible:</strong><br>
+            Primer calculem quants litres de benzina necessitem per recórrer 925 km segons el seu consum mitjà:
+            \\[ \\text{Litres} = \\frac{7,1 \\, \\text{L}}{100 \\, \\text{km}} \\times 925 \\, \\text{km} = 65,675 \\, \\text{L} \\]
+
+            <strong>2. Càlcul de les emissions de CO₂:</strong><br>
+            Sabent que cada litre cremat allibera 2,45 kg de CO₂, multipliquem:
+            \\[ \\text{CO}_2 = 65,675 \\, \\text{L} \\times 2,45 \\, \\text{kg/L} = 160,90375 \\, \\text{kg} \\]
+
+            <strong>Nota:</strong> La velocitat (100 km/h) és una dada irrellevant per al càlcul final d'emissions totals si ja coneixem el consum mitjà per distància.
+        `
     },
     {
         type: "questions",
@@ -96,6 +119,17 @@ const questions = [
             { text: "112", value: "d" }
         ],
         correctAnswer: "a",
-        steps: `\\[ 1400 \\times 0,92 = 1288 \\]`
+        steps: `
+            <strong>1. Concepte de Fiabilitat R(t):</strong><br>
+            La fiabilitat (0,92) representa la probabilitat que un component funcioni sense fallades durant un temps determinat. En termes estadístics, ens diu quin percentatge d'un lot sobreviurà.
+
+            <strong>2. Aplicació al lot de producció:</strong><br>
+            Per trobar el nombre d'unitats funcionals (esperança matemàtica), multipliquem la mida del lot inicial per la taxa de fiabilitat:
+            \\[ N_{\\text{funcionant}} = N_{\\text{total}} \\times \\text{Fiabilitat} \\]
+            \\[ 1400 \\, \\text{unitats} \\times 0,92 = 1288 \\, \\text{unitats} \\]
+
+            <strong>3. Interpretació:</strong><br>
+            Això significa que, estadísticament, s'espera que 1.288 unitats segueixin funcionant i que 112 hagin fallat després de les 2.400 hores.
+        `
     }
 ];
