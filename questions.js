@@ -245,9 +245,8 @@ const questions = [
             El temps mort és el temps que el sistema espera entre acabar una unitat i començar la següent:
            \\[ T_{mort} = T_{total} - T_{treball} = 27,69 - 23 = 4,69 \\, \\text{s} \\]
         `
-    }
-];
-{
+    },
+    {
     type: "exercicis",
     category: "control logic i funcions logiques",
     text: `Una bodega de vi té dues premses (\\(p_1\\) i \\(p_2\\)) i un equip d'embotellament (\\(p_e\\)). Per raons elèctriques, s'ha de controlar el funcionament d'aquests equips mitjançant un sistema d'alarma (\\(r\\)) que s'activarà (\\(r=1\\)) en els casos següents:
@@ -305,3 +304,5 @@ const questions = [
         <br><br>
         <img src="img/esquema_logic_bodega.png" alt="Esquema de portes lògiques">`
 }
+];
+
