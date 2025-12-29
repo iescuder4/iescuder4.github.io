@@ -1,6 +1,6 @@
 const questions = [
-{
-        type: "questions", // Tipus de pregunta
+    {
+        type: "questions",
         category: "organitzacio",
         text: `Un tren de fira té una capacitat nominal de 48 passatgers. L’interval entre sortides consecutives és 15 minuts i el temps de trajecte, 5 minuts. Quin nombre màxim de passatgers pot transportar el tren en una hora?`,
         options: [
@@ -10,7 +10,7 @@ const questions = [
             { text: "192", value: "d" }
         ],
         correctAnswer: "d",
-       steps: `
+        steps: `
             \\[
             \\text{Capacitat nominal del tren} = 48 \\, \\text{passatgers}
             \\]
@@ -24,28 +24,13 @@ const questions = [
             \\text{Nombre de sortides per hora} = \\frac{60}{15} = 4
             \\]
             \\[
-            \\text{Descomposició de la capacitat: } 48 = 40 + 8
-            \\]            
-            \\[
-            40 \\times 4 = 160
-            \\]
-            \\[
-            8 \\times 4 = 32
-            \\]
-            \\[
-            160 + 32 = 192
-            \\]
-            \\[
-            \\text{Comprovació: el temps de trajecte (5 min) és menor que l'interval (15 min), per tant no limita la capacitat horària.}
-            \\]
-            \\[
             \\text{Nombre màxim de passatgers per hora} = 48 \\times 4 = 192
             \\]
- <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">` 
- },
-     {
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,
+        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`
+    },
+    {
         type: "questions",
         category: "metrologia i normalitzacio",
         text: `Qüestió 2<br>
@@ -60,16 +45,9 @@ const questions = [
         correctAnswer: "c",
         steps: `
             <strong>Càlcul de la resistència total:</strong><br>
-            En un circuit en sèrie, les resistències es sumen directament:<br>
-            \\[
-            R_{\\text{total}} = R_1 + R_2 = 1,1 \\, \\text{k}\\Omega + 3,3 \\, \\text{k}\\Omega = 4,4 \\, \\text{k}\\Omega
-            \\]
+            \\[ R_{\\text{total}} = 1,1 + 3,3 = 4,4 \\, \\text{k}\\Omega \\]
             <br><strong>Càlcul de la tolerància total:</strong><br>
-            La tolerància es calcula sumant les toleràncies relatives de cada resistència:<br>
-            \\[
-            \\text{Tolerància total} = 0,05 \\times 4,4 = 0,22 \\, \\text{k}\\Omega
-            \\]
-        `
+            \\[ \\text{Tolerància} = 0,05 \\times 4,4 = 0,22 \\, \\text{k}\\Omega \\]`
     },
     {
         type: "questions",
@@ -86,13 +64,7 @@ const questions = [
         ],
         correctAnswer: "b",
         steps: `
-            <strong>Càlcul de la secció mínima:</strong><br>
-            La tensió es calcula amb la fórmula \\( \\sigma = \\frac{F}{S} \\), on \\(F\\) és la força i \\(S\\) és la secció.<br>
-            Per tant, la secció mínima serà:<br>
-            \\[
-            S = \\frac{750}{75 \\times 10^6} = 1 \\times 10^{-5} \\, \\text{m}^2 = 10 \, \\text{mm}^2
-            \\]
-        `
+            \\[ S = \\frac{F}{\\sigma} = \\frac{750}{75 \\times 10^6} = 10 \\, \\text{mm}^2 \\]`
     },
     {
         type: "questions",
@@ -108,17 +80,8 @@ const questions = [
         ],
         correctAnswer: "b",
         steps: `
-            <strong>Càlcul del consum de benzina:</strong><br>
-            El cotxe consumeix 7,1 L per cada 100 km, per tant per 925 km el consum total serà:<br>
-            \\[
-            7,1 \, \\text{L/100 km} \\times 925 \, \\text{km} = 65,7 \, \\text{L}
-            \\]
-            <br><strong>Càlcul de CO₂ emès:</strong><br>
-            El cotxe emet 2,45 kg de CO₂ per cada litre de benzina:<br>
-            \\[
-            65,7 \\times 2,45 = 160,9 \, \\text{kg de CO₂}
-            \\]
-        `
+            \\[ 7,1 \\, \\text{L/100km} \\times 925 \\, \\text{km} = 65,675 \\, \\text{L} \\]
+            \\[ 65,675 \\times 2,45 = 160,9 \\, \\text{kg CO}_2 \\]`
     },
     {
         type: "questions",
@@ -133,11 +96,6 @@ const questions = [
             { text: "112", value: "d" }
         ],
         correctAnswer: "a",
-        steps: `
-            <strong>Càlcul de la quantitat d'artefactes funcionant:</strong><br>
-            Sabem que la fiabilitat és del 92%, per tant la quantitat d'artefactes que continuaran funcionant serà:<br>
-            \\[
-            0,92 \\times 1400 = 1288
-            \\]
-        `
+        steps: `\\[ 1400 \\times 0,92 = 1288 \\]`
     }
+];
