@@ -245,5 +245,66 @@ const questions = [
             El temps mort és el temps que el sistema espera entre acabar una unitat i començar la següent:
            \\[ T_{mort} = T_{total} - T_{treball} = 27,69 - 23 = 4,69 \\, \\text{s} \\]
         `
-    }
+    },
+    {
+    type: "exercise",
+    category: "control logic i funcions logiques",
+    text: `<strong>Exercici: Control de la Bodega de Vi</strong><br>
+    Una bodega de vi té dues premses (p1 i p2) i un equip d'embotellament (pe). Per raons elèctriques, s'ha de controlar el funcionament d'aquests equips mitjançant un sistema d'alarma (r) que s'activarà (r=1) en els casos següents:
+    <ul>
+        <li>Quan funcionin simultàniament les dues premses i l'equip d'embotellament.</li>
+        <li>Quan funcionin les dues premses, però no l'equip d'embotellament, i un interruptor general (g12) estigui activat.</li>
+        <li>Quan funcioni l'equip d'embotellament i una de les dues premses (només una), i un interruptor general (g15) estigui activat.</li>
+    </ul>
+    A més, s'ha de tenir en compte que l'estat en què només funciona una de les dues premses i l'equip d'embotellament no funciona és una situació impossible (X).`,
+    steps: `
+        <strong>a) Taula de Veritat:</strong><br>
+        Definim les variables d'entrada: <em>p1, p2</em> (premses), <em>pe</em> (embotellament), <em>g12</em> i <em>g15</em> (interruptors). Per simplificar la taula segons la solució oficial, agrupem les combinacions de premses (p1 i p2) com <em>ac</em> (ambdues connectades) i <em>so</em> (només una).
+        <br><br>
+        <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th>p1, p2 (Premses)</th>
+                    <th>pe (Embotellament)</th>
+                    <th>g12 / g15</th>
+                    <th>r (Alarma)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0 (Cap)</td><td>0</td><td>X</td><td>0</td></tr>
+                <tr><td>0 (Cap)</td><td>1</td><td>X</td><td>0</td></tr>
+                <tr><td>so (Només una)</td><td>0</td><td>X</td><td><strong>X (Impossible)</strong></td></tr>
+                <tr><td>so (Només una)</td><td>1</td><td>g15=0</td><td>0</td></tr>
+                <tr><td>so (Només una)</td><td>1</td><td>g15=1</td><td>1</td></tr>
+                <tr><td>ac (Ambdues)</td><td>0</td><td>g12=0</td><td>0</td></tr>
+                <tr><td>ac (Ambdues)</td><td>1</td><td>X</td><td>1</td></tr>
+                <tr><td>ac (Ambdues)</td><td>0</td><td>g12=1</td><td>1</td></tr>
+            </tbody>
+        </table>
+        <br>
+        
+        <strong>b) Funció Lògica simplificada:</strong><br>
+        A partir de les condicions de l'enunciat i la taula, la funció de l'alarma (r) es pot expressar sumant els casos on r=1. Si considerem que l'estat impossible (X) no s'ha d'activar (X=0), la funció queda:
+        \\[ r = (p1 \\cdot p2 \\cdot pe) + (p1 \\cdot p2 \\cdot \\overline{pe} \\cdot g_{12}) + ((p1 \\oplus p2) \\cdot pe \\cdot g_{15}) \\]
+        
+        <em>Simplificació segons la pauta oficial:</em><br>
+        \\[ r = ac \\cdot pe + ac \\cdot \\overline{pe} \\cdot g_{12} + so \\cdot pe \\cdot g_{15} \\]
+        On:
+        <ul>
+            <li><strong>ac</strong>: p1 i p2 funcionant (p1 · p2).</li>
+            <li><strong>so</strong>: Només una premsa funcionant (p1 ⊕ p2).</li>
+        </ul>
+
+        <strong>c) Esquema de portes lògiques:</strong><br>
+        L'esquema representa la implementació de la funció anterior. Utilitzem:
+        <ul>
+            <li>Portes <strong>AND</strong> (per a les multiplicacions lògiques/condicions simultànies).</li>
+            <li>Portes <strong>OR</strong> (per a la suma de condicions que activen l'alarma).</li>
+            <li>Portes <strong>NOT</strong> (per a les inversions, com \\(\\overline{pe}\\)).</li>
+            <li>Portes <strong>XOR</strong> (per detectar quan només funciona una de les dues premses).</li>
+        </ul>
+        <br>
+        <img src="ruta/a/esquema_logic_bodega.jpg" alt="Esquema de portes lògiques de la bodega">
+    `
+}
 ];
