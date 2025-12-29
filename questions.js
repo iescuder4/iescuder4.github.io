@@ -245,8 +245,9 @@ const questions = [
             El temps mort és el temps que el sistema espera entre acabar una unitat i començar la següent:
            \\[ T_{mort} = T_{total} - T_{treball} = 27,69 - 23 = 4,69 \\, \\text{s} \\]
         `
-    },
-    {
+    }
+];
+const exerciseBodega = {
     type: "exercise",
     category: "control logic i funcions logiques",
     text: `<strong>Exercici: Control de la Bodega de Vi</strong><br>
@@ -306,5 +307,4 @@ const questions = [
         <br>
         <img src="ruta/a/esquema_logic_bodega.jpg" alt="Esquema de portes lògiques de la bodega">
     `
-}
-];
+};
