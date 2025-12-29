@@ -137,7 +137,7 @@ const questions = [
         correctAnswer: "d",
         steps: `
             <strong>1. Concepte de tolerància dimensional:</strong><br>
-            La tolerància indica el marge d'error acceptable sobre una mesura nominal. [cite_start]El símbol ± ens indica que hem de sumar i restar aquest valor a la mesura base per trobar l'interval de valors vàlids. [cite: 1]
+            La tolerància indica el marge d'error acceptable sobre una mesura nominal. El símbol ± ens indica que hem de sumar i restar aquest valor a la mesura base per trobar l'interval de valors vàlids.
             
             <strong>2. Càlcul dels límits:</strong><br>
             \\[ \\text{Límit superior} = 146 + 0,8 = 146,8 \\, \\text{mm} \\]
@@ -160,7 +160,7 @@ const questions = [
         correctAnswer: "b",
         steps: `
             <strong>1. Llei de Pouillet:</strong><br>
-            La resistència d'un conductor depèn de la seva resistivitat (ρ), la seva longitud (L) i la seva secció (S). [cite_start]La fórmula és: [cite: 1]
+            La resistència d'un conductor depèn de la seva resistivitat (ρ), la seva longitud (L) i la seva secció (S). La fórmula és: 
             \\[ R = \\rho \\frac{L}{S} \\implies L = \\frac{R \\cdot S}{\\rho} \\]
             
             <strong>2. Conversió d'unitats al Sistema Internacional:</strong><br>
