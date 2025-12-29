@@ -127,7 +127,7 @@ const questions = [
     {
         type: "questions",
         category: "metrologia i normalitzacio",
-        text: `Qüestió 1<br>En un plànol s'especifica que la longitud d'una peça ha de ser (146 ± 0,8) mm. S'acceptaran totes les peces de longitud:`,
+        text: `Qüestió 6<br>En un plànol s'especifica que la longitud d'una peça ha de ser (146 ± 0,8) mm. S'acceptaran totes les peces de longitud:`,
         options: [
             { text: "superior a 146,8 mm.", value: "a" },
             { text: "compresa entre 146 mm i 146,8 mm.", value: "b" },
@@ -137,20 +137,20 @@ const questions = [
         correctAnswer: "d",
         steps: `
             <strong>1. Concepte de tolerància dimensional:</strong><br>
-            La tolerància indica el marge d'error acceptonble sobre una mesura nominal. El símbol ± ens indica que hem de sumar i restar aquest valor a la mesura base.
+            La tolerància indica el marge d'error acceptable sobre una mesura nominal. [cite_start]El símbol ± ens indica que hem de sumar i restar aquest valor a la mesura base per trobar l'interval de valors vàlids. [cite: 1]
             
             <strong>2. Càlcul dels límits:</strong><br>
             \\[ \\text{Límit superior} = 146 + 0,8 = 146,8 \\, \\text{mm} \\]
             \\[ \\text{Límit inferior} = 146 - 0,8 = 145,2 \\, \\text{mm} \\]
             
             <strong>3. Conclusió:</strong><br>
-            S'acceptarà qualsevol peça que estigui dins de l'interval [145,2 , 146,8] mm. Qualsevol mesura fora d'aquest rang es considera defectuosa.
+            S'acceptarà qualsevol peça que estigui dins de l'interval [145,2 , 146,8] mm. [cite_start]Qualsevol mesura fora d'aquest rang es considera fora de tolerància. [cite: 2]
         `
     },
     {
         type: "questions",
-        category: "electrotècnia",
-        text: `Qüestió 2<br>Un fil de coure de 5 mm² de secció té una resistència de 0,05 Ω. La resistivitat del coure és ρ = 0,0171 μΩ·m. Quina és la longitud del fil?`,
+        category: "maquines i sistemes electrics i electrotecnics",
+        text: `Qüestió 7<br>Un fil de coure de 5 mm² de secció té una resistència de 0,05 Ω. La resistivitat del coure és ρ = 0,0171 μΩ·m. Quina és la longitud del fil?`,
         options: [
             { text: "0,324 m", value: "a" },
             { text: "14,62 m", value: "b" },
@@ -160,22 +160,21 @@ const questions = [
         correctAnswer: "b",
         steps: `
             <strong>1. Llei de Pouillet:</strong><br>
-            La resistència d'un conductor depèn de la seva naturalesa (resistivitat), la seva longitud i la seva secció:
+            La resistència d'un conductor depèn de la seva resistivitat (ρ), la seva longitud (L) i la seva secció (S). [cite_start]La fórmula és: [cite: 1]
             \\[ R = \\rho \\frac{L}{S} \\implies L = \\frac{R \\cdot S}{\\rho} \\]
             
-            <strong>2. Conversió d'unitats al SI:</strong><br>
-            És crític passar-ho tot a metres i ohms:<br>
-            - Secció: \\( 5 \\, \\text{mm}^2 = 5 \\times 10^{-6} \\, \\text{m}^2 \\)<br>
-            - Resistivitat: \\( 0,0171 \\, \\mu\\Omega\\cdot m = 0,0171 \\times 10^{-6} \\, \\Omega\\cdot m \\)
+            <strong>2. Conversió d'unitats al Sistema Internacional:</strong><br>
+            - Secció (S): \\( 5 \\, \\text{mm}^2 = 5 \\times 10^{-6} \\, \\text{m}^2 \\)
+            - Resistivitat (ρ): \\( 0,0171 \\, \\mu\\Omega\\cdot m = 0,0171 \\times 10^{-6} \\, \\Omega\\cdot m \\)
             
             <strong>3. Càlcul de la longitud:</strong><br>
-            \\[ L = \\frac{0,05 \\cdot 5 \\times 10^{-6}}{0,0171 \\times 10^{-6}} = \\frac{0,25}{0,0171} \\approx 14,62 \\, \\text{m} \\]
+            [cite_start]\\[ L = \\frac{0,05 \\cdot 5 \\times 10^{-6}}{0,0171 \\times 10^{-6}} = \\frac{0,25}{0,0171} = 14,62 \\, \\text{m} \\] [cite: 2]
         `
     },
     {
         type: "questions",
         category: "material i assaig",
-        text: `Qüestió 3<br>L'acer inoxidable AISI 316 té una tensió de ruptura σr = 620 MPa. Quina és la força axial màxima que es pot aplicar a una barra massissa de 12 mm de diàmetre sense que es trenqui?`,
+        text: `Qüestió 8<br>L'acer inoxidable AISI 316 té una tensió de ruptura σr = 620 MPa. Quina és la força axial màxima que es pot aplicar a una barra massissa de 12 mm de diàmetre sense que es trenqui?`,
         options: [
             { text: "70,12 kN", value: "a" },
             { text: "140,8 kN", value: "b" },
@@ -185,22 +184,22 @@ const questions = [
         correctAnswer: "a",
         steps: `
             <strong>1. Àrea de la secció circular:</strong><br>
-            Primer cal calcular la superfície de la barra a partir del seu diàmetre (d = 12 mm):
+            La barra és massissa i circular, per tant la seva superfície es calcula amb el diàmetre (d = 12 mm):
             \\[ S = \\frac{\\pi \\cdot d^2}{4} = \\frac{\\pi \\cdot 12^2}{4} = 113,1 \\, \\text{mm}^2 \\]
             
             <strong>2. Relació Força i Tensió:</strong><br>
-            La força màxima abans de la ruptura és el producte de la tensió de ruptura per la secció:
+            [cite_start]La força màxima (F) abans de la ruptura es defineix com: [cite: 1]
             \\[ F = \\sigma_r \\cdot S \\]
             
             <strong>3. Càlcul final:</strong><br>
             \\[ F = 620 \\, \\text{N/mm}^2 \\times 113,1 \\, \\text{mm}^2 = 70122 \\, \\text{N} \\]
-            Convertint a quilonewtons: \\( F \\approx 70,12 \\, \\text{kN} \\).
+            [cite_start]Convertint a quilonewtons (dividir per 1000): \\( F \\approx 70,12 \\, \\text{kN} \\). [cite: 2]
         `
     },
     {
         type: "questions",
-        category: "oleohidràulica",
-        text: `Qüestió 4<br>Un cilindre hidràulic ha d'exercir una força de 20 kN en l'avanç. Si el diàmetre del cilindre és 50 mm i el de la tija 32 mm, quina pressió ha de proporcionar el grup?`,
+        category: "sistemes pneumatics i oleohidraulics",
+        text: `Qüestió 9<br>Un cilindre hidràulic ha d'exercir una força de 20 kN en l'avanç. Si el diàmetre del cilindre és 50 mm i el de la tija 32 mm, quina pressió ha de proporcionar el grup?`,
         options: [
             { text: "3,79 MPa", value: "a" },
             { text: "10,19 MPa", value: "b" },
@@ -210,20 +209,22 @@ const questions = [
         correctAnswer: "b",
         steps: `
             <strong>1. Superfície de treball en l'avanç:</strong><br>
-            En la cursa d'avanç, el fluid empeny tota la cara del pistó (no cal restar la tija). El diàmetre és 50 mm:
+            En la cursa d'avanç, el fluid actua sobre tota la cara del pistó. El diàmetre és 50 mm:
             \\[ S = \\frac{\\pi \\cdot 50^2}{4} = 1963,5 \\, \\text{mm}^2 = 1,9635 \\times 10^{-3} \\, \\text{m}^2 \\]
             
             <strong>2. Càlcul de la pressió:</strong><br>
-            \\[ p = \\frac{F}{S} = \\frac{20000 \\, \\text{N}}{1,9635 \\times 10^{-3} \\, \\text{m}^2} \\]
-            \\[ p = 10,185,892 \\, \\text{Pa} \\approx 10,19 \\, \\text{MPa} \\]
+            [cite_start]Utilitzem la fórmula de la pressió hidràulica \\( p = \\frac{F}{S} \\): [cite: 1]
+            \\[ p = \\frac{20000 \\, \\text{N}}{1,9635 \\times 10^{-3} \\, \\text{m}^2} = 10.185.892 \\, \\text{Pa} \\]
             
-            <strong>Nota:</strong> El diàmetre de la tija (32 mm) és una dada irrellevant per a la cursa d'avanç, només s'utilitzaria per calcular la pressió en el retrocés.
+            <strong>3. Resultat en MegaPascals:</strong><br>
+            [cite_start]\\( 10.185.892 \\, \\text{Pa} \\approx 10,19 \\, \\text{MPa} \\). [cite: 2]
+            <br><em>Nota: El diàmetre de la tija només s'utilitzaria si ens demanessin el retrocés.</em>
         `
     },
     {
         type: "questions",
-        category: "organització industrial",
-        text: `Qüestió 5<br>Un sistema de pintatge permet obtenir un màxim de 130 unitats/h. Sobre cada unitat es fan dues operacions simultànies de t1=23s i t2=15s. Quin és el temps mort o d'espera entre unitats?`,
+        category: "organitzacio industrial",
+        text: `Qüestió 10<br>Un sistema de pintatge permet obtenir un màxim de 130 unitats/h. Sobre cada unitat es fan dues operacions simultànies de t1=23s i t2=15s. Quin és el temps mort o d'espera entre unitats?`,
         options: [
             { text: "4,69 s", value: "a" },
             { text: "12,70 s", value: "b" },
@@ -232,17 +233,17 @@ const questions = [
         ],
         correctAnswer: "a",
         steps: `
-            <strong>1. Temps de cicle total disponible:</strong><br>
-            Si la màquina treu 130 unitats en una hora (3600 s), el temps total dedicat a cada unitat és:
+            <strong>1. Temps de cicle total (T):</strong><br>
+            [cite_start]Calculem el temps total assignat a cada unitat segons la producció horària (3600 segons): [cite: 1]
             \\[ T_{total} = \\frac{3600 \\, \\text{s}}{130 \\, \\text{unitats}} = 27,69 \\, \\text{s/unitat} \\]
             
             <strong>2. Temps d'operació real:</strong><br>
-            Les dues operacions es fan <strong>simultàniament</strong>. Per tant, el temps que la màquina està "treballant" realment és el de l'operació més llarga:
+            Com que les operacions són <strong>simultànies</strong>, el temps de treball real és el de la tasca més llarga:
             \\[ T_{treball} = \\max(23, 15) = 23 \\, \\text{s} \\]
             
-            <strong>3. Càlcul del temps d'espera:</strong><br>
-            La diferència entre el temps total disponible i el temps de treball és el temps mort:
-            \\[ T_{mort} = 27,69 - 23 = 4,69 \\, \\text{s} \\]
+            <strong>3. Càlcul del temps mort:</strong><br>
+            El temps mort és el temps que el sistema espera entre acabar una unitat i començar la següent:
+            [cite_start]\\[ T_{mort} = T_{total} - T_{treball} = 27,69 - 23 = 4,69 \\, \\text{s} \\] [cite: 2]
         `
     }
 ];
