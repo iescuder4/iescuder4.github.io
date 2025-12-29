@@ -161,47 +161,51 @@ const questions = [
             <strong>2. Pressió:</strong>\\[ p = \\frac{20000}{1,963 \\times 10^{-3}} = 10,19 \\, \\text{MPa} \\]
         `
     },
-    {
-        type: "questions",
-        category: "organitzacio industrial",
-        text: `130 unitats/h. Operacions simultànies de 23s i 15s. Temps mort?`,
-        options: [
-            { text: "4,69 s", value: "a" },
-            { text: "12,70 s", value: "b" },
-            { text: "8,70 s", value: "c" },
-            { text: "9,20 s", value: "d" }
-        ],
-        correctAnswer: "a",
-        steps: `
-            <strong>1. Temps cicle:</strong> 3600 / 130 = 27,69 s.<br>
-            <strong>2. Treball real:</strong> max(23, 15) = 23 s.<br>
-            <strong>3. Mort:</strong> 27,69 - 23 = 4,69 s.
-        `
-    }, // <-- AQUESTA COMA ÉS MOLT IMPORTANT
-    {
-        type: "exercicis",
-        category: "control logic i funcions logiques",
-        text: `<strong>Exercici: Control de la Bodega de Vi</strong><br>
-               Determineu:<br>
-               <strong>a)</strong> La taula de veritat del sistema.<br>
-               <strong>b)</strong> La funció lògica simplificada (r).<br>
-               <strong>c)</strong> L'esquema lògic.`,
-        correctAnswer: "",
-        steps: `
-            <strong>a) Taula de veritat:</strong><br>
-            <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
-                <tr style="background-color: #f2f2f2;">
-                    <td><strong>Premses</strong></td><td><strong>pe</strong></td><td><strong>Interruptor</strong></td><td><strong>Alarma (r)</strong></td>
-                </tr>
-                <tr><td>Cap</td><td>0</td><td>-</td><td>0</td></tr>
-                <tr><td>Només una</td><td>1</td><td>g15=1</td><td>1</td></tr>
-                <tr><td>Ambdues</td><td>1</td><td>-</td><td>1</td></tr>
-                <tr><td>Ambdues</td><td>0</td><td>g12=1</td><td>1</td></tr>
-            </table>
-            <br>
-            <strong>b) Funció lògica:</strong>\\[ r = (ac \\cdot p_e) + (ac \\cdot \\overline{p_e} \\cdot g_{12}) + (so \\cdot p_e \\cdot g_{15}) \\]
-            <br>
-            <strong>c) Esquema:</strong> S'implementa amb portes AND, OR, XOR i NOT.
-        `
-    }
+{
+    type: "exercicis",
+    category: "control logic i funcions logiques",
+    text: `En una explotació vinícola es controla el grau alcohòlic i l’acidesa per determinar el moment de la verema i l’ús del raïm. Per elaborar un vi negre de qualitat, cal que el raïm estigui veremat i que tingui un grau alcohòlic d’entre el 12 % i el 15 % vol. Les variables d’estat són l’acidesa \\(ac\\) (\\(ac = 1\\) si el raïm és veremat; \\(ac = 0\\) si no ho és), el grau alcohòlic \\(g_{12}\\) (\\(g_{12} = 1\\) si és superior al 12 % vol.; \\(g_{12} = 0\\) si és inferior) i el grau alcohòlic \\(g_{15}\\) (\\(g_{15} = 1\\) si és superior al 15 % vol.; \\(g_{15} = 0\\) si és inferior). La sortida és \\(r\\) (\\(r = 1\\) si el raïm és per a vi de qualitat; \\(r = 0\\) per a altres usos).
+           <br><br>
+           Determineu:
+           <br><strong>a)</strong> La taula de veritat del sistema. [1 punt]
+           <br><strong>b)</strong> La funció lògica simplificada \\(r\\) entre les variables d’estat, si la situació impossible es considera que no ha de donar raïm de qualitat (\\(X = 0\\)). [0,5 punts]
+           <br><strong>c)</strong> L’esquema lògic mitjançant portes lògiques. [1 punt]`,
+    correctAnswer: "", 
+    steps: `
+        <strong>a) Taula de veritat:</strong>
+        <br>
+        Hem de tenir en compte que hi ha estats impossibles (no pot ser que el grau sigui superior al 15 % i alhora inferior al 12 %).
+        <br><br>
+        <table border="1" style="width:100%; text-align:center; border-collapse: collapse; font-family: Arial, sans-serif;">
+            <tr style="background-color: #f2f2f2;">
+                <td><strong>\\(ac\\)</strong></td>
+                <td><strong>\\(g_{12}\\)</strong></td>
+                <td><strong>\\(g_{15}\\)</strong></td>
+                <td><strong>\\(r\\) (Sortida)</strong></td>
+                <td><strong>Observacions</strong></td>
+            </tr>
+            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>No veremat</td></tr>
+            <tr><td>0</td><td>0</td><td>1</td><td><strong>X</strong></td><td>Impossible</td></tr>
+            <tr><td>0</td><td>1</td><td>0</td><td>0</td><td>No veremat</td></tr>
+            <tr><td>0</td><td>1</td><td>1</td><td>0</td><td>No veremat</td></tr>
+            <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>Grau < 12%</td></tr>
+            <tr><td>1</td><td>0</td><td>1</td><td><strong>X</strong></td><td>Impossible</td></tr>
+            <tr><td>1</td><td>1</td><td>0</td><td><strong>1</strong></td><td><strong>Vi qualitat</strong></td></tr>
+            <tr><td>1</td><td>1</td><td>1</td><td>0</td><td>Grau > 15%</td></tr>
+        </table>
+        <br>
+        <strong>b) Funció lògica simplificada (amb \\(X = 0\\)):</strong>
+        <br>
+        Perquè la sortida \\(r\\) sigui 1, s'han de complir simultàniament tres condicions: que estigui veremat (\\(ac\\)), que el grau sigui > 12% (\\(g_{12}\\)) i que NO sigui > 15% (\\(\\overline{g_{15}}\\)).
+        \\[
+        r = ac \\cdot g_{12} \\cdot \\overline{g_{15}}
+        \\]
+        <br>
+        <strong>c) Esquema de portes lògiques:</strong>
+        <br>
+        L'esquema es construeix amb una porta <strong>NOT</strong> per invertir la senyal de \\(g_{15}\\) i una porta <strong>AND</strong> de tres entrades per realitzar el producte lògic:
+        <br><br>
+        <img src="img/esquema_logic_vi.png" alt="Esquema de portes lògiques del control de vi">
+    `
+}
 ];
