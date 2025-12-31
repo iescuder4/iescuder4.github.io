@@ -572,5 +572,51 @@ const questions = [
             \\]
             *(Nota: En aquest motor el parell es manté constant en aquest tram).*
         `
+    },
+    {
+        type: "exercicis",
+        category: "mecanismes i transmissio de moviments",
+        text: `El sistema de transmissió d’una màquina està format per un motor que gira a \\(n_m = 1450 \\, \\text{min}^{-1}\\) i que acciona una politja de diàmetre \\(d_1 = 60 \\, \\text{mm}\\). Aquesta politja transmet el moviment mitjançant una corretja a una segona politja de diàmetre \\(d_2 = 150 \\, \\text{mm}\\). Solidari a la segona politja, hi ha un engranatge de \\(z_3 = 18\\) dents que engrana amb una roda de \\(z_4 = 42\\) dents, que és l’eix de sortida de la màquina.
+               <br><br>
+               Determineu:
+               <br><strong>a)</strong> La relació de transmissió total, \\(i_{\\text{total}}\\), del sistema. [1 punt]
+               <br><strong>b)</strong> La velocitat de rotació de l’eix de sortida, \\(n_{\\text{sortida}}\\). [0,5 punts]
+               <br><strong>c)</strong> El parell a l’eix de sortida, \\(\\Gamma_{\\text{sortida}}\\), si el motor té una potència \\(P_m = 2{,}2 \\, \\text{kW}\\) i el rendiment de la transmissió és \\(\\eta = 0{,}85\\). [1 punt]
+               <br><br>
+               <img src="img/esquema_transmissio.png" alt="Esquema del sistema de transmissió amb politges i engranatges">`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Relació de transmissió total (\\(i_{\\text{total}}\\)):</strong>
+            <br>
+            La relació de transmissió total és el producte de les relacions de cada etapa.
+            <br>1a Etapa (politges): \\(i_1 = \\frac{d_1}{d_2} = \\frac{60}{150} = 0{,}4\\)
+            <br>2a Etapa (engranatges): \\(i_2 = \\frac{z_3}{z_4} = \\frac{18}{42} \\approx 0{,}4286\\)
+            \\[
+            i_{\\text{total}} = i_1 \\cdot i_2 = 0{,}4 \\cdot 0{,}4286 = 0{,}1714
+            \\]
+            *(Això significa que l'eix de sortida gira 0,1714 vegades per cada volta del motor).*
+            <br>
+            <strong>b) Velocitat de rotació de l'eix de sortida (\\(n_{\\text{sortida}}\\)):</strong>
+            <br>
+            Multipliquem la velocitat del motor per la relació de transmissió total:
+            \\[
+            n_{\\text{sortida}} = n_m \\cdot i_{\\text{total}} = 1450 \\, \\text{min}^{-1} \\cdot 0{,}1714 = 248{,}57 \\, \\text{min}^{-1}
+            \\]
+            <br>
+            <strong>c) Parell a l'eix de sortida (\\(\\Gamma_{\\text{sortida}}\\)):</strong>
+            <br>
+            Primer, calculem la potència a la sortida considerant el rendiment:
+            \\[
+            P_{\\text{sortida}} = P_m \\cdot \\eta = 2200 \\, \\text{W} \\cdot 0{,}85 = 1870 \\, \\text{W}
+            \\]
+            Passem la velocitat de sortida a rad/s:
+            \\[
+            \\omega_{\\text{sortida}} = n_{\\text{sortida}} \\cdot \\frac{2\\pi}{60} = 248{,}57 \\cdot \\frac{2\\pi}{60} = 26{,}03 \\, \\text{rad/s}
+            \\]
+            Finalment, aïllem el parell de la fórmula de la potència (\\(P = \\Gamma \\cdot \\omega\\)):
+            \\[
+            \\Gamma_{\\text{sortida}} = \\frac{P_{\\text{sortida}}}{\\omega_{\\text{sortida}}} = \\frac{1870}{26{,}03} = 71{,}84 \\, \\text{N}\\cdot\\text{m}
+            \\]
+        `
     }
 ];
