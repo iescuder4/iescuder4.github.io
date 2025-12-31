@@ -513,5 +513,64 @@ const questions = [
             m_{\\text{ce}} = \\frac{E_{\\text{comb}}}{p_c} = \\frac{3{,}271 \\cdot 10^{13}}{40 \\cdot 10^6} = 817.750 \\, \\text{kg} \\approx 817{,}75 \\, \\text{t}
             \\]
         `
+    },
+    {
+        type: "exercicis",
+        category: "maquines i sistemes energetics",
+        text: `Un automòbil de massa \\(m = 1725 \\, \\text{kg}\\) accelera des del repòs fins a una velocitat \\(v = 100 \\, \\text{km/h}\\). El motor de combustió té un rendiment \\(\\eta = 23\\%\\) i utilitza un combustible amb un poder calorífic \\(\\rho_c = 41 \\, \\text{MJ/kg}\\).
+               <br><br>
+               Determineu:
+               <br><strong>a)</strong> L’energia mecànica, \\(E_m\\), que ha subministrat el motor per a realitzar aquesta acceleració (suposant que no hi ha pèrdues per fricció). [0,5 punts]
+               <br><strong>b)</strong> La massa de combustible, \\(m_{\\text{comb}}\\), consumida en l’acceleració. [0,5 punts]
+               <br><br>
+               El motor té les corbes de potència i de parell motor que es mostren en el gràfic adjunt. Si el motor treballa a una velocitat de rotació \\(n_1 = 2000 \\, \\text{min}^{-1}\\) i després a \\(n_2 = 3000 \\, \\text{min}^{-1}\\), determineu:
+               <br><strong>c)</strong> Les potències \\(P_1\\) i \\(P_2\\) que proporciona el motor en aquests dos règims de gir. [1 punt]
+               <br><strong>d)</strong> El parell motor \\(\\Gamma\\) en cada un d’aquests casos. [0,5 punts]
+               <br><br>
+               <img src="img/grafic_motor.png" alt="Gràfic de potència i parell motor">`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Energia mecànica subministrada (\\(E_m\\)):</strong>
+            <br>
+            L'energia mecànica necessària per accelerar el vehicle des del repòs equival a la seva energia cinètica final.
+            <br>Primer passem la velocitat a m/s: \\(100 \\, \\text{km/h} = 27{,}78 \\, \\text{m/s}\\).
+            \\[
+            E_m = \\Delta E_c = \\frac{1}{2} \\cdot m \\cdot v^2 = \\frac{1}{2} \\cdot 1725 \\cdot (27{,}78)^2
+            \\]
+            \\[
+            E_m = 665.500 \\, \\text{J} = 665{,}5 \\, \\text{kJ}
+            \\]
+            <br>
+            <strong>b) Massa de combustible consumida (\\(m_{\\text{comb}}\\)):</strong>
+            <br>
+            L'energia total que ha d'alliberar el combustible (\\(E_{\\text{comb}}\\)) és l'energia mecànica dividida pel rendiment:
+            \\[
+            E_{\\text{comb}} = \\frac{E_m}{\\eta} = \\frac{665{,}5 \\cdot 10^3 \\, \\text{J}}{0{,}23} = 2.893.478 \\, \\text{J}
+            \\]
+            Ara usem el poder calorífic (\\(\\rho_c = 41 \\cdot 10^6 \\, \\text{J/kg}\\)):
+            \\[
+            m_{\\text{comb}} = \\frac{E_{\\text{comb}}}{\\rho_c} = \\frac{2.893.478}{41 \\cdot 10^6} = 0{,}07057 \\, \\text{kg} \\approx 70{,}57 \\, \\text{g}
+            \\]
+            <br>
+            <strong>c) Potències segons el gràfic (\\(P_1\\) i \\(P_2\\)):</strong>
+            <br>
+            Observant les corbes del gràfic per a cada velocitat de gir:
+            <br>- Per a \\(n_1 = 2000 \\, \\text{min}^{-1}\\): La potència llegida a la corba superior és \\(P_1 \\approx 67 \\, \\text{kW}\\).
+            <br>- Per a \\(n_2 = 3000 \\, \\text{min}^{-1}\\): La potència llegida a la corba superior és \\(P_2 \\approx 100{,}5 \\, \\text{kW}\\).
+            <br>
+            <strong>d) Parell motor (\\(\\Gamma\\)):</strong>
+            <br>
+            Utilitzem la relació \\(P = \\Gamma \\cdot \\omega\\). Primer convertim les \\(n\\) a rad/s:
+            \\[
+            \\omega_1 = \\frac{2000 \\cdot 2\\pi}{60} = 209{,}44 \\, \\text{rad/s} ; \\quad \\omega_2 = \\frac{3000 \\cdot 2\\pi}{60} = 314{,}16 \\, \\text{rad/s}
+            \\]
+            \\[
+            \\Gamma_1 = \\frac{P_1}{\\omega_1} = \\frac{67000}{209{,}44} = 319{,}9 \\, \\text{N}\\cdot\\text{m}
+            \\]
+            \\[
+            \\Gamma_2 = \\frac{P_2}{\\omega_2} = \\frac{100500}{314{,}16} = 319{,}9 \\, \\text{N}\\cdot\\text{m}
+            \\]
+            *(Nota: En aquest motor el parell es manté constant en aquest tram).*
+        `
     }
 ];
