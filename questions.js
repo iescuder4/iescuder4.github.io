@@ -396,8 +396,7 @@ const questions = [
         correctAnswer: "",
         steps: `
             <strong>a) Taula de veritat:</strong><br>
-            Entrades: p (pedal), p1 (polsador 1), p2 (polsador 2). Sortida: m (motor).
-            La condició és m=1 només si p=1 i almenys un dels polsadors (p1 o p2) és 1.
+            L'activació del motor (m=1) requereix que el pedal estigui a 1 I que qualsevol dels polsadors (o tots dos) estiguin a 1.
             <br><br>
             p | p1 | p2 | m<br>
             --|----|----|---<br>
@@ -411,15 +410,51 @@ const questions = [
             1 | 1  | 1  | 1<br>
             <br>
             <strong>b) Funció lògica:</strong><br>
-            La descripció indica que el motor s'activa amb el Pedal (p) I (Polsador 1 O Polsador 2).
-            La funció simplificada és:
-            \\[ m = p \cdot (p_1 + p_2) \\]
+            La condició lògica s'expressa de la següent manera:<br>
+            m = p * (p1 + p2)<br>
             <br>
+            On el signe (*) representa la multiplicació lògica (porta AND) i el signe (+) representa la suma lògica (porta OR).
+            <br><br>
             <strong>c) Esquema de portes lògiques:</strong><br>
-            1. Una porta <strong>OR</strong> rep les entrades p1 i p2.
-            2. La sortida d'aquesta porta OR va a una porta <strong>AND</strong>.
-            3. L'altra entrada de la porta AND és el pedal p.
-            4. La sortida de la porta AND és el motor m.
+            Per implementar aquesta funció necessitem:<br>
+            1. Una porta <strong>OR</strong> on connectem les entrades p1 i p2.<br>
+            2. Una porta <strong>AND</strong> on connectem l'entrada p i la sortida de la porta OR anterior.<br>
+            3. La sortida d'aquesta porta AND és el senyal que activa el motor m.
+        `
+    }
+
+    {
+        type: "exercicis",
+        category: "maquines i sistemes energetics",
+        text: `Exercici 3
+               Un vehicle de massa m = 1725 kg accelera, en una superfície horitzontal, de v1 = 0 km/h a v2 = 100 km/h. El combustible que fa servir és gasoil, de poder calorífic pc = 43,25 MJ/kg. El rendiment mitjà del motor, entès com la relació entre l'energia mecànica i l'energia que proporciona el combustible, és η = 20,8%. Durant l'etapa d'acceleració, determineu:
+               <br>a) L'energia mecànica, Em, que adquireix el vehicle. [0,5 punts]
+               <br>b) La quantitat de combustible, mcomb, consumida. [1 punt]
+               <br>Se suposa que el motor proporciona un parell Гmot = 320 N·m constant entre n1 = 2000 min⁻¹ i n2 = 3000 min⁻¹:
+               <br>c) Representeu, de manera aproximada i indicant les escales, la corba de la potència, Pm, que proporciona el motor per a 2000 min⁻¹ ≤ n ≤ 3000 min⁻¹. [1 punt]`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Energia mecànica (Em):</strong><br>
+            L'energia mecànica adquirida és l'energia cinètica final (ja que v1=0). Primer passem la velocitat a m/s:<br>
+            v2 = 100 km/h = 100 / 3,6 = 27,78 m/s<br>
+            Em = (1/2) * m * v2² = 0,5 * 1725 * (27,78)² = 665.664 J = 665,66 kJ
+            <br><br>
+            <strong>b) Quantitat de combustible (mcomb):</strong><br>
+            L'energia del combustible (Ecomb) es troba dividint l'energia mecànica pel rendiment:<br>
+            Ecomb = Em / η = 665.664 / 0,208 = 3.200.307 J = 3,20 MJ<br>
+            Ara usem el poder calorífic (pc) per trobar la massa:<br>
+            mcomb = Ecomb / pc = 3,20 MJ / 43,25 MJ/kg = 0,074 kg = 74 g
+            <br><br>
+            <strong>c) Representació de la corba de potència (Pm):</strong><br>
+            La potència és P = Г * ω. Com que el parell (Г) és constant, la potència serà una línia recta ascendent.<br>
+            Calculem els punts extrems:<br>
+            1. Per n1 = 2000 min⁻¹:<br>
+            ω1 = 2000 * (2π / 60) = 209,44 rad/s<br>
+            P1 = 320 * 209,44 = 67.020 W = 67,02 kW<br>
+            2. Per n2 = 3000 min⁻¹:<br>
+            ω2 = 3000 * (2π / 60) = 314,16 rad/s<br>
+            P2 = 320 * 314,16 = 100.531 W = 100,53 kW<br>
+            La gràfica és una recta que uneix (2000, 67.02) i (3000, 100.53).
         `
     }
 ];
