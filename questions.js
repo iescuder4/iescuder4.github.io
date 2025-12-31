@@ -24,6 +24,7 @@ const questions = [
             \\[ 48 \\, \\text{passatgers/viatge} \\times 4 \\, \\text{viatges/h} = 192 \\, \\text{passatgers/h} \\]
         `
     },
+    
     {
         type: "questions",
         category: "maquines i sistemes electrics i electrotecnics",
@@ -47,6 +48,7 @@ const questions = [
             <strong>3. Resultat:</strong>\\[ R = (4,4 \\pm 0,22) \\, \\text{k}\\Omega \\]
         `
     },
+    
     {
         type: "questions",
         category: "material i assaig",
@@ -65,6 +67,7 @@ const questions = [
             <strong>4. Conversió:</strong>\\[ 10^{-5} \\, \\text{m}^2 \\times 10^6 = 10 \\, \\text{mm}^2 \\]
         `
     },
+    
     {
         type: "questions",
         category: "energia",
@@ -81,6 +84,7 @@ const questions = [
             <strong>2. Càlcul de les emissions de \\(CO_{2}\\):</strong>\\[ \\text{Massa } CO_2 = 65,675 \\, \\text{L} \\times 2,45 \\, \\text{kg/L} = 160,90375 \\, \\text{kg} \\approx 160,9 \\, \\text{kg} \\]
         `
     },
+    
     {
         type: "questions",
         category: "organitzacio industrial",
@@ -99,7 +103,6 @@ const questions = [
         `
     },
 
-    // --- BLOC 3: Exercicis Complexos ---
     {
         type: "exercicis",
         category: "control logic i funcions logiques",
@@ -142,6 +145,7 @@ const questions = [
             S'utilitza una porta NOT per a \\(g_{15}\\) i una porta AND de tres entrades.
         `
     },
+    
     {
         type: "exercicis",
         category: "sistemes pneumatics i oleohidraulics",
@@ -171,6 +175,7 @@ const questions = [
             \\[ \\eta = \\frac{P_{útil}}{P_h} = \\frac{3171,6}{3910} = 0,8111 \\implies 81,11\\% \\]
         `
     },
+    
     {
         type: "exercicis",
         category: "motors reductors",
@@ -196,6 +201,65 @@ const questions = [
             \\[ E_{electr} = P_{elèctr} \\cdot t = 391 \\cdot 20 = 7820 \\, \\text{J} = 7,82 \\, \\text{kJ} \\]
             \\[ E_{útil} = P_s \\cdot t = 100 \\cdot 20 = 2000 \\, \\text{J} \\]
             \\[ E_{diss} = E_{electr} - E_{útil} = 7820 - 2000 = 5820 \\, \\text{J} = 5,82 \\, \\text{kJ} \\]
+        `
+    },
+    
+    {
+        type: "exercicis",
+        category: "mecanismes i transmissio de moviments",
+        text: `El sistema de transmissió d'una màquina és format per un motor que gira a \\(n_m = 1450 \\, \\text{min}^{-1}\\) i que acciona una politja de diàmetre \\(d_1 = 60 \\, \\text{mm}\\). Aquesta politja transmet el moviment mitjançant una corretja a una segona politja de diàmetre \\(d_2 = 150 \\, \\text{mm}\\). Solidari a la segona politja, hi ha un engranatge de \\(z_3 = 18\\) dents que engrana amb una roda de \\(z_4 = 42\\) dents, que és l'eix de sortida de la màquina. Determineu:
+               <br>a) La relació de transmissió total \\(i_{tot}\\) del sistema. [1 punt]
+               <br>b) La velocitat de rotació \\(n_{sortida}\\) de l'eix de sortida. [0,5 punts]
+               <br>c) El parell \\(\\Gamma_{sortida}\\) a l'eix de sortida si el motor té una potència \\(P_m = 2,2 \\, \\text{kW}\\) i el rendiment de la transmissió és \\(\\eta = 0,85\\). [1 punt]`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Relació de transmissió total (\\(i_{tot}\\)):</strong>
+            <br>
+            La relació total és el producte de les relacions de cada etapa:
+            \\[ i_1 = \\frac{d_1}{d_2} = \\frac{60}{150} = 0,4 \\]
+            \\[ i_2 = \\frac{z_3}{z_4} = \\frac{18}{42} = 0,4286 \\]
+            \\[ i_{tot} = i_1 \\cdot i_2 = 0,4 \\cdot 0,4286 = 0,1714 \\]
+            <br>
+            <strong>b) Velocitat de rotació de l'eix de sortida (\\(n_{sortida}\\)):</strong>
+            \\[ n_{sortida} = n_m \\cdot i_{tot} = 1450 \\cdot 0,1714 = 248,57 \\, \\text{min}^{-1} \\]
+            <br>
+            <strong>c) Parell a l'eix de sortida (\\(\\Gamma_{sortida}\\)):</strong>
+            <br>
+            Primer, calculem la potència de sortida real:
+            \\[ P_{sortida} = P_m \\cdot \\eta = 2200 \\cdot 0,85 = 1870 \\, \\text{W} \\]
+            Convertim la velocitat de sortida a rad/s:
+            \\[ \\omega_{sortida} = n_{sortida} \\cdot \\frac{2\\pi}{60} = 248,57 \\cdot \\frac{2\\pi}{60} = 26,03 \\, \\text{rad/s} \\]
+            \\[ \\Gamma_{sortida} = \\frac{P_{sortida}}{\\omega_{sortida}} = \\frac{1870}{26,03} = 71,84 \\, \\text{Nm} \\]
+        `
+    },
+    
+    {
+        type: "exercicis",
+        category: "maquines i sistemes electrics i electrotecnics",
+        text: `Una cafetera elèctrica té tres resistències. La resistència \\(R_3\\) s'utilitza per a mantenir el cafè calent; les altres dues resistències tenen valors \\(R_1 = 145 \\, \\Omega\\) i \\(R_2 = 100 \\, \\Omega\\) i el circuit s'alimenta a una tensió \\(U = 230 \\, \\text{V}\\). Determineu:
+               <br>a) La resistència inicial del circuit, \\(R_{in}\\) quan es connecta la cafetera. [0,5 punts]
+               <br>b) El corrent, \\(I\\), consumit quan es connecta la cafetera. [0,5 punts]
+               <br>c) El valor de les dues potències, \\(P_1\\) i \\(P_2\\), que consumeix la cafetera quan els interruptors 1 i 2 estan tancats i quan només ho està l'interruptor 2. [1 punt]
+               <br>d) El valor que ha de tenir la resistència \\(R_3\\) perquè la potència consumida quan es manté el cafè calent sigui \\(P_3 = 300 \\, \\text{W}\\). [0,5 punts]`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Resistència inicial (\\(R_{in}\\)):</strong>
+            <br>
+            Segons l'esquema (amb Int 1 i Int 2 tancats), \\(R_1\\) i \\(R_2\\) estan en paral·lel:
+            \\[ R_{in} = \\frac{R_1 \\cdot R_2}{R_1 + R_2} = \\frac{145 \\cdot 100}{145 + 100} = 59,18 \\, \\Omega \\]
+            <br>
+            <strong>b) Corrent consumit (\\(I\\)):</strong>
+            \\[ I = \\frac{U}{R_{in}} = \\frac{230}{59,18} = 3,886 \\, \\text{A} \\]
+            <br>
+            <strong>c) Potències consumides:</strong>
+            <br>
+            - Amb Int 1 i 2 tancats:
+            \\[ P_{total} = \\frac{U^2}{R_{in}} = \\frac{230^2}{59,18} = 893,88 \\, \\text{W} \\]
+            - Amb només Int 2 tancat:
+            \\[ P_{2} = \\frac{U^2}{R_2} = \\frac{230^2}{100} = 529 \\, \\text{W} \\]
+            <br>
+            <strong>d) Valor de \\(R_3\\):</strong>
+            \\[ R_3 = \\frac{U^2}{P_3} = \\frac{230^2}{300} = 176,33 \\, \\Omega \\]
         `
     }
 ];
