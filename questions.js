@@ -207,5 +207,66 @@ const questions = [
         <br><br>
         <img src="img/esquema_logic_vi.png" alt="Esquema de portes lògiques del control de vi">
     `
-}
+},
+    {
+        type: "exercicis",
+        category: "sistemes pneumatics i oleohidraulics",
+        text: `Un ascensor hidràulic d’acció directa funciona mitjançant un cilindre hidràulic connectat directament a la cabina de l’ascensor. El cilindre té un diàmetre interior \\(d_{\\text{int}} = 94 \\, \\text{mm}\\) i el diàmetre de la tija és \\(d_{\\text{tija}} = 60 \\, \\text{mm}\\). La massa de la cabina, la tija i la càrrega és \\(m = 980 \\, \\text{kg}\\). Si el cilindre hidràulic manté en repòs la cabina, determineu:
+               <br><strong>a)</strong> La pressió relativa, \\(p_{\\text{int}}\\), a l’interior del cilindre. [1 punt]
+               <br><strong>b)</strong> La tensió normal a compressió, \\(\\sigma_{\\text{tija}}\\), de la tija. [0,5 punts]
+               <br><br>
+               Si una bomba subministra un cabal d’oli \\(q = 2{,}3 \\, \\text{L/s}\\) al cilindre, a una pressió \\(p = 1{,}7 \\, \\text{MPa}\\), i l’ascensor puja a una velocitat constant \\(v = 0{,}33 \\, \\text{m/s}\\), determineu:
+               <br><strong>c)</strong> La potència, \\(P_h\\), proporcionada per la bomba. [0,5 punts]
+               <br><strong>d)</strong> El rendiment, \\(\\eta\\), del cilindre. [0,5 punts]`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Càlcul de la pressió relativa a l'interior del cilindre:</strong>
+            <br>
+            La força que ha de suportar el cilindre és el pes total (massa $\\times$ gravetat). Considerem \\(g = 9{,}81 \\, \\text{m/s}^2\\).
+            \\[
+            F = m \\cdot g = 980 \\, \\text{kg} \\cdot 9{,}81 \\, \\text{m/s}^2 = 9613{,}8 \\, \\text{N}
+            \\]
+            L'àrea efectiva del cilindre (pistó) es calcula amb el diàmetre interior \\(d_{\\text{int}} = 94 \\, \\text{mm} = 0{,}094 \\, \\text{m}\\):
+            \\[
+            S_{\\text{int}} = \\frac{\\pi \\cdot d_{\\text{int}}^2}{4} = \\frac{\\pi \\cdot (0{,}094)^2}{4} = 6{,}939 \\cdot 10^{-3} \\, \\text{m}^2
+            \\]
+            La pressió necessària per mantenir l'equilibri és:
+            \\[
+            p_{\\text{int}} = \\frac{F}{S_{\\text{int}}} = \\frac{9613{,}8}{6{,}939 \\cdot 10^{-3}} = 1.385.473 \\, \\text{Pa} \\approx 1{,}39 \\, \\text{MPa}
+            \\]
+            <br>
+            <strong>b) Tensió normal a compressió de la tija:</strong>
+            <br>
+            La tija suporta la mateixa força de compressió (el pes de la cabina). Calculem la seva secció amb \\(d_{\\text{tija}} = 60 \\, \\text{mm} = 0{,}06 \\, \\text{m}\\):
+            \\[
+            S_{\\text{tija}} = \\frac{\\pi \\cdot d_{\\text{tija}}^2}{4} = \\frac{\\pi \\cdot (0{,}06)^2}{4} = 2{,}827 \\cdot 10^{-3} \\, \\text{m}^2
+            \\]
+            La tensió (\\(\\sigma\\)) és força dividit per secció:
+            \\[
+            \\sigma_{\\text{tija}} = \\frac{F}{S_{\\text{tija}}} = \\frac{9613{,}8}{2{,}827 \\cdot 10^{-3}} = 3.400.707 \\, \\text{Pa} \\approx 3{,}40 \\, \\text{MPa}
+            \\]
+            <br>
+            <strong>c) Potència proporcionada per la bomba:</strong>
+            <br>
+            La potència hidràulica es calcula com el producte de la pressió pel cabal.
+            <br>Primer convertim les unitats al SI:
+            <br>- Pressió: \\(p = 1{,}7 \\, \\text{MPa} = 1{,}7 \\cdot 10^6 \\, \\text{Pa}\\)
+            <br>- Cabal: \\(q = 2{,}3 \\, \\text{L/s} = 2{,}3 \\cdot 10^{-3} \\, \\text{m}^3/\\text{s}\\)
+            \\[
+            P_h = p \\cdot q = 1{,}7 \\cdot 10^6 \\cdot 2{,}3 \\cdot 10^{-3} = 3910 \\, \\text{W} = 3{,}91 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>d) Rendiment del cilindre:</strong>
+            <br>
+            El rendiment (\\(\\eta\\)) és la relació entre la potència útil (mecànica) i la potència absorbida (hidràulica).
+            <br>La potència útil és la força per la velocitat d'ascens:
+            \\[
+            P_{\\text{útil}} = F \\cdot v = 9613{,}8 \\, \\text{N} \\cdot 0{,}33 \\, \\text{m/s} = 3172{,}55 \\, \\text{W}
+            \\]
+            Finalment, el rendiment:
+            \\[
+            \\eta = \\frac{P_{\\text{útil}}}{P_h} = \\frac{3172{,}55}{3910} = 0{,}811 \\quad (81{,}1 \\%)
+            \\]
+        `
+    }
 ];
