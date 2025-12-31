@@ -388,39 +388,38 @@ const questions = [
         category: "sistemes de control",
         text: `Exercici 2
                Una premsa hidràulica es controla amb dos polsadors i un pedal. El motor de la premsa es posa en marxa si s'acciona el pedal i es prem, com a mínim, un dels polsadors. Utilitzant les variables d'estat següents:
-               <br>polsadors: \\(p_1, p_2 = \\begin{cases} 1: \\text{premut} \\\\ 0: \\text{no premut} \\end{cases}\\) ; pedal: \\(p = \\begin{cases} 1: \\text{accionat} \\\\ 0: \\text{no accionat} \\end{cases}\\)
-               <br>motor: \\(m = \\begin{cases} 1: \\text{en marxa} \\\\ 0: \\text{aturat} \\end{cases}\\)
+               <br>polsadors: p1, p2 = { 1: premut; 0: no premut ; pedal: p = { 1: accionat; 0: no accionat
+               <br>motor: m = { 1: en marxa; 0: aturat
                <br>a) Escriviu la taula de veritat del sistema. [1 punt]
                <br>b) Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
                <br>c) Dibuixeu l'esquema de portes lògiques equivalent. [0,5 punts]`,
         correctAnswer: "",
         steps: `
             <strong>a) Taula de veritat:</strong><br>
-            La condició per activar el motor (m=1) és que el pedal estigui accionat (p=1) I que almenys un dels polsadors estigui premut (\\(p_1=1\\) o \\(p_2=1\\))[cite: 475, 476].
-            <br>
-            | p | p1 | p2 | m |
-            |---|----|----|---|
-            | 0 | 0  | 0  | 0 |
-            | 0 | 0  | 1  | 0 |
-            | 0 | 1  | 0  | 0 |
-            | 0 | 1  | 1  | 0 |
-            | 1 | 0  | 0  | 0 |
-            | 1 | 0  | 1  | 1 |
-            | 1 | 1  | 0  | 1 |
-            | 1 | 1  | 1  | 1 |
+            Entrades: p (pedal), p1 (polsador 1), p2 (polsador 2). Sortida: m (motor).
+            La condició és m=1 només si p=1 i almenys un dels polsadors (p1 o p2) és 1.
+            <br><br>
+            p | p1 | p2 | m<br>
+            --|----|----|---<br>
+            0 | 0  | 0  | 0<br>
+            0 | 0  | 1  | 0<br>
+            0 | 1  | 0  | 0<br>
+            0 | 1  | 1  | 0<br>
+            1 | 0  | 0  | 0<br>
+            1 | 0  | 1  | 1<br>
+            1 | 1  | 0  | 1<br>
+            1 | 1  | 1  | 1<br>
             <br>
             <strong>b) Funció lògica:</strong><br>
-            Traduïm la condició verbal a operadors lògics[cite: 489]:
-            - "Accionar el pedal" → \\(p\\)
-            - "Prem, com a mínim, un dels polsadors" → \\((p_1 + p_2)\\)
-            - Combinació (I):
-            \\[ m = p \\cdot (p_1 + p_2) \\]
-            Aquesta és la funció simplificada. Si s'extreu directament de la taula (suma de productes), s'arriba al mateix resultat després de simplificar: \\( m = p \\cdot p_1 \\cdot \\bar{p_2} + p \\cdot \\bar{p_1} \\cdot p_2 + p \\cdot p_1 \\cdot p_2 = p \\cdot (p_1 + p_2) \\).
+            La descripció indica que el motor s'activa amb el Pedal (p) I (Polsador 1 O Polsador 2).
+            La funció simplificada és:
+            \\[ m = p \cdot (p_1 + p_2) \\]
             <br>
             <strong>c) Esquema de portes lògiques:</strong><br>
-            L'esquema necessita[cite: 490]:
-            1. Una porta **OR** per sumar els polsadors \\(p_1\\) i \\(p_2\\).
-            2. Una porta **AND** per multiplicar el resultat de l'anterior pel pedal \\(p\\).
+            1. Una porta <strong>OR</strong> rep les entrades p1 i p2.
+            2. La sortida d'aquesta porta OR va a una porta <strong>AND</strong>.
+            3. L'altra entrada de la porta AND és el pedal p.
+            4. La sortida de la porta AND és el motor m.
         `
     }
 ];
