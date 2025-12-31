@@ -452,5 +452,66 @@ const questions = [
             \\Delta E_p = 1440 \\cdot 9{,}81 \\cdot 22 = 310.977{,}6 \\, \\text{J} \\approx 311 \\, \\text{kJ}
             \\]
         `
+    },
+    {
+        type: "exercicis",
+        category: "energia i balanços energetics",
+        text: `Un aerogenerador té un rotor de tres pales de diàmetre \\(d = 80 \\, \\text{m}\\). El coeficient de potència de l’aerogenerador és \\(c_p = 0{,}4\\). Quan el vent bufa a una velocitat \\(v = 11 \\, \\text{m/s}\\) i la densitat de l’aire és \\(\\rho = 1{,}2 \\, \\text{kg/m}^3\\), determineu:
+               <br><strong>a)</strong> La potència del vent, \\(P_{\\text{vent}}\\), que incideix sobre el rotor. [1 punt]
+               <br><strong>b)</strong> La potència elèctrica, \\(P_{\\text{elèctr}}\\), que proporciona l’aerogenerador, si el rendiment del multiplicador i de l’alternador és \\(\\eta = 0{,}9\\). [0,5 punts]
+               <br><br>
+               Si l’aerogenerador funciona en un lloc on el vent bufa de mitjana 2.200 hores/any a la velocitat de 11 m/s (i la resta del temps està aturat o bufa a velocitats inferiors), determineu:
+               <br><strong>c)</strong> L’energia elèctrica anual produïda, \\(E_{\\text{anual}}\\), expressada en \\(\\text{kW} \\cdot \\text{h}\\). [0,5 punts]
+               <br><strong>d)</strong> La massa de combustible equivalent, \\(m_{\\text{ce}}\\), que caldria per a produir aquesta mateixa energia elèctrica en una central tèrmica amb un rendiment del 35 %, si el poder calorífic del combustible és \\(p_c = 40 \\, \\text{MJ/kg}\\). [0,5 punts]`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Potència del vent (\\(P_{\\text{vent}}\\)):</strong>
+            <br>
+            La potència del vent depèn de la secció de l'aire (àrea del cercle que formen les pales), la densitat i el cub de la velocitat.
+            \\[
+            S = \\frac{\\pi \\cdot d^2}{4} = \\frac{\\pi \\cdot 80^2}{4} = 5026{,}5 \\, \\text{m}^2
+            \\]
+            \\[
+            P_{\\text{vent}} = \\frac{1}{2} \\cdot \\rho \\cdot S \\cdot v^3 = \\frac{1}{2} \\cdot 1{,}2 \\cdot 5026{,}5 \\cdot 11^3
+            \\]
+            \\[
+            P_{\\text{vent}} = 4.016.208 \\, \\text{W} \\approx 4{,}016 \\, \\text{MW}
+            \\]
+            <br>
+            <strong>b) Potència elèctrica proporcionada (\\(P_{\\text{elèctr}}\\)):</strong>
+            <br>
+            La potència aprofitada és la del vent multiplicada pel coeficient de potència (Llei de Betz) i el rendiment dels components mecànics/elèctrics.
+            \\[
+            P_{\\text{elèctr}} = P_{\\text{vent}} \\cdot c_p \\cdot \\eta = 4{,}016 \\cdot 10^6 \\cdot 0{,}4 \\cdot 0{,}9
+            \\]
+            \\[
+            P_{\\text{elèctr}} = 1.445.835 \\, \\text{W} \\approx 1{,}446 \\, \\text{MW}
+            \\]
+            <br>
+            <strong>c) Energia elèctrica anual produïda (\\(E_{\\text{anual}}\\)):</strong>
+            <br>
+            L'energia és potència per temps. Passem la potència a kW i usem les hores donades:
+            \\[
+            E_{\\text{anual}} = P_{\\text{elèctr, kW}} \\cdot t = 1445{,}8 \\, \\text{kW} \\cdot 2200 \\, \\text{h/any}
+            \\]
+            \\[
+            E_{\\text{anual}} = 3.180.760 \\, \\text{kWh/any}
+            \\]
+            <br>
+            <strong>d) Massa de combustible equivalent (\\(m_{\\text{ce}}\\)):</strong>
+            <br>
+            Primer, passem l'energia anual de kWh a Joules (1 kWh = 3,6 MJ):
+            \\[
+            E_{\\text{J}} = 3.180.760 \\cdot 3{,}6 \\cdot 10^6 = 1{,}145 \\cdot 10^{13} \\, \\text{J}
+            \\]
+            L'energia que ha d'aportar el combustible (\\(E_{\\text{comb}}\\)) tenint en compte el rendiment de la central (35%):
+            \\[
+            E_{\\text{comb}} = \\frac{E_{\\text{J}}}{\\eta_{\\text{central}}} = \\frac{1{,}145 \\cdot 10^{13}}{0{,}35} = 3{,}271 \\cdot 10^{13} \\, \\text{J}
+            \\]
+            Finalment, usem el poder calorífic (\\(p_c = 40 \\cdot 10^6 \\, \\text{J/kg}\\)):
+            \\[
+            m_{\\text{ce}} = \\frac{E_{\\text{comb}}}{p_c} = \\frac{3{,}271 \\cdot 10^{13}}{40 \\cdot 10^6} = 817.750 \\, \\text{kg} \\approx 817{,}75 \\, \\text{t}
+            \\]
+        `
     }
 ];
