@@ -421,7 +421,7 @@ const questions = [
             2. Una porta <strong>AND</strong> on connectem l'entrada p i la sortida de la porta OR anterior.<br>
             3. La sortida d'aquesta porta AND és el senyal que activa el motor m.
         `
-    }
+    },
 
     {
         type: "exercicis",
