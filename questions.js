@@ -204,62 +204,61 @@ const questions = [
         `
     },
     
-    {
+   {
         type: "exercicis",
-        category: "mecanismes i transmissio de moviments",
-        text: `El sistema de transmissió d'una màquina és format per un motor que gira a \\(n_m = 1450 \\, \\text{min}^{-1}\\) i que acciona una politja de diàmetre \\(d_1 = 60 \\, \\text{mm}\\). Aquesta politja transmet el moviment mitjançant una corretja a una segona politja de diàmetre \\(d_2 = 150 \\, \\text{mm}\\). Solidari a la segona politja, hi ha un engranatge de \\(z_3 = 18\\) dents que engrana amb una roda de \\(z_4 = 42\\) dents, que és l'eix de sortida de la màquina. Determineu:
-               <br>a) La relació de transmissió total \\(i_{tot}\\) del sistema. [1 punt]
-               <br>b) La velocitat de rotació \\(n_{sortida}\\) de l'eix de sortida. [0,5 punts]
-               <br>c) El parell \\(\\Gamma_{sortida}\\) a l'eix de sortida si el motor té una potència \\(P_m = 2,2 \\, \\text{kW}\\) i el rendiment de la transmissió és \\(\\eta = 0,85\\). [1 punt]`,
+        category: "maquines i sistemes energetics",
+        text: `Un aerogenerador consta, bàsicament, d'un rotor amb pales, d'un multiplicador de la velocitat de gir i d'un generador. Considerem que el rendiment del multiplicador, \\(\\eta_{mult}\\), i el del generador, \\(\\eta_{gen}\\), són constants. L'aerogenerador de la figura té una relació de transmissió \\(\\tau = \\omega_2 / \\omega_1 = 73\\) i un sistema de control que permet que la potència elèctrica generada es mantingui constant en \\(P_{electr} = 750 \\, \\text{kW}\\) per a una velocitat de gir del rotor \\(15 \\, \\text{min}^{-1} \\le n \\le 35 \\, \\text{min}^{-1}\\). Determineu:
+               <br>a) La potència subministrada, \\(P_1\\), pel rotor al multiplicador. [0,5 punts]
+               <br>b) El parell màxim a l'eix d'entrada, \\(\\Gamma_1\\), i a l'eix de sortida, \\(\\Gamma_2\\), del multiplicador. [1 punt]
+               <br>c) La potència dissipada en el multiplicador, \\(P_{mult}\\), i en el generador, \\(P_{gen}\\). [1 punt]`,
         correctAnswer: "",
         steps: `
-            <strong>a) Relació de transmissió total (\\(i_{tot}\\)):</strong>
+            <strong>a) Potència subministrada pel rotor (\\(P_1\\)):</strong><br>
+            La potència elèctrica és el resultat de la potència d'entrada multiplicada pels rendiments de la cadena:
+            \\[ P_{electr} = P_1 \\cdot \\eta_{mult} \\cdot \\eta_{gen} \\]
+            [cite_start]Segons la figura[cite: 116]: \\(\\eta_{mult} = 0,68\\) i \\(\\eta_{gen} = 0,87\\).
+            \\[ P_1 = \\frac{P_{electr}}{\\eta_{mult} \\cdot \\eta_{gen}} = \\frac{750}{0,68 \\cdot 0,87} = 1267,75 \\, \\text{kW} \\]
             <br>
-            La relació total és el producte de les relacions de cada etapa:
-            \\[ i_1 = \\frac{d_1}{d_2} = \\frac{60}{150} = 0,4 \\]
-            \\[ i_2 = \\frac{z_3}{z_4} = \\frac{18}{42} = 0,4286 \\]
-            \\[ i_{tot} = i_1 \\cdot i_2 = 0,4 \\cdot 0,4286 = 0,1714 \\]
+            <strong>b) Parell màxim (\\(\\Gamma_1\\) i \\(\\Gamma_2\\)):</strong><br>
+            [cite_start]El parell és màxim quan la velocitat de gir és mínima (\\(n_{min} = 15 \\, \\text{min}^{-1}\\))[cite: 119]:
+            \\[ \\omega_1 = 15 \\cdot \\frac{2\\pi}{60} = 1,5708 \\, \\text{rad/s} \\]
+            \\[ \\Gamma_1 = \\frac{P_1}{\\omega_1} = \\frac{1267,75 \\cdot 10^3}{1,5708} = 807.073 \\, \\text{Nm} \\]
+            Per a l'eix de sortida (eix 2):
+            \\[ P_2 = P_1 \\cdot \\eta_{mult} = 1267,75 \\cdot 0,68 = 862,07 \\, \\text{kW} \\]
+            \\[ \\omega_2 = \\omega_1 \\cdot \\tau = 1,5708 \\cdot 73 = 114,67 \\, \\text{rad/s} \\]
+            \\[ \\Gamma_2 = \\frac{P_2}{\\omega_2} = \\frac{862,07 \\cdot 10^3}{114,67} = 7517,8 \\, \\text{Nm} \\]
             <br>
-            <strong>b) Velocitat de rotació de l'eix de sortida (\\(n_{sortida}\\)):</strong>
-            \\[ n_{sortida} = n_m \\cdot i_{tot} = 1450 \\cdot 0,1714 = 248,57 \\, \\text{min}^{-1} \\]
-            <br>
-            <strong>c) Parell a l'eix de sortida (\\(\\Gamma_{sortida}\\)):</strong>
-            <br>
-            Primer, calculem la potència de sortida real:
-            \\[ P_{sortida} = P_m \\cdot \\eta = 2200 \\cdot 0,85 = 1870 \\, \\text{W} \\]
-            Convertim la velocitat de sortida a rad/s:
-            \\[ \\omega_{sortida} = n_{sortida} \\cdot \\frac{2\\pi}{60} = 248,57 \\cdot \\frac{2\\pi}{60} = 26,03 \\, \\text{rad/s} \\]
-            \\[ \\Gamma_{sortida} = \\frac{P_{sortida}}{\\omega_{sortida}} = \\frac{1870}{26,03} = 71,84 \\, \\text{Nm} \\]
+            <strong>c) Potència dissipada:</strong><br>
+            \\[ P_{mult} = P_1 - P_2 = 1267,75 - 862,07 = 405,68 \\, \\text{kW} \\]
+            \\[ P_{gen} = P_2 - P_{electr} = 862,07 - 750 = 112,07 \\, \\text{kW} \\]
         `
     },
     
     {
         type: "exercicis",
-        category: "maquines i sistemes electrics i electrotecnics",
-        text: `Una cafetera elèctrica té tres resistències. La resistència \\(R_3\\) s'utilitza per a mantenir el cafè calent; les altres dues resistències tenen valors \\(R_1 = 145 \\, \\Omega\\) i \\(R_2 = 100 \\, \\Omega\\) i el circuit s'alimenta a una tensió \\(U = 230 \\, \\text{V}\\). Determineu:
-               <br>a) La resistència inicial del circuit, \\(R_{in}\\) quan es connecta la cafetera. [0,5 punts]
-               <br>b) El corrent, \\(I\\), consumit quan es connecta la cafetera. [0,5 punts]
-               <br>c) El valor de les dues potències, \\(P_1\\) i \\(P_2\\), que consumeix la cafetera quan els interruptors 1 i 2 estan tancats i quan només ho està l'interruptor 2. [1 punt]
-               <br>d) El valor que ha de tenir la resistència \\(R_3\\) perquè la potència consumida quan es manté el cafè calent sigui \\(P_3 = 300 \\, \\text{W}\\). [0,5 punts]`,
+        category: "termodinamica",
+        text: `Una cafetera elèctrica escalfa l'aigua en dues fases. En la primera fase, escalfa l'aigua fins a \\(T_1 = 105 \\, ^\\circ\\text{C}\\) mitjançant dues resistències que proporcionen una potència \\(P_1 = 850 \\, \\text{W}\\). En la segona fase, es desconnecta una de les resistències per a obtenir una potència \\(P_2 = 500 \\, \\text{W}\\) i escalfa l'aigua fins a \\(T_2 = 125 \\, ^\\circ\\text{C}\\). Un cop el cafè ja està fet, una tercera resistència proporciona una potència mitjana \\(P_3 = 250 \\, \\text{W}\\) per a mantenir-lo calent. La cafetera escalfa mig litre d'aigua, que inicialment està a temperatura \\(T_0 = 25 \\, ^\\circ\\text{C}\\). Tenint en compte que la calor específica de l'aigua és \\(c_e = 4,18 \\, \\text{kJ/(kg} \\cdot ^\\circ\\text{C)}\\) i el cost de l'energia elèctrica és \\(c_{electr} = 0,125 \\, \\text{€/(kWh)}\\), determineu:
+               <br>a) Les energies, \\(E_1\\) i \\(E_2\\), necessàries per a escalfar l'aigua en les dues fases. [1 punt]
+               <br>b) Els temps de durada, \\(t_1\\) i \\(t_2\\), de cadascuna de les dues fases. [0,5 punts]
+               <br>c) L'energia elèctrica consumida, \\(E_{electr}\\), en kWh, i el cost econòmic, \\(c_{econ}\\), de tot el procés si, un cop fet, el cafè es manté calent durant \\(t_3 = 4 \\, \\text{h}\\). [1 punt]`,
         correctAnswer: "",
         steps: `
-            <strong>a) Resistència inicial (\\(R_{in}\\)):</strong>
+            <strong>a) Energies (\\(E_1\\) i \\(E_2\\)):</strong><br>
+            [cite_start]Massa d'aigua (\\(m\\)) = 0,5 kg (mig litre)[cite: 129].
+            \\[ E_1 = m \\cdot c_e \\cdot (T_1 - T_0) = 0,5 \\cdot 4,18 \\cdot (105 - 25) = 167,2 \\, \\text{kJ} \\]
+            \\[ E_2 = m \\cdot c_e \\cdot (T_2 - T_1) = 0,5 \\cdot 4,18 \\cdot (125 - 105) = 41,8 \\, \\text{kJ} \\]
             <br>
-            Segons l'esquema (amb Int 1 i Int 2 tancats), \\(R_1\\) i \\(R_2\\) estan en paral·lel:
-            \\[ R_{in} = \\frac{R_1 \\cdot R_2}{R_1 + R_2} = \\frac{145 \\cdot 100}{145 + 100} = 59,18 \\, \\Omega \\]
+            <strong>b) Temps de durada (\\(t_1\\) i \\(t_2\\)):</strong><br>
+            \\[ t_1 = \\frac{E_1}{P_1} = \\frac{167,2 \\cdot 10^3}{850} = 196,71 \\, \\text{s} \\]
+            \\[ t_2 = \\frac{E_2}{P_2} = \\frac{41,8 \\cdot 10^3}{500} = 83,6 \\, \\text{s} \\]
             <br>
-            <strong>b) Corrent consumit (\\(I\\)):</strong>
-            \\[ I = \\frac{U}{R_{in}} = \\frac{230}{59,18} = 3,886 \\, \\text{A} \\]
-            <br>
-            <strong>c) Potències consumides:</strong>
-            <br>
-            - Amb Int 1 i 2 tancats:
-            \\[ P_{total} = \\frac{U^2}{R_{in}} = \\frac{230^2}{59,18} = 893,88 \\, \\text{W} \\]
-            - Amb només Int 2 tancat:
-            \\[ P_{2} = \\frac{U^2}{R_2} = \\frac{230^2}{100} = 529 \\, \\text{W} \\]
-            <br>
-            <strong>d) Valor de \\(R_3\\):</strong>
-            \\[ R_3 = \\frac{U^2}{P_3} = \\frac{230^2}{300} = 176,33 \\, \\Omega \\]
+            <strong>c) Energia total i cost:</strong><br>
+            Energia de manteniment (\\(E_3\\)):
+            \\[ E_3 = P_3 \\cdot t_3 = 250 \\, \\text{W} \\cdot 4 \\, \\text{h} = 1000 \\, \\text{Wh} = 1 \\, \\text{kWh} \\]
+            Energia de les fases 1 i 2 en kWh:
+            \\[ E_{1+2} = \\frac{167,2 + 41,8}{3600} = 0,05806 \\, \\text{kWh} \\]
+            \\[ E_{total} = 1 + 0,05806 = 1,0581 \\, \\text{kWh} \\]
+            \\[ c_{econ} = E_{total} \\cdot c_{electr} = 1,0581 \\cdot 0,125 = 0,1323 \\, \\text{€} \\]
         `
     }
 ];
