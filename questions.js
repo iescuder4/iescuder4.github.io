@@ -262,35 +262,10 @@ const questions = [
         `
     },
 
-    {
-        type: "questions",
-        category: "maquines i sistemes electrics i electrotecnics",
-        text: `Un fil de coure de 5 mm² de secció té una resistència de 0,05 Ω. La resistivitat del coure és ρ = 0,0171 μΩ·m. Quina és la longitud del fil?`,
-        options: [
-            { text: "0,324 m", value: "a" },
-            { text: "14,62 m", value: "b" },
-            { text: "45,93 m", value: "c" },
-            { text: "2,92 m", value: "d" }
-        ],
-        correctAnswer: "b",
-        steps: `
-            <strong>1. Identificar la fórmula (Llei de Pouillet):</strong><br>
-            La resistència d'un conductor es calcula com: \\( R = \\rho \\cdot \\frac{L}{S} \\).<br>
-            Per tant, la longitud és: \\( L = \\frac{R \\cdot S}{\\rho} \\).
-
-            <strong>2. Conversió d'unitats al SI:</strong><br>
-            - Secció (\\(S\\)): \\( 5 \\, \\text{mm}^2 = 5 \\times 10^{-6} \\, \\text{m}^2 \\).<br>
-            - Resistivitat (\\(\\rho\\)): \\( 0,0171 \\, \\mu\\Omega\\cdot m = 0,0171 \\times 10^{-6} \\, \\Omega\\cdot m \\).
-
-            <strong>3. Càlcul:</strong><br>
-            \\[ L = \\frac{0,05 \\cdot 5 \\times 10^{-6}}{0,0171 \\times 10^{-6}} = \\frac{0,25}{0,0171} = 14,62 \\, \\text{m} \\]
-        `
-    },
  {
         type: "questions",
         category: "metrologia i normalitzacio",
-        text: `Qüestió 1
-               En un plànol s'especifica que la longitud d'una peça ha de ser (146 ± 0,8) mm. S'acceptaran totes les peces de longitud`,
+        text: `En un plànol s'especifica que la longitud d'una peça ha de ser (146 ± 0,8) mm. S'acceptaran totes les peces de longitud`,
         options: [
             { text: "a) superior a 146,8 mm.", value: "a" },
             { text: "b) compresa entre 146 mm i 146,8 mm.", value: "b" },
@@ -313,8 +288,7 @@ const questions = [
     {
         type: "questions",
         category: "maquines i sistemes electrics i electrotecnics",
-        text: `Qüestió 2
-               Un fil de coure de 5 mm² de secció té una resistència de 0,05 Ω. La resistivitat del coure és ρ = 0,0171 μΩ·m. Quina és la longitud del fil?`,
+        text: `Un fil de coure de 5 mm² de secció té una resistència de 0,05 Ω. La resistivitat del coure és ρ = 0,0171 μΩ·m. Quina és la longitud del fil?`,
         options: [
             { text: "a) 0,324 m", value: "a" },
             { text: "b) 14,62 m", value: "b" },
@@ -338,8 +312,7 @@ const questions = [
     {
         type: "questions",
         category: "material i assaig",
-        text: `Qüestió 3
-               L'acer inoxidable AISI 316 que s'utilitza en pròtesis mèdiques té una tensió de ruptura σr = 620 MPa. Quina és la força axial màxima que es pot aplicar a una barra massissa de 12 mm de diàmetre sense que es trenqui?`,
+        text: `L'acer inoxidable AISI 316 que s'utilitza en pròtesis mèdiques té una tensió de ruptura σr = 620 MPa. Quina és la força axial màxima que es pot aplicar a una barra massissa de 12 mm de diàmetre sense que es trenqui?`,
         options: [
             { text: "a) 70,12 kN", value: "a" },
             { text: "b) 140,8 kN", value: "b" },
@@ -363,8 +336,7 @@ const questions = [
     {
         type: "questions",
         category: "sistemes pneumatics i oleohidraulics",
-        text: `Qüestió 4
-               Un cilindre hidràulic, d'una sola tija, ha d'exercir una força de 20 kN en la cursa d'avanç. Si el diàmetre del cilindre és 50 mm i el de la tija, 32 mm, quina pressió ha de proporcionar el grup hidràulic?`,
+        text: `Un cilindre hidràulic, d'una sola tija, ha d'exercir una força de 20 kN en la cursa d'avanç. Si el diàmetre del cilindre és 50 mm i el de la tija, 32 mm, quina pressió ha de proporcionar el grup hidràulic?`,
         options: [
             { text: "a) 3,79 MPa", value: "a" },
             { text: "b) 10,19 MPa", value: "b" },
@@ -388,8 +360,7 @@ const questions = [
     {
         type: "questions",
         category: "organitzacio industrial",
-        text: `Qüestió 5
-               Un sistema de pintatge automatitzat permet obtenir un màxim de 130 unitats per hora. Sobre cada unitat es realitzen dues operacions simultànies de t1 = 23 i t2 = 15 s de durada. Quin és el temps mitjà que transcorre entre que s'acaba una unitat i que la unitat següent està preparada per a ser pintada?`,
+        text: `Un sistema de pintatge automatitzat permet obtenir un màxim de 130 unitats per hora. Sobre cada unitat es realitzen dues operacions simultànies de t1 = 23 i t2 = 15 s de durada. Quin és el temps mitjà que transcorre entre que s'acaba una unitat i que la unitat següent està preparada per a ser pintada?`,
         options: [
             { text: "a) 4,69 s", value: "a" },
             { text: "b) 12,70 s", value: "b" },
