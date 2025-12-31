@@ -268,5 +268,65 @@ const questions = [
             \\eta = \\frac{P_{\\text{útil}}}{P_h} = \\frac{3172{,}55}{3910} = 0{,}811 \\quad (81{,}1 \\%)
             \\]
         `
+    },
+    {
+        type: "exercicis",
+        category: "motors reductors",
+        text: `Una persiana d’amplària \\(a = 3{,}2 \\, \\text{m}\\) i alçària \\(h = 2{,}2 \\, \\text{m}\\) és feta d’un material de densitat superficial \\(\\sigma = 12 \\, \\text{kg/m}^2\\). La persiana s’acciona mitjançant un motor reductor elèctric que s’alimenta a \\(U = 230 \\, \\text{V}\\) i pel qual circula un corrent \\(I = 1{,}7 \\, \\text{A}\\). En règim de funcionament nominal, el motor reductor proporciona una potència \\(P_s = 100 \\, \\text{W}\\) a l’eix de sortida, que gira a \\(n = 12 \\, \\text{min}^{-1}\\).
+               <br><br>
+               Determineu:
+               <br><strong>a)</strong> La massa, \\(m\\), de la persiana. [0,5 punts]
+               <br><strong>b)</strong> El parell, \\(\\Gamma_s\\), a l’eix de sortida. [0,5 punts]
+               <br><strong>c)</strong> El rendiment electromecànic, \\(\\eta\\), del motor reductor. [0,5 punts]
+               <br><strong>d)</strong> L’energia elèctrica consumida, \\(E_{\\text{elèctr}}\\), i l’energia dissipada en el motor, \\(E_{\\text{diss}}\\), si funciona durant un temps \\(t = 20 \\, \\text{s}\\) en règim nominal. [1 punt]
+               <br><br>
+               <img src="img/esquema_persiana.png" alt="Esquema de la persiana i dades del motor">`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Càlcul de la massa de la persiana:</strong>
+            <br>
+            La massa total s'obté multiplicant la superfície de la persiana per la seva densitat superficial (\\(\\sigma\\)):
+            \\[
+            m = a \\cdot h \\cdot \\sigma = 3{,}2 \\, \\text{m} \\cdot 2{,}2 \\, \\text{m} \\cdot 12 \\, \\text{kg/m}^2 = 84{,}48 \\, \\text{kg}
+            \\]
+            <br>
+            <strong>b) Càlcul del parell a l'eix de sortida (\\(\\Gamma_s\\)):</strong>
+            <br>
+            La potència mecànica de rotació es defineix com \\(P = \\Gamma \\cdot \\omega\\). Primer, hem de convertir la velocitat de rotació \\(n\\) de minuts a radians per segon:
+            \\[
+            \\omega = n \\cdot \\frac{2\\pi}{60} = 12 \\cdot \\frac{2\\pi}{60} = 0{,}4\\pi \\approx 1{,}257 \\, \\text{rad/s}
+            \\]
+            Ara aïllem el parell de la fórmula de la potència:
+            \\[
+            \\Gamma_s = \\frac{P_s}{\\omega} = \\frac{100 \\, \\text{W}}{1{,}257 \\, \\text{rad/s}} = 79{,}58 \\, \\text{N}\\cdot\\text{m}
+            \\]
+            <br>
+            <strong>c) Càlcul del rendiment electromecànic (\\(\\eta\\)):</strong>
+            <br>
+            El rendiment compara la potència útil que treu el motor (mecànica) amb la que consumeix de la xarxa (elèctrica).
+            <br>Primer calculem la potència elèctrica absorbida:
+            \\[
+            P_{\\text{elèc}} = U \\cdot I = 230 \\, \\text{V} \\cdot 1{,}7 \\, \\text{A} = 391 \\, \\text{W}
+            \\]
+            Finalment, el rendiment:
+            \\[
+            \\eta = \\frac{P_{\\text{útil}}}{P_{\\text{absorbida}}} = \\frac{P_s}{P_{\\text{elèc}}} = \\frac{100}{391} \\approx 0{,}2558 \\quad (25{,}58 \\%)
+            \\]
+            <br>
+            <strong>d) Balanç d'energies (consumida i dissipada):</strong>
+            <br>
+            - <strong>Energia elèctrica consumida</strong> en 20 segons:
+            \\[
+            E_{\\text{elèctr}} = P_{\\text{elèc}} \\cdot t = 391 \\, \\text{W} \\cdot 20 \\, \\text{s} = 7820 \\, \\text{J} = 7{,}82 \\, \\text{kJ}
+            \\]
+            - <strong>Energia dissipada</strong> (calor/pèrdues):
+            És la diferència entre l'energia que entra i l'energia útil que s'aprofita per moure la persiana.
+            \\[
+            E_{\\text{útil}} = P_s \\cdot t = 100 \\, \\text{W} \\cdot 20 \\, \\text{s} = 2000 \\, \\text{J}
+            \\]
+            \\[
+            E_{\\text{diss}} = E_{\\text{elèctr}} - E_{\\text{útil}} = 7820 - 2000 = 5820 \\, \\text{J} = 5{,}82 \\, \\text{kJ}
+            \\]
+        `
     }
 ];
