@@ -403,5 +403,54 @@ const questions = [
             R_3 = \\frac{230^2}{300} = \\frac{52900}{300} \\approx 176{,}33 \\, \\Omega
             \\]
         `
+    },
+    {
+        type: "exercicis",
+        category: "sistemes pneumatics i oleohidraulics",
+        text: `Un ariet hidràulic és una bomba d’aigua que aprofita l’energia que proporciona un dipòsit subministrador, situat a una altura \\(h_1 = 3 \\, \\text{m}\\), per a elevar una part de l’aigua a un dipòsit receptor, situat a una altura \\(h_2 = 25 \\, \\text{m}\\). La bomba funciona per mitjà del tancament sobtat i periòdic d’una vàlvula de descàrrega. El dipòsit subministrador proporciona un cabal \\(q_1 = 5 \\, \\text{L/s}\\) i el dipòsit receptor rep un cabal \\(q_2 = 0{,}4 \\, \\text{L/s}\\).
+               <br><br>
+               Determineu:
+               <br><strong>a)</strong> El rendiment, \\(\\eta\\), de l’ariet. [1 punt]
+               <br><strong>b)</strong> El volum d’aigua que es perd per la vàlvula de descàrrega en una hora, \\(V_{\\text{cua}}\\). [1 punt]
+               <br><strong>c)</strong> L’energia potencial, \\(\\Delta E_p\\), que guanya l’aigua elevada al dipòsit receptor en una hora. [0,5 punts]`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Rendiment de l'ariet (\\(\\eta\\)):</strong>
+            <br>
+            El rendiment es calcula comparant l'energia útil (la que s'usa per pujar l'aigua a l'alçada \\(h_2\\)) amb l'energia total disponible (la que proporciona el cabal total des de l'alçada \\(h_1\\)).
+            <br>La fórmula del rendiment per a un ariet hidràulic és:
+            \\[
+            \\eta = \\frac{q_2 \\cdot h_2}{q_1 \\cdot h_1}
+            \\]
+            Substituint els valors:
+            \\[
+            \\eta = \\frac{0{,}4 \\cdot 25}{5 \\cdot 3} = \\frac{10}{15} = 0{,}6667 \\quad (66{,}67 \\%)
+            \\]
+            <br>
+            <strong>b) Volum d'aigua perdut per la vàlvula (\\(V_{\\text{cua}}\\)):</strong>
+            <br>
+            El cabal que es perd (\\(q_{\\text{cua}}\\)) és la diferencia entre el cabal que entra i el que realment s'eleva:
+            \\[
+            q_{\\text{cua}} = q_1 - q_2 = 5 \\, \\text{L/s} - 0{,}4 \\, \\text{L/s} = 4{,}6 \\, \\text{L/s}
+            \\]
+            Per trobar el volum total en una hora (\\(t = 3600 \\, \\text{s}\\)):
+            \\[
+            V_{\\text{cua}} = q_{\\text{cua}} \\cdot t = 4{,}6 \\, \\text{L/s} \\cdot 3600 \\, \\text{s} = 16.560 \\, \\text{L} = 16{,}56 \\, \\text{m}^3
+            \\]
+            <br>
+            <strong>c) Energia potencial guanyada (\\(\\Delta E_p\\)):</strong>
+            <br>
+            L'energia potencial és \\(m \\cdot g \\cdot h\\). Primer calculem la massa d'aigua elevada en una hora:
+            \\[
+            V_2 = q_2 \\cdot t = 0{,}4 \\, \\text{L/s} \\cdot 3600 \\, \\text{s} = 1440 \\, \\text{L} \\implies m_2 = 1440 \\, \\text{kg}
+            \\]
+            Ara calculem el guany d'energia potencial respecte al nivell d'entrada (\\(h_2 - h_1\\)) o el treball d'elevació total des de la bomba:
+            \\[
+            \\Delta E_p = m_2 \\cdot g \\cdot (h_2 - h_1) = 1440 \\, \\text{kg} \\cdot 9{,}81 \\, \\text{m/s}^2 \\cdot (25 - 3) \\, \\text{m}
+            \\]
+            \\[
+            \\Delta E_p = 1440 \\cdot 9{,}81 \\cdot 22 = 310.977{,}6 \\, \\text{J} \\approx 311 \\, \\text{kJ}
+            \\]
+        `
     }
 ];
