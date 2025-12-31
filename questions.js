@@ -286,95 +286,129 @@ const questions = [
             \\[ L = \\frac{0,05 \\cdot 5 \\times 10^{-6}}{0,0171 \\times 10^{-6}} = \\frac{0,25}{0,0171} = 14,62 \\, \\text{m} \\]
         `
     },
+ {
+        type: "questions",
+        category: "metrologia i normalitzacio",
+        text: `Qüestió 1
+               En un plànol s'especifica que la longitud d'una peça ha de ser (146 ± 0,8) mm. S'acceptaran totes les peces de longitud`,
+        options: [
+            { text: "a) superior a 146,8 mm.", value: "a" },
+            { text: "b) compresa entre 146 mm i 146,8 mm.", value: "b" },
+            { text: "c) compresa entre 145,6 mm i 146,4 mm.", value: "c" },
+            { text: "d) compresa entre 145,2 mm i 146,8 mm.", value: "d" }
+        ],
+        correctAnswer: "d",
+        steps: `
+            <strong>1. Anàlisi de la tolerància:</strong><br>
+            La cota nominal és 146 mm i el marge d'error permès (tolerància) és de ± 0,8 mm.
+            
+            <strong>2. Càlcul dels límits d'acceptació:</strong><br>
+            - Límit superior: 146 + 0,8 = 146,8 mm.<br>
+            - Límit inferior: 146 - 0,8 = 145,2 mm.
+            
+            <strong>3. Conclusió:</strong><br>
+            Qualsevol peça que mesuri entre 145,2 mm i 146,8 mm compleix l'especificació del plànol.
+        `
+    },
+    {
+        type: "questions",
+        category: "maquines i sistemes electrics i electrotecnics",
+        text: `Qüestió 2
+               Un fil de coure de 5 mm² de secció té una resistència de 0,05 Ω. La resistivitat del coure és ρ = 0,0171 μΩ·m. Quina és la longitud del fil?`,
+        options: [
+            { text: "a) 0,324 m", value: "a" },
+            { text: "b) 14,62 m", value: "b" },
+            { text: "c) 45,93 m", value: "c" },
+            { text: "d) 2,92 m", value: "d" }
+        ],
+        correctAnswer: "b",
+        steps: `
+            <strong>1. Fórmula base (Llei de Pouillet):</strong><br>
+            La resistència es calcula com \\( R = \\rho \\cdot \\frac{L}{S} \\). Per trobar la longitud, aïllem: \\( L = \\frac{R \\cdot S}{\\rho} \\).
+            
+            <strong>2. Unificació d'unitats al Sistema Internacional:</strong><br>
+            - Secció (S): 5 mm² = \\( 5 \\cdot 10^{-6} \\, m^2 \\).<br>
+            - Resistivitat (\\(\\rho\\)): 0,0171 μΩ·m = \\( 0,0171 \\cdot 10^{-6} \\, \\Omega \\cdot m \\).
+            
+            <strong>3. Resolució:</strong><br>
+            \\[ L = \\frac{0,05 \\cdot 5 \\cdot 10^{-6}}{0,0171 \\cdot 10^{-6}} = \\frac{0,25}{0,0171} = 14,6198... \\, m \\]
+            Arrodonint obtenim 14,62 m.
+        `
+    },
     {
         type: "questions",
         category: "material i assaig",
-        text: `L'acer inoxidable AISI 316 té una tensió de ruptura σr = 620 MPa. Quina és la força axial màxima que pot suportar una barra d'aquest material de 12 mm de diàmetre sense trencar-se?`,
+        text: `Qüestió 3
+               L'acer inoxidable AISI 316 que s'utilitza en pròtesis mèdiques té una tensió de ruptura σr = 620 MPa. Quina és la força axial màxima que es pot aplicar a una barra massissa de 12 mm de diàmetre sense que es trenqui?`,
         options: [
-            { text: "70,12 kN", value: "a" },
-            { text: "140,8 kN", value: "b" },
-            { text: "80,5 kN", value: "c" },
-            { text: "56,10 kN", value: "d" }
+            { text: "a) 70,12 kN", value: "a" },
+            { text: "b) 140,8 kN", value: "b" },
+            { text: "c) 80,5 kN", value: "c" },
+            { text: "d) 56,10 kN", value: "d" }
         ],
         correctAnswer: "a",
         steps: `
-            <strong>1. Càlcul de la secció circular (\\(S\\)):</strong><br>
-            \\[ S = \\frac{\\pi \\cdot d^2}{4} = \\frac{\\pi \\cdot 12^2}{4} = 113,1 \\, \\text{mm}^2 \\]
-
-            <strong>2. Relació entre tensió i força:</strong><br>
-            Sabem que \\( \\sigma = \\frac{F}{S} \\), per tant: \\( F = \\sigma \\cdot S \\).
-
-            <strong>3. Càlcul de la força:</strong><br>
-            \\[ F = 620 \\, \\text{N/mm}^2 \\cdot 113,1 \\, \\text{mm}^2 = 70.122 \\, \\text{N} \\]
-            Convertint a kilonewtons: \\( F = 70,12 \\, \\text{kN} \\).
+            <strong>1. Càlcul de la secció (S):</strong><br>
+            La barra és cilíndrica amb diàmetre d = 12 mm.
+            \\[ S = \\frac{\\pi \\cdot d^2}{4} = \\frac{\\pi \\cdot 12^2}{4} = 113,097 \\, mm^2 \\]
+            
+            <strong>2. Càlcul de la força (F):</strong><br>
+            Utilitzem la relació \\( \\sigma = \\frac{F}{S} \\), on \\( F = \\sigma_r \\cdot S \\).
+            \\[ F = 620 \\, \\frac{N}{mm^2} \\cdot 113,097 \\, mm^2 = 70.120,35 \\, N \\]
+            
+            <strong>3. Conversió a kN:</strong><br>
+            Dividim per 1000: \\( 70,12035 \\, kN \\), que arrodonit és 70,12 kN.
         `
     },
     {
         type: "questions",
         category: "sistemes pneumatics i oleohidraulics",
-        text: `Es vol que un cilindre hidràulic de 50 mm de diàmetre interior pugui exercir una força de 20 kN. Quina pressió ha de tenir l'oli en el cilindre?`,
+        text: `Qüestió 4
+               Un cilindre hidràulic, d'una sola tija, ha d'exercir una força de 20 kN en la cursa d'avanç. Si el diàmetre del cilindre és 50 mm i el de la tija, 32 mm, quina pressió ha de proporcionar el grup hidràulic?`,
         options: [
-            { text: "3,79 MPa", value: "a" },
-            { text: "10,19 MPa", value: "b" },
-            { text: "17,25 MPa", value: "c" },
-            { text: "24,87 MPa", value: "d" }
+            { text: "a) 3,79 MPa", value: "a" },
+            { text: "b) 10,19 MPa", value: "b" },
+            { text: "c) 17,25 MPa", value: "c" },
+            { text: "d) 24,87 MPa", value: "d" }
         ],
         correctAnswer: "b",
         steps: `
-            <strong>1. Càlcul de l'àrea del pistó:</strong><br>
-            El diàmetre és \\( 50 \\, \\text{mm} = 0,05 \\, \\text{m} \\).<br>
-            \\[ S = \\frac{\\pi \\cdot 0,05^2}{4} = 1,9635 \\times 10^{-3} \\, \\text{m}^2 \\]
-
-            <strong>2. Càlcul de la pressió (\\(p = F/S\\)):</strong><br>
-            \\[ p = \\frac{20.000 \\, \\text{N}}{1,9635 \\times 10^{-3} \\, \\text{m}^2} = 10.185.892 \\, \\text{Pa} \\]
-            Convertint a megapascals: \\( p \\approx 10,19 \\, \\text{MPa} \\).
+            <strong>1. Secció de treball:</strong><br>
+            En la cursa d'avanç, l'oli empeny tota la cara del pistó. El diàmetre útil és el del cilindre (50 mm).
+            \\[ S = \\frac{\\pi \\cdot 0,05^2}{4} = 0,0019635 \\, m^2 \\]
+            
+            <strong>2. Càlcul de la pressió:</strong><br>
+            Força (F) = 20.000 N.
+            \\[ p = \\frac{F}{S} = \\frac{20000}{0,0019635} = 10.185.919,2 \\, Pa \\]
+            
+            <strong>3. Resultat en MPa:</strong><br>
+            10,185... MPa, que arrodonit és 10,19 MPa.
         `
     },
     {
         type: "questions",
         category: "organitzacio industrial",
-        text: `Una estació de treball d'una línia de producció ha de lliurar 130 unitats per hora. L'estació consta de dues operacions que es fan simultàniament que duren 23 s i 15 s, respectivament. Quin és el temps mort de cada cicle?`,
+        text: `Qüestió 5
+               Un sistema de pintatge automatitzat permet obtenir un màxim de 130 unitats per hora. Sobre cada unitat es realitzen dues operacions simultànies de t1 = 23 i t2 = 15 s de durada. Quin és el temps mitjà que transcorre entre que s'acaba una unitat i que la unitat següent està preparada per a ser pintada?`,
         options: [
-            { text: "4,69 s", value: "a" },
-            { text: "12,70 s", value: "b" },
-            { text: "8,70 s", value: "c" },
-            { text: "9,20 s", value: "d" }
+            { text: "a) 4,69 s", value: "a" },
+            { text: "b) 12,70 s", value: "b" },
+            { text: "c) 8,70 s", value: "c" },
+            { text: "d) 9,20 s", value: "d" }
         ],
         correctAnswer: "a",
         steps: `
-            <strong>1. Càlcul del temps de cicle (\\(T_c\\)):</strong><br>
-            Si s'han de produir 130 unitats en una hora (3600 segons):
-            \\[ T_c = \\frac{3600 \\, \\text{s}}{130 \\, \\text{unitats}} = 27,692 \\, \\text{s/unitat} \\]
-
-            <strong>2. Determinació del temps de treball real (\\(T_w\\)):</strong><br>
-            Com que les operacions són simultànies, el temps de treball efectiu el marca la més llarga:
-            \\[ T_w = \\max(23 \\, \\text{s}, 15 \\, \\text{s}) = 23 \\, \\text{s} \\]
-
-            <strong>3. Càlcul del temps mort (\\(T_m\\)):</strong><br>
-            \\[ T_m = T_c - T_w = 27,692 - 23 = 4,692 \\, \\text{s} \\]
-        `
-    },
-    {
-        type: "questions",
-        category: "metrologia i normalitzacio",
-        text: `En un plànol de fabricació s'especifica que la longitud d'una peça ha de ser (146 ± 0,8) mm. S'acceptaran totes les peces que tinguin una longitud`,
-        options: [
-            { text: "superior a 146,8 mm.", value: "a" },
-            { text: "compresa entre 146 mm i 146,8 mm.", value: "b" },
-            { text: "compresa entre 145,6 mm i 146,4 mm.", value: "c" },
-            { text: "compresa entre 145,2 mm i 146,8 mm.", value: "d" }
-        ],
-        correctAnswer: "d",
-        steps: `
-            <strong>1. Anàlisi de la tolerància:</strong><br>
-            La cota nominal és 146 mm i la tolerància és de ±0,8 mm.
-
-            <strong>2. Càlcul dels límits:</strong><br>
-            - Límit superior: \\( 146 + 0,8 = 146,8 \\, \\text{mm} \\).<br>
-            - Límit inferior: \\( 146 - 0,8 = 145,2 \\, \\text{mm} \\).
-
-            <strong>3. Conclusió:</strong><br>
-            S'accepten les peces dins de l'interval [145,2 , 146,8].
+            <strong>1. Temps de cicle total:</strong><br>
+            Si es produeixen 130 unitats en 1 hora (3600 segons):
+            \\[ T_{cicle} = \\frac{3600 \\, s}{130 \\, unitats} = 27,692 \\, s/unitat \\]
+            
+            <strong>2. Temps de treball efectiu:</strong><br>
+            Com que les operacions són simultànies, la màquina triga el temps de l'operació més llarga: \\( T_{treball} = 23 \\, s \\).
+            
+            <strong>3. Càlcul del temps d'espera (temps mort):</strong><br>
+            És la diferència entre el temps total disponible per unitat i el que realment s'està treballant:
+            \\[ T_{espera} = 27,692 - 23 = 4,692 \\, s \\]
+            El resultat és 4,69 s.
         `
     }
 ];
