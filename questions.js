@@ -350,5 +350,58 @@ const questions = [
             E_{\\text{diss}} = E_{\\text{elèctr}} - E_{\\text{útil}} = 7820 - 2000 = 5820 \\, \\text{J} = 5{,}82 \\, \\text{kJ}
             \\]
         `
+    },
+    {
+        type: "exercicis",
+        category: "maquines i sistemes electrics i electrotecnics",
+        text: `Una cafetera elèctrica té tres resistències. La resistència \\(R_1 = 145 \\, \\Omega\\) i la resistència \\(R_2 = 100 \\, \\Omega\\) s'utilitzen per escalfar l'aigua. La resistència \\(R_3\\) s'utilitza per mantenir el cafè calent. El circuit s'alimenta a una tensió \\(U = 230 \\, \\text{V}\\).
+               <br><br>
+               Determineu:
+               <br><strong>a)</strong> La resistència inicial del circuit, \\(R_{\\text{in}}\\), quan es connecta la cafetera (amb els interruptors 1 i 2 tancats). [0,5 punts]
+               <br><strong>b)</strong> El corrent, \\(I\\), consumit quan es connecta la cafetera. [0,5 punts]
+               <br><strong>c)</strong> El valor de les dues potències, \\(P_1\\) i \\(P_2\\), que consumeix la cafetera quan els interruptors 1 i 2 estan tancats i quan només ho està l'interruptor 2. [1 punt]
+               <br><strong>d)</strong> El valor que ha de tenir la resistència \\(R_3\\) perquè la potència consumida per mantenir el cafè calent sigui \\(P_3 = 300 \\, \\text{W}\\). [0,5 punts]
+               <br><br>
+               <img src="img/esquema_cafetera.png" alt="Esquema elèctric de la cafetera">`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Resistència inicial del circuit (\\(R_{\\text{in}}\\)):</strong>
+            <br>
+            Quan els interruptors 1 i 2 estan tancats, les resistències \\(R_1\\) i \\(R_2\\) estan connectades en paral·lel.
+            \\[
+            \\frac{1}{R_{\\text{in}}} = \\frac{1}{R_1} + \\frac{1}{R_2} = \\frac{1}{145} + \\frac{1}{100}
+            \\]
+            \\[
+            R_{\\text{in}} = \\frac{R_1 \\cdot R_2}{R_1 + R_2} = \\frac{145 \\cdot 100}{145 + 100} = \\frac{14500}{245} \\approx 59{,}18 \\, \\Omega
+            \\]
+            <br>
+            <strong>b) Corrent consumit (\\(I\\)):</strong>
+            <br>
+            Utilitzant la Llei d'Ohm amb la resistència equivalent calculada:
+            \\[
+            I = \\frac{U}{R_{\\text{in}}} = \\frac{230 \\, \\text{V}}{59{,}18 \\, \\Omega} \\approx 3{,}886 \\, \\text{A}
+            \\]
+            <br>
+            <strong>c) Potències consumides (\\(P_1\\) i \\(P_2\\)):</strong>
+            <br>
+            - <strong>Cas 1: Interruptors 1 i 2 tancats.</strong> La potència total és la suma de les potències de cada branca (o bé usant \\(R_{\\text{in}}\\)):
+            \\[
+            P_{\\text{total}} = \\frac{U^2}{R_{\\text{in}}} = \\frac{230^2}{59{,}18} \\approx 893{,}88 \\, \\text{W}
+            \\]
+            - <strong>Cas 2: Només l'interruptor 2 tancat.</strong> En aquest cas, només circula corrent per \\(R_2\\):
+            \\[
+            P_2 = \\frac{U^2}{R_2} = \\frac{230^2}{100} = 529 \\, \\text{W}
+            \\]
+            <br>
+            <strong>d) Càlcul de la resistència \\(R_3\\):</strong>
+            <br>
+            Sabem que la potència desitjada és \\(P_3 = 300 \\, \\text{W}\\). Utilitzem la fórmula de la potència per aïllar la resistència:
+            \\[
+            P_3 = \\frac{U^2}{R_3} \\implies R_3 = \\frac{U^2}{P_3}
+            \\]
+            \\[
+            R_3 = \\frac{230^2}{300} = \\frac{52900}{300} \\approx 176{,}33 \\, \\Omega
+            \\]
+        `
     }
 ];
