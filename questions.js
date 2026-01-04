@@ -680,22 +680,5 @@ const questions = [
         ],
         correctAnswer: "a",
         steps: `\\[ N = 1400 \\times 0,92 = 1288 \\, \\text{unitats} \\]`
-    },
-
-    // --- BLOC 2: Exercicis de Desenvolupament ---
-    {
-        type: "exercicis",
-        category: "fabricacio i materials",
-        text: `Exercici 4 (Sèrie 4)<br>La peça s'ha obtingut d'una planxa d'acer (e = 12 mm, ρ = 7900 kg/m³). Dada: b=625 mm, h=400 mm, r1=100 mm, r2=5 mm. Determineu la massa m de la peça.`,
-        correctAnswer: "",
-        steps: `
-            <strong>d) Massa de la peça (m):</strong><br>
-            1. Àrea del rectangle base: \\[ A_{rect} = b \\cdot h = 625 \\cdot 400 = 250.000 \\, mm^2 \\]
-            2. Àrea sobrant de la cantonada (quadrat de costat r1 menys el sector circular):
-            \\[ A_{sobrant} = r_1^2 - \\frac{\\pi \\cdot r_1^2}{4} = 100^2 - \\frac{\\pi \\cdot 100^2}{4} = 2146,02 \\, mm^2 \\]
-            3. Àrea dels 4 forats: \\[ A_{forats} = 4 \\cdot (\\pi \\cdot r_2^2) = 4 \\cdot \\pi \\cdot 5^2 = 314,16 \\, mm^2 \\]
-            4. Àrea neta: \\[ A_{total} = A_{rect} - A_{sobrant} - A_{forats} = 247.539,8 \\, mm^2 = 0,2475 \\, m^2 \\]
-            5. Massa: \\[ m = A_{total} \\cdot e \\cdot \\rho = 0,2475 \\cdot 0,012 \\cdot 7900 = 23,46 \\, kg \\]
-        `
     }
 ];
