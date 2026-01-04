@@ -578,8 +578,7 @@ const questions = [
     {
         type: "questions",
         category: "maquines i sistemes electrics i electrotecnics",
-        text: `Qüestió 1
-               Un fil de coure de 600 m té una resistència de 1,02 Ω. Si el fil es divideix en dos parts iguals de 300 m i es connecten en paral·lel, quina és la resistència entre els extrems?`,
+        text: `Un fil de coure de 600 m té una resistència de 1,02 Ω. Si el fil es divideix en dos parts iguals de 300 m i es connecten en paral·lel, quina és la resistència entre els extrems?`,
         options: [
             { text: "a) 0,51 Ω", value: "a" },
             { text: "b) 0,255 Ω", value: "b" },
@@ -603,8 +602,7 @@ const questions = [
     {
         type: "questions",
         category: "energia",
-        text: `Qüestió 2
-               Se substitueix una bombeta incandescent de 100 W per una bombeta de baix consum de 20 W que produeix una intensitat de llum equivalent. Quant de temps ha de funcionar perquè la substitució produeixi un estalvi de 90 € en el consum? (Considereu el cost de 0,13 €/kWh).`,
+        text: `Se substitueix una bombeta incandescent de 100 W per una bombeta de baix consum de 20 W que produeix una intensitat de llum equivalent. Quant de temps ha de funcionar perquè la substitució produeixi un estalvi de 90 € en el consum? (Considereu el cost de 0,13 €/kWh).`,
         options: [
             { text: "a) 6923 h", value: "a" },
             { text: "b) 5769 h", value: "b" },
@@ -630,8 +628,7 @@ const questions = [
     {
         type: "questions",
         category: "sistemes pneumatics i oleohidraulics",
-        text: `Qüestió 3
-               Un cilindre hidràulic ha d'exercir una força de 10 kN en la cursa de retrocés. Si el diàmetre del cilindre és 50 mm i el de la tija, 32 mm, quina pressió ha de proporcionar el grup?`,
+        text: `Un cilindre hidràulic ha d'exercir una força de 10 kN en la cursa de retrocés. Si el diàmetre del cilindre és 50 mm i el de la tija, 32 mm, quina pressió ha de proporcionar el grup?`,
         options: [
             { text: "a) 8,626 MPa", value: "a" },
             { text: "b) 5,093 MPa", value: "b" },
@@ -655,8 +652,7 @@ const questions = [
     {
         type: "questions",
         category: "organitzacio industrial",
-        text: `Qüestió 4
-               En una botiga hi ha un estoc inicial de 1000 unitats i es demanen 800 unitats més cada vegada que l'estoc arriba a 300 unitats. Si al cap de 100 dies es fa la dotzena comanda (12a), quantes unitats s'han venut en total?`,
+        text: `En una botiga hi ha un estoc inicial de 1000 unitats i es demanen 800 unitats més cada vegada que l'estoc arriba a 300 unitats. Si al cap de 100 dies es fa la dotzena comanda (12a), quantes unitats s'han venut en total?`,
         options: [
             { text: "a) 8800", value: "a" },
             { text: "b) 9500", value: "b" },
@@ -681,8 +677,7 @@ const questions = [
     {
         type: "questions",
         category: "metrologia i normalitzacio",
-        text: `Qüestió 5
-               Un sensor de pressió té un error total màxim de ±2% de la lectura en el rang de temperatures de 0 °C a 50 °C. Si s'està mesurant una pressió de 8 bar a una temperatura de 45 °C, quin és el valor màxim que pot donar el sensor?`,
+        text: `Un sensor de pressió té un error total màxim de ±2% de la lectura en el rang de temperatures de 0 °C a 50 °C. Si s'està mesurant una pressió de 8 bar a una temperatura de 45 °C, quin és el valor màxim que pot donar el sensor?`,
         options: [
             { text: "a) 8,2 bar", value: "a" },
             { text: "b) 8,14 bar", value: "b" },
