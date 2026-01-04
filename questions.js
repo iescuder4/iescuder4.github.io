@@ -756,22 +756,54 @@ const questions = [
         Convertim les velocitats a m/s:
         \\[ v_1 = \\frac{80}{3,6} = 22,22 \\, m/s \\, ; \\, v_2 = \\frac{120}{3,6} = 33,33 \\, m/s \\]
         \\[ t_1 = \\frac{d}{v_1} = \\frac{25000}{22,22} = 1125 \\, s \\, (0,3125 \\, h) \\]
-        \\[ t_2 = \\frac{d}{v_2} = \\frac{25000}{33,33} = 750 \\, s \\, (0,2083 \\, h) \\] [cite: 2]
+        \\[ t_2 = \\frac{d}{v_2} = \\frac{25000}{33,33} = 750 \\, s \\, (0,2083 \\, h) \\]
 
         <strong>b) Expressió de la potència (\\(P\\)):</strong><br>
         La potència és el producte de la força per la velocitat:
-        \\[ P = F_{res} \\cdot v = (0,42 \\cdot v^2) \\cdot v = 0,42 \\cdot v^3 \\, (W) \\] [cite: 2]
+        \\[ P = F_{res} \\cdot v = (0,42 \\cdot v^2) \\cdot v = 0,42 \\cdot v^3 \\, (W) \\] 
 
         <strong>c) Quantitat de combustible (\\(m_{comb1}\\) i \\(m_{comb2}\\)):</strong><br>
         A partir del rendiment \\(\\eta = \\frac{E_{útil}}{E_{consumida}} = \\frac{P \\cdot t}{m_{comb} \\cdot p_c}\\):
         \\[ m_{comb1} = \\frac{0,42 \\cdot (22,22)^3 \\cdot 1125}{0,23 \\cdot 47,1 \\cdot 10^6} = 0,4786 \\, kg \\]
-        \\[ m_{comb2} = \\frac{0,42 \\cdot (33,33)^3 \\cdot 750}{0,23 \\cdot 47,1 \\cdot 10^6} = 1,077 \\, kg \\] [cite: 2]
+        \\[ m_{comb2} = \\frac{0,42 \\cdot (33,33)^3 \\cdot 750}{0,23 \\cdot 47,1 \\cdot 10^6} = 1,077 \\, kg \\]
 
         <strong>d) Quantitat de \\(CO_2\\) emesa:</strong><br>
         Primer calculem el volum de gasolina consumit (\\(V = m / \\rho\\)):
         \\[ V_1 = \\frac{0,4786}{0,68} = 0,7038 \\, L \\, ; \\, V_2 = \\frac{1,077}{0,68} = 1,5838 \\, L \\]
         Multipliquem pel factor d'emissió (2,38 kg/L):
         \\[ (CO_2)_{v1} = 0,7038 \\cdot 2,38 = 1,675 \\, kg \\]
-        \\[ (CO_2)_{v2} = 1,5838 \\cdot 2,38 = 3,769 \\, kg \\] [cite: 2]`
+        \\[ (CO_2)_{v2} = 1,5838 \\cdot 2,38 = 3,769 \\, kg \\] 
+        `
+},
+   
+    {
+    type: "exercicis",
+    category: "maquines i sistemes electrics i electrotecnics",
+    text: `[2,5 punts]<br>La figura mostra les posicions desplegada i plegada d'una cistella de bàsquet que penja del sostre. El mecanisme s'acciona per mitjà d'un cable que s'enrotlla a una politja, de radi \\(R=0,1~m\\), moguda per un motor reductor elèctric. El motor reductor té, en règim de funcionament nominal, un rendiment \\(\\eta=0,30\\); proporciona a l'eix de sortida un gir \\(n=14~min^{-1}\\) i una potència \\(P_{s}=200~W.\\) Totes les masses es consideren negligibles excepte la massa del tauler, que és \\(m=115~kg.\\) Determineu:
+           <br>a) L'energia, E, necessària per a fer pujar la cistella. [0,5 punts]
+           <br>b) El temps, t, que tarda a pujar la cistella amb el motor funcionant en règim nominal. [0,5 punts]
+           <br>c) La longitud de cable, L, que s'ha enrotllat. [0,5 punts]
+           <br>d) L'energia elèctrica consumida, \\(E_{electr}\\), i l'energia dissipada, \\(E_{diss}.\\) [1 punt]`,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Energia necessària (E):</strong><br>
+        L'energia necessària correspon a l'augment d'energia potencial del tauler des de l'altura \\(h_2\\) fins a \\(h_1\\):
+        \\[ E = m \\cdot g \\cdot (h_1 - h_2) = 115 \\, kg \\cdot 9,807 \\, m/s^2 \\cdot (3 - 0,7) \\, m = 2594 \\, J \\]
+        En unitats d'energia elèctrica: \\[ E = 0,7206 \\, Wh \\] 
+
+        <strong>b) Temps necessari (t):</strong><br>
+        Utilitzant la potència de sortida del motor reductor (\\(P_s = 200 \\, W\\)):
+        \\[ t = \\frac{E}{P_s} = \\frac{2594 \\, J}{200 \\, W} = 12,97 \\, s \\]
+
+        <strong>c) Longitud de cable (L):</strong><br>
+        La longitud és la distància lineal recorreguda pel cable enrotllat a la politja:
+        \\[ L = \\omega \\cdot R \\cdot t = \\left( 14 \\cdot \\frac{2\\pi}{60} \\right) \\cdot 0,1 \\, m \\cdot 12,97 \\, s = 1,901 \\, m \\]
+
+        <strong>d) Energia elèctrica consumida (\\(E_{electr}\\)) i dissipada (\\(E_{diss}\\)):</strong><br>
+        L'energia consumida es calcula mitjançant el rendiment (\\(\\eta = 0,30\\)):
+        \\[ E_{electr} = \\frac{E}{\\eta} = \\frac{2594 \\, J}{0,3} = 8647 \\, J = 2,402 \\, Wh \\] 
+        L'energia dissipada és la diferència entre la consumida i la útil:
+        \\[ E_{diss} = E_{electr} - E = 8647 \\, J - 2594 \\, J = 6053 \\, J = 1,681 \\, Wh \\]
+        `
 }
 ];
