@@ -1,5 +1,4 @@
 const questions = [
-    // --- BLOC 1: Qüestions Curtes (1-5) ---
     {
         type: "questions",
         category: "organitzacio industrial",
