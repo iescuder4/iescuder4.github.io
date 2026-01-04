@@ -103,47 +103,41 @@ const questions = [
     },
 
     {
-        type: "exercicis",
-        category: "control logic i funcions logiques",
-        text: `En una explotació vinícola es controla regularment el grau alcohòlic i l'acidesa de les vinyes. La mesura de l'acidesa indica el moment idoni per a iniciar la verema i el grau alcohòlic indica si el raïm és apte per a l'elaboració de vi. Per a elaborar un vi negre de qualitat cal que tingui un grau alcohòlic entre el 12% i el 15% vol. Utilitzant les variables d'estat següents:
-               <br>acidesa: \\(ac\\) {1: raïm veremat, 0: raïm no veremat};
-               <br>grau alcohòlic: \\(g_{15}\\) {1: superior al 15% vol., 0: inferior al 15% vol.};
-               <br>grau alcohòlic: \\(g_{12}\\) {1: superior al 12% vol., 0: inferior al 12% vol.};
-               <br>raïm: \\(r\\) {1: raïm per a vi de qualitat, 0: altres usos}.
-               <br><br>
-               a) Escriviu la taula de veritat del sistema i indiqueu els casos que no són possibles. [1 punt]
-               <br>b) Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
-               <br>c) Dibuixeu l'esquema de portes lògiques equivalent. [0,5 punts]`,
-        correctAnswer: "",
-        steps: `
-            <strong>a) Taula de veritat:</strong>
-            <br>
-            Cal notar que l'estat \\(g_{12}=0\\) i \\(g_{15}=1\\) és impossible físicament (un grau no pot ser superior al 15% i inferior al 12% alhora).
-            <br><br>
-            <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
-                <tr style="background-color: #f2f2f2;">
-                    <td>\\(ac\\)</td><td>\\(g_{12}\\)</td><td>\\(g_{15}\\)</td><td>\\(r\\)</td><td>Observacions</td>
-                </tr>
-                <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>No veremat</td></tr>
-                <tr><td>0</td><td>0</td><td>1</td><td>X</td><td>Impossible</td></tr>
-                <tr><td>0</td><td>1</td><td>0</td><td>0</td><td>No veremat</td></tr>
-                <tr><td>0</td><td>1</td><td>1</td><td>0</td><td>No veremat</td></tr>
-                <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>Grau < 12%</td></tr>
-                <tr><td>1</td><td>0</td><td>1</td><td>X</td><td>Impossible</td></tr>
-                <tr><td>1</td><td>1</td><td>0</td><td>1</td><td>QUALITAT</td></tr>
-                <tr><td>1</td><td>1</td><td>1</td><td>0</td><td>Grau > 15%</td></tr>
-            </table>
-            <br>
-            <strong>b) Funció lògica:</strong>
-            <br>
-            El raïm és de qualitat si està veremat (\\(ac=1\\)), el grau és >12% (\\(g_{12}=1\\)) i NO és >15% (\\(g_{15}=0\\)):
-            \\[ r = ac \\cdot g_{12} \\cdot \\overline{g_{15}} \\]
-            <br>
-            <strong>c) Esquema de portes:</strong>
-            <br>
-            S'utilitza una porta NOT per a \\(g_{15}\\) i una porta AND de tres entrades.
-        `
-    },
+    type: "exercicis",
+    category: "control logic i funcions logiques",
+    text: `Exercici 2<br>En una explotació vinícola es controla regularment el grau alcohòlic i l'acidesa de les vinyes per a iniciar la verema. Per a elaborar un vi negre de qualitat cal que el raïm estigui veremat i tingui un grau alcohòlic superior al 12% vol. Utilitzant les variables d'estat següents:
+           <br>acidesa: \\(ac\\) {1: raïm veremat, 0: raïm no veremat};
+           <br>grau alcohòlic: \\(g_{12}\\) {1: superior al 12% vol., 0: inferior al 12% vol.};
+           <br>grau alcohòlic: \\(g_{15}\\) {1: superior al 15% vol., 0: inferior al 15% vol.};
+           <br>raïm: \\(r\\) {1: vi de qualitat, 0: altres usos}.
+           <br>a) Escriviu la taula de veritat del sistema. [1 punt]
+           <br>b) Determineu la funció lògica simplificada. [1 punt]
+           <br>c) Dibuixeu l'esquema de portes lògiques. [0,5 punts]`,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Taula de veritat:</strong><br>
+        El vi és de qualitat (r=1) sempre que estigui veremat (ac=1) i el grau sigui superior al 12% (g12=1), independentment de si supera el 15% o no.
+        <br><br>
+        <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
+            <tr style="background-color: #f2f2f2;">
+                <td>\\(ac\\)</td><td>\\(g_{12}\\)</td><td>\\(g_{15}\\)</td><td>\\(r\\)</td>
+            </tr>
+            <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>0</td><td>0</td><td>1</td><td>X</td></tr>
+            <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+            <tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+            <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>1</td><td>0</td><td>1</td><td>X</td></tr>
+            <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+        </table>
+        <br>
+        <strong>b) Funció lògica:</strong><br>
+        Simplificant per Karnaugh o observació, la variable \\(g_{15}\\) no afecta el resultat si \\(g_{12}\\) ja és 1:
+        \\[ r = ac \\cdot g_{12} \\]
+        <br>
+        <strong>c) Esquema:</strong> Una única porta AND de dues entrades (ac i g12).`
+},
     
     {
         type: "exercicis",
