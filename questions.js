@@ -575,7 +575,7 @@ const questions = [
         `
     },
 
-    {
+   {
         type: "questions",
         category: "maquines i sistemes electrics i electrotecnics",
         text: `Un fil de coure de 600 m de longitud té una resistència de 1,02 Ω. Si el fil es divideix en dues parts iguals de 300 m i aquestes es connecten en paral·lel, quina és la resistència entre els extrems?`,
@@ -592,12 +592,12 @@ const questions = [
             \\[ R_{tram} = \\frac{1,02 \\, \\Omega}{2} = 0,51 \\, \\Omega \\]
             <strong>2. Connexió en paral·lel:</strong><br>
             Quan connectem dues resistències iguals en paral·lel, la resistència equivalent és la meitat d'una d'elles:
-            \\[ R_{eq} = \\frac{R_{tram}}{2} = \\frac{0,51 \\, \\Omega}{2} = 0,255 \\, \\Omega \\]`
+            \\[ R_{eq} = \\frac{0,51}{2} = 0,255 \\, \\Omega \\]`
     },
     {
         type: "questions",
         category: "energia",
-        text: `Se substitueix una bombeta incandescent de 100 W per una de baix consum de 20 W. Quant de temps ha de funcionar perquè la substitució produeixi un estalvi de 90 € en el consum? (Cost de l'energia: 0,13 €/kWh)`,
+        text: `Se substitueix una bombeta incandescent de 100 W per una bombeta de baix consum de 20 W que, segons el fabricant, produeix una intensitat de llum equivalent. Quant de temps ha de funcionar perquè la substitució produeixi un estalvi de 90 € en el consum? (Considereu el cost de 0,13 €/kWh.)`,
         options: [
             { text: "a) 6923 h", value: "a" },
             { text: "b) 5769 h", value: "b" },
@@ -609,14 +609,14 @@ const questions = [
             <strong>1. Estalvi de potència:</strong><br>
             \\[ P_{estalvi} = 100 \\, W - 20 \\, W = 80 \\, W = 0,08 \\, kW \\]
             <strong>2. Energia que cal estalviar:</strong><br>
-            \\[ E = \\frac{\\text{Estalvi (€)}}{\\text{Preu (€/kWh)}} = \\frac{90}{0,13} = 692,31 \\, kWh \\]
-            <strong>3. Temps de funcionament:</strong><br>
-            \\[ t = \\frac{E}{P_{estalvi}} = \\frac{692,31 \\, kWh}{0,08 \\, kW} = 8653,85 \\, h \\approx 8654 \\, h \\]`
+            \\[ E = \\frac{90 \\, €}{0,13 \\, €/kWh} = 692,31 \\, kWh \\]
+            <strong>3. Temps necessari:</strong><br>
+            \\[ t = \\frac{692,31 \\, kWh}{0,08 \\, kW} = 8653,85 \\, h \\approx 8654 \\, h \\]`
     },
     {
         type: "questions",
         category: "sistemes pneumatics i oleohidraulics",
-        text: `Un cilindre hidràulic de doble efecte té un diàmetre de cilindre D = 50 mm i un diàmetre de tija d = 32 mm. Quina pressió ha de proporcionar el grup hidràulic per exercir una força de 10 kN en la cursa de retrocés?`,
+        text: `Un cilindre hidràulic de doble efecte té un diàmetre de cilindre D = 50 mm i un diàmetre de tija d = 32 mm. Quina pressió ha de proporcionar el grup hidràulic per a exercir una força de 10 kN en la cursa de retrocés?`,
         options: [
             { text: "a) 8,626 MPa", value: "a" },
             { text: "b) 5,093 MPa", value: "b" },
@@ -625,15 +625,15 @@ const questions = [
         ],
         correctAnswer: "a",
         steps: `
-            <strong>1. Superfície efectiva de retrocés (anular):</strong><br>
-            \\[ S_{retrocés} = \\frac{\\pi \\cdot (D^2 - d^2)}{4} = \\frac{\\pi \\cdot (50^2 - 32^2)}{4} = 1159,25 \\, mm^2 \\]
+            <strong>1. Secció efectiva de retrocés (àrea anular):</strong><br>
+            \\[ S = \\frac{\\pi \\cdot (D^2 - d^2)}{4} = \\frac{\\pi \\cdot (50^2 - 32^2)}{4} = 1159,25 \\, mm^2 \\]
             <strong>2. Càlcul de la pressió:</strong><br>
-            \\[ p = \\frac{F}{S} = \\frac{10000 \\, N}{1159,25 \\, mm^2} = 8,626 \\, N/mm^2 = 8,626 \\, MPa \\]`
+            \\[ p = \\frac{F}{S} = \\frac{10000 \\, N}{1159,25 \\, mm^2} = 8,626 \\, MPa \\]`
     },
     {
         type: "questions",
         category: "organitzacio industrial",
-        text: `Un magatzem té un estoc inicial de 1000 unitats d'un producte. Quan l'estoc arriba a 300 unitats, es fa una comanda de 800 unitats que s'incorporen immediatament al magatzem. Si al cap de 100 dies s'efectua la dotzena (12a) comanda, quantes unitats s'han venut?`,
+        text: `Un magatzem té un estoc inicial de 1000 unitats d'un producte. Quan l'estoc arriba a 300 unitats, es fa una comanda de 800 unitats que s'incorporen immediatament al magatzem. Si al cap de 100 dies s'efectua la dotzena (12a) comanda, quantes unitats d'aquest producte s'han venut?`,
         options: [
             { text: "a) 8800", value: "a" },
             { text: "b) 9500", value: "b" },
@@ -642,14 +642,13 @@ const questions = [
         ],
         correctAnswer: "b",
         steps: `
-            <strong>1. Vendes per a la 1a comanda:</strong><br>
-            Es ven fins a arribar al punt de comanda (300):
-            \\[ V_1 = 1000 - 300 = 700 \\, \\text{unitats} \\]
-            <strong>2. Vendes per a les següents comandes:</strong><br>
-            De la 1a a la 12a hi ha 11 cicles on es venen les 800 unitats demanades:
-            \\[ V_{cicles} = 11 \\times 800 = 8800 \\, \\text{unitats} \\]
+            <strong>1. Vendes fins a la primera comanda:</strong><br>
+            \\[ 1000 - 300 = 700 \\, \\text{unitats} \\]
+            <strong>2. Vendes per a les 11 comandes següents:</strong><br>
+            Cada comanda de 800 unitats es consumeix fins a tornar a arribar al punt de comanda (300).
+            \\[ 11 \\times 800 = 8800 \\, \\text{unitats} \\]
             <strong>3. Total venut:</strong><br>
-            \\[ V_{total} = 700 + 8800 = 9500 \\, \\text{unitats} \\]`
+            \\[ 700 + 8800 = 9500 \\, \\text{unitats} \\]`
     },
     {
         type: "questions",
@@ -663,10 +662,9 @@ const questions = [
         ],
         correctAnswer: "d",
         steps: `
-            <strong>1. Càlcul de l'error absolut:</strong><br>
-            L'error és el 2% del valor llegit:
-            \\[ \\text{Error} = 8 \\, \\text{bar} \\times 0,02 = 0,16 \\, \\text{bar} \\]
-            <strong>2. Valor màxim:</strong><br>
-            \\[ P_{max} = 8 + 0,16 = 8,16 \\, \\text{bar} \\]`
+            <strong>1. Càlcul de l'error:</strong><br>
+            \\[ 8 \\, \\text{bar} \\times 0,02 = 0,16 \\, \\text{bar} \\]
+            <strong>2. Pressió màxima possible:</strong><br>
+            \\[ 8 + 0,16 = 8,16 \\, \\text{bar} \\]`
     }
 ];
