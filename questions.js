@@ -389,31 +389,40 @@ const questions = [
         text: `Una premsa hidràulica es controla amb dos polsadors i un pedal. El motor de la premsa es posa en marxa si s'acciona el pedal i es prem, com a mínim, un dels polsadors. Utilitzant les variables d'estat següents:
                <br>polsadors: \\(p_1, p_2 = \\begin{cases} 1: \\text{premut} \\\\ 0: \\text{no premut} \\end{cases}\\) ; pedal: \\(p_e = \\begin{cases} 1: \\text{accionat} \\\\ 0: \\text{no accionat} \\end{cases}\\)
                <br>motor: \\(m = \\begin{cases} 1: \\text{en marxa} \\\\ 0: \\text{aturat} \\end{cases}\\)
-               <br>a) Escriviu la taula de veritat del sistema.
-               <br>b) Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la.
-               <br>c) Dibuixeu l'esquema de portes lògiques equivalent.`,
+               <br>a) Escriviu la taula de veritat del sistema. [1 punt]
+               <br>b) Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
+               <br>c) Dibuixeu l'esquema de portes lògiques equivalent. [0,5 punts]`,
         correctAnswer: "",
         steps: `
-            <strong>a) Taula de veritat:</strong><br>
-            Condició: El motor s'activa (1) si el pedal (pe) és 1 I (almenys un polsador p1 o p2 és 1).
-         <br><br>
-            p | p1 | p2 | m<br>
-            --|----|----|---<br>
-            0 | 0  | 0  | 0<br>
-            0 | 0  | 1  | 0<br>
-            0 | 1  | 0  | 0<br>
-            0 | 1  | 1  | 0<br>
-            1 | 0  | 0  | 0<br>
-            1 | 0  | 1  | 1<br>
-            1 | 1  | 0  | 1<br>
-            1 | 1  | 1  | 1<br>
+            <strong>a) Taula de veritat:</strong>
             <br>
-            <strong>b) Funció lògica:</strong><br>
+            El motor s'activa (m=1) només si el pedal està accionat (p_e=1) I algun dels dos polsadors (p_1 o p_2) també ho està.
+            <br><br>
+            <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
+                <tr style="background-color: #f2f2f2;">
+                    <td>\\(p_e\\)</td><td>\\(p_1\\)</td><td>\\(p_2\\)</td><td>\\(m\\)</td>
+                </tr>
+                <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+                <tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+                <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+                <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+                <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+            </table>
+            <br>
+            <strong>b) Funció lògica:</strong>
+            <br>
+            Segons l'enunciat: "si s'acciona el pedal (\\(p_e\\)) I es prem, com a mínim, un dels polsadors (\\(p_1 + p_2\\))".
+            <br>
             \\[ m = p_e \\cdot (p_1 + p_2) \\]
             <br>
-            <strong>c) Esquema de portes lògiques:</strong><br>
-            Una porta <strong>OR</strong> que suma p1 i p2. La sortida d'aquesta va a una porta <strong>AND</strong> juntament amb l'entrada pe.
-        `
+            <strong>c) Esquema de portes lògiques:</strong>
+            <br>
+            L'esquema requereix una porta OR per als polsadors i una porta AND per multiplicar pel pedal.
+            <br>
+                    `
     },
     
     {
