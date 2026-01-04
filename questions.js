@@ -707,5 +707,36 @@ const questions = [
         L'esquema simplificat correspon a tres contactes en paral·lel: un contacte normalment obert per a la velocitat (v) i dos contactes normalment tancats per a la bateria (b) i la temperatura (t)[cite: 376, 377].
         <br>
                 `
+},
+
+    {
+    type: "exercicis",
+    category: "maquines i sistemes electrics i electrotecnics",
+    text: `Exercici 3<br>Una lluminària decorativa està formada per quatre files de n bombetes iguals, de potència \\(P_{bombeta}=5~W\\) connectades segons l'esquema de la figura. Per a fer-la atractiva, els interruptors canvien d'estat cíclicament cada \\(t_{c}=0,5~s\\) de manera que sempre hi ha una sola fila de bombetes enceses. Quan la lluminària es connecta a \\(U=230~V\\) consumeix \\(P=360~W\\). Determineu:
+           <br>a) El nombre total de bombetes, \\(n_{total}\\), de la lluminària. [0,5 punts]
+           <br>b) El corrent, I, que circula per una bombeta encesa i la resistència interna, R, corresponent. [1 punt]
+           <br>c) El consum total, \\(E_{total}\\), i el consum per bombeta, \\(E_{bombeta}\\), si la lluminària funciona durant \\(t=6~h\\). [1 punt]`,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Nombre total de bombetes (\\(n_{total}\\)):</strong><br>
+        Com que sempre hi ha només una fila encesa i la potència total consumida és de 360 W, calculem primer el nombre de bombetes per fila (n)[cite: 281, 283]:
+        \\[ n = \\frac{P}{P_{bombeta}} = \\frac{360 \\, W}{5 \\, W} = 72 \\, \\text{bombetes/fila} \\]
+        Atès que hi ha 4 files iguals en total[cite: 281, 381]:
+        \\[ n_{total} = 4 \\times 72 = 288 \\, \\text{bombetes} \\]
+        
+        <strong>b) Corrent (I) i resistència interna (R):</strong><br>
+        El corrent que circula per la fila encesa és el mateix que circula per cada bombeta individual, ja que estan en sèrie dins de la fila[cite: 381, 386]:
+        \\[ I = \\frac{P}{U} = \\frac{360 \\, W}{230 \\, V} = 1,565 \\, A \\]
+        La resistència de cada bombeta es calcula a partir de la seva potència nominal i el corrent que la travessa[cite: 387]:
+        \\[ R = \\frac{P_{bombeta}}{I^2} = \\frac{5 \\, W}{(1,565 \\, A)^2} = 2,041 \\, \\Omega \\]
+        (També es pot calcular com \\( R = \\frac{U_{bombeta}}{I} \\) on \\( U_{bombeta} = \\frac{230 \\, V}{72} \\)).
+        
+        <strong>c) Consum d'energia (\\(E_{total}\\) i \\(E_{bombeta}\\)):</strong><br>
+        L'energia total consumida per la lluminària en 6 hores és[cite: 389]:
+        \\[ E_{total} = P \\cdot t = 360 \\, W \\times 6 \\, h = 2160 \\, Wh = 2,16 \\, kWh \\]
+        En unitats del SI: \\[ 2,16 \\, kWh \\times 3600 = 7776 \\, kJ \\]
+        L'energia consumida per cada bombeta individualment depèn del temps real que està encesa (només 1/4 del temps total)[cite: 390]:
+        \\[ E_{bombeta} = \\frac{E_{total}}{n_{total}} = \\frac{7776 \\, kJ}{288} = 27 \\, kJ \\]
+        O en unitats d'energia elèctrica: \\[ E_{bombeta} = \\frac{2,16 \\, kWh}{288} = 0,0075 \\, kWh = 7,5 \\, Wh \\]`
 }
 ];
