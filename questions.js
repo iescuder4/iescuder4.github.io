@@ -395,7 +395,7 @@ const questions = [
         correctAnswer: "",
         steps: `
             <strong>a) Taula de veritat:</strong><br>
-            Condició: El motor s'activa (1) si el pedal ($p_e$) és 1 I (almenys un polsador $p_1$ o $p_2$ és 1).
+            Condició: El motor s'activa (1) si el pedal (pe) és 1 I (almenys un polsador p1 o p2 és 1).
          <br><br>
             p | p1 | p2 | m<br>
             --|----|----|---<br>
@@ -412,11 +412,10 @@ const questions = [
             \\[ m = p_e \\cdot (p_1 + p_2) \\]
             <br>
             <strong>c) Esquema de portes lògiques:</strong><br>
-            Una porta <strong>OR</strong> que suma $p_1$ i $p_2$. La sortida d'aquesta va a una porta <strong>AND</strong> juntament amb l'entrada $p_e$.
+            Una porta <strong>OR</strong> que suma p1 i p2. La sortida d'aquesta va a una porta <strong>AND</strong> juntament amb l'entrada pe.
         `
     },
     
-    // --- EXERCICI 3 (OPCIÓ A) ---
     {
         type: "exercicis",
         category: "maquines i sistemes energetics",
@@ -443,7 +442,6 @@ const questions = [
         `
     },
 
-    // --- EXERCICI 4 (OPCIÓ A) - CORREGIT SEGONS FOTO ---
     {
         type: "exercicis",
         category: "fabricacio i materials",
@@ -487,6 +485,45 @@ const questions = [
             4. <strong>Massa:</strong>
             \\[ Volum = A_{neta} \\cdot e = 0,24754 \\, \\text{m}^2 \\cdot 0,012 \\, \\text{m} = 0,00297 \\, \\text{m}^3 \\]
             \\[ m = Volum \\cdot \\rho = 0,00297 \\cdot 7900 = 23,47 \\, \\text{kg} \\]
+        `
+    },
+
+    {
+        type: "exercicis",
+        category: "maquines i sistemes electrics i electrotecnics",
+        text: `En la figura es mostra el circuit elèctric d’una cafetera. Quan es connecta la cafetera, els dos interruptors termostàtics estan tancats. L’interruptor 1 s’obre quan la temperatura de l’aigua arriba als 105 °C i l’interruptor 2, quan la temperatura arriba als 125 °C. La resistència \\(R_3\\), que és variable, serveix per a mantenir el cafè calent. Les altres dues resistències tenen valors \\(R_1=145 \\, \\Omega\\) i \\(R_2=100 \\, \\Omega\\) i el circuit s’alimenta a una tensió \\(U=230 \\, \\text{V}\\). Determineu:
+               <br>a) La resistència inicial del circuit, \\(R_{\\text{in}}\\), quan es connecta la cafetera. [0,5 punts]
+               <br>b) El corrent, \\(I\\), consumit quan es connecta la cafetera. [0,5 punts]
+               <br>c) El valor de les dues potències, \\(P_1\\) i \\(P_2\\), que consumeix la cafetera quan els interruptors 1 i 2 estan tancats i quan només ho està l’interruptor 2. [1 punt]
+               <br>d) El valor que ha de tenir la resistència \\(R_3\\) perquè la potència consumida quan es manté el cafè calent sigui \\(P_3=300 \\, \\text{W}\\). [0,5 punts]`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Resistència inicial del circuit (\\(R_{\\text{in}}\\)):</strong><br>
+            Inicialment, els dos interruptors estan tancats.
+            L'interruptor 2 tancat curtcircuita \\(R_3\\), de manera que per la branca de la dreta només tenim \\(R_2\\).
+            L'interruptor 1 tancat connecta \\(R_1\\).
+            Per tant, tenim \\(R_1\\) i \\(R_2\\) connectades en paral·lel a la font de tensió:
+            \\[ \\frac{1}{R_{\\text{in}}} = \\frac{1}{R_1} + \\frac{1}{R_2} = \\frac{1}{145} + \\frac{1}{100} \\]
+            \\[ R_{\\text{in}} = \\frac{R_1 \\cdot R_2}{R_1 + R_2} = \\frac{145 \\cdot 100}{145 + 100} = \\frac{14500}{245} = 59,18 \\, \\Omega \\]
+            <br>
+            <strong>b) Corrent consumit (\\(I\\)):</strong><br>
+            Utilitzant la llei d'Ohm amb la resistència equivalent calculada:
+            \\[ I = \\frac{U}{R_{\\text{in}}} = \\frac{230}{59,18} = 3,886 \\, \\text{A} \\]
+            <br>
+            <strong>c) Potències consumides (\\(P_1\\) i \\(P_2\\)):</strong><br>
+            - **\\(P_1\\) (Ambdós interruptors tancats):** És la potència inicial total.
+            \\[ P_1 = \\frac{U^2}{R_{\\text{in}}} = \\frac{230^2}{59,18} = 893,88 \\, \\text{W} \\]
+            - **\\(P_2\\) (Només interruptor 2 tancat):** L'interruptor 1 s'obre, desconnectant \\(R_1\\). L'interruptor 2 segueix tancat, curtcircuitant \\(R_3\\). Només queda \\(R_2\\) connectada al circuit.
+            \\[ P_2 = \\frac{U^2}{R_2} = \\frac{230^2}{100} = 529 \\, \\text{W} \\]
+            <br>
+            <strong>d) Valor de la resistència \\(R_3\\):</strong><br>
+            Per mantenir el cafè calent, la temperatura ha superat els 125 °C, així que l'interruptor 2 també s'obre (l'1 ja estava obert).
+            Ara el corrent ha de passar per \\(R_2\\) i per \\(R_3\\) (que estava en paral·lel amb l'interruptor 2 i ara ja no està curtcircuitada). El circuit queda amb \\(R_2\\) i \\(R_3\\) en sèrie (branca dreta), mentre la branca esquerra està oberta.
+            La resistència total és \\(R_{\\text{tot}} = R_2 + R_3\\).
+            Sabem que la potència desitjada és \\(P_3 = 300 \\, \\text{W}\\):
+            \\[ P_3 = \\frac{U^2}{R_{\\text{tot}}} \\implies R_{\\text{tot}} = \\frac{U^2}{P_3} = \\frac{230^2}{300} = 176,33 \\, \\Omega \\]
+            Com que \\(R_{\\text{tot}} = R_2 + R_3\\):
+            \\[ R_3 = R_{\\text{tot}} - R_2 = 176,33 - 100 = 76,33 \\, \\Omega \\]
         `
     }
 ];
