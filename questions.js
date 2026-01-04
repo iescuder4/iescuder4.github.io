@@ -666,5 +666,46 @@ const questions = [
             \\[ 8 \\, \\text{bar} \\times 0,02 = 0,16 \\, \\text{bar} \\]
             <strong>2. Pressió màxima possible:</strong><br>
             \\[ 8 + 0,16 = 8,16 \\, \\text{bar} \\]`
-    }
+    },
+    {
+    type: "exercicis",
+    category: "sistemes de control",
+    text: `Un sistema dissenyat per a reduir el consum de combustible en els cotxes atura completament el motor quan el vehicle va a una velocitat inferior a 3 km/h llevat que la bateria tingui un baix nivell de càrrega o la temperatura exterior sigui inferior a 3 °C. Utilitzant les variables d'estat següents:
+           <br>velocitat del cotxe: \\(v = \\begin{cases} 1: \\text{superior a 3 km/h} \\\\ 0: \\text{inferior a 3 km/h} \\end{cases}\\) ; bateria: \\(b = \\begin{cases} 1: \\text{carregada} \\\\ 0: \\text{baixa} \\end{cases}\\)
+           <br>temperatura exterior: \\(t = \\begin{cases} 1: \\text{superior a 3 °C} \\\\ 0: \\text{inferior a 3 °C} \\end{cases}\\) ; motor: \\(m = \\begin{cases} 1: \\text{en funcionament} \\\\ 0: \\text{aturat} \\end{cases}\\)
+           <br>a) Escriviu la taula de veritat del sistema. [1 punt]
+           <br>b) Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
+           <br>c) Dibuixeu l'esquema de contactes equivalent. [0,5 punts]`,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Taula de veritat:</strong>
+        <br>
+        El motor funciona (m=1) si la velocitat és superior a 3 km/h (v=1). Si la velocitat és inferior (v=0), el motor només funciona si la bateria és baixa (b=0) O la temperatura és baixa (t=0)[cite: 262, 370].
+        <br><br>
+        <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
+            <tr style="background-color: #f2f2f2;">
+                <td>\\(v\\)</td><td>\\(b\\)</td><td>\\(t\\)</td><td>\\(m\\)</td>
+            </tr>
+            <tr><td>0</td><td>0</td><td>0</td><td>1</td></tr>
+            <tr><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+            <tr><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+            <tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+            <tr><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+            <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+        </table>
+        <br>
+        <strong>b) Funció lògica:</strong>
+        <br>
+        El motor s'atura només quan es compleixen tres condicions alhora: velocitat baixa (\\(\\overline{v}\\)), bateria carregada (\\(b\\)) i temperatura alta (\\(t\\)). Per tant, l'estat de funcionament és el contrari d'aquesta aturada[cite: 372]:
+        <br>
+        \\[ m = \\overline{\\overline{v} \\cdot b \\cdot t} = v + \\overline{b} + \\overline{t} \\]
+        <br>
+        <strong>c) Esquema de contactes equivalent:</strong>
+        <br>
+        L'esquema simplificat correspon a tres contactes en paral·lel: un contacte normalment obert per a la velocitat (v) i dos contactes normalment tancats per a la bateria (b) i la temperatura (t)[cite: 376, 377].
+        <br>
+                `
+}
 ];
