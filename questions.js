@@ -738,5 +738,41 @@ const questions = [
         L'energia consumida per cada bombeta individualment depèn del temps real que està encesa (només 1/4 del temps total)[cite: 390]:
         \\[ E_{bombeta} = \\frac{E_{total}}{n_{total}} = \\frac{7776 \\, kJ}{288} = 27 \\, kJ \\]
         O en unitats d'energia elèctrica: \\[ E_{bombeta} = \\frac{2,16 \\, kWh}{288} = 0,0075 \\, kWh = 7,5 \\, Wh \\]`
+},
+    {
+    type: "exercicis",
+    category: "energia",
+    text: `Exercici 4<br>Un vehicle de massa \\(m=1450~kg\\) fa un trajecte de \\(d=25~km\\). La força de resistència a l'avanç és \\(F_{res}=0,42 \\cdot v^2\\) (amb \\(F_{res}\\) en N i \\(v\\) en m/s). El rendiment global del vehicle és \\(\\eta=0,23\\) i el poder calorífic del combustible és \\(p_{c}=47,1~MJ/kg\\). Determineu:
+           <br>a) El temps, \\(t_1\\) i \\(t_2\\), que triga a fer el trajecte si el recorre a les velocitats constants \\(v_1=80~km/h\\) i \\(v_2=120~km/h\\). [0,5 punts]
+           <br>b) L'expressió de la potència de resistència a l'avanç, \\(P_{res}\\), en funció de la velocitat v en m/s. [0,5 punts]
+           <br>c) El consum de combustible, \\(m_{comb1}\\) i \\(m_{comb2}\\), en kg, per a cada velocitat. [1 punt]
+           <br>d) La quantitat de \\(CO_2\\) emesa en cada cas si la combustió d'un litre de combustible (densitat \\(\\rho=0,74~kg/L\\)) genera 2,45 kg de \\(CO_2\\). [0,5 punts]`,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Temps del trajecte (\\(t_1\\) i \\(t_2\\)):</strong><br>
+        Convertim primer les velocitats a m/s per a futurs càlculs: 
+        \\[ v_1 = 80/3,6 = 22,22 \\, m/s; \\quad v_2 = 120/3,6 = 33,33 \\, m/s \\]
+        Calculem el temps (\\(t = d/v\\)) en hores:
+        \\[ t_1 = \\frac{25 \\, km}{80 \\, km/h} = 0,3125 \\, h = 1125 \\, s \\]
+        \\[ t_2 = \\frac{25 \\, km}{120 \\, km/h} = 0,2083 \\, h = 750 \\, s \\]
+        
+        <strong>b) Potència de resistència (\\(P_{res}\\)):</strong><br>
+        La potència és el producte de la força per la velocitat (\\(P = F \\cdot v\\)):
+        \\[ P_{res} = F_{res} \\cdot v = (0,42 \\cdot v^2) \\cdot v = 0,42 \\cdot v^3 \\]
+        On \\(P_{res}\\) s'obté en Watts (W) si la velocitat està en m/s.
+        
+        <strong>c) Consum de combustible (\\(m_{comb1}\\) i \\(m_{comb2}\\)):</strong><br>
+        L'energia útil és \\(E_{u} = P_{res} \\cdot t\\) i l'energia del combustible és \\(E_{c} = m_{comb} \\cdot p_{c}\\).
+        Sabent que \\( \eta = E_{u} / E_{c} \\), aïllem la massa:
+        \\[ m_{comb} = \\frac{P_{res} \\cdot t}{\\eta \\cdot p_{c}} \\]
+        Per a \\(v_1 = 22,22 \\, m/s\\):
+        \\[ m_{comb1} = \\frac{0,42 \\cdot 22,22^3 \\cdot 1125}{0,23 \\cdot 47,1 \\cdot 10^6} = 0,4786 \\, kg \\]
+        Per a \\(v_2 = 33,33 \\, m/s\\):
+        \\[ m_{comb2} = \\frac{0,42 \\cdot 33,33^3 \\cdot 750}{0,23 \\cdot 47,1 \\cdot 10^6} = 1,077 \\, kg \\]
+        
+        <strong>d) Emissions de \\(CO_2\\):</strong><br>
+        Primer passem la massa a volum (litres) i després multipliquem pel factor d'emissió:
+        \\[ (CO_2)_1 = \\frac{0,4786 \\, kg}{0,74 \\, kg/L} \\times 2,45 \\, kg/L = 1,585 \\, kg \\, CO_2 \\]
+        \\[ (CO_2)_2 = \\frac{1,077 \\, kg}{0,74 \\, kg/L} \\times 2,45 \\, kg/L = 3,566 \\, kg \\, CO_2 \\]`
 }
 ];
