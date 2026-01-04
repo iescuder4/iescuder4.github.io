@@ -573,7 +573,7 @@ const questions = [
             <br><br>
             Convertit a metres cúbics: <strong>66,96 m³</strong>
         `
-    }
+    },
 
     {
         type: "questions",
@@ -599,103 +599,103 @@ const questions = [
             La resistència total del conjunt en paral·lel és de 0,255 Ω.
         `
     },
-    {
+  {
         type: "questions",
-        category: "energia",
-        text: `Se substitueix una bombeta incandescent de 100 W per una bombeta de baix consum de 20 W que produeix una intensitat de llum equivalent. Quant de temps ha de funcionar perquè la substitució produeixi un estalvi de 90 € en el consum? (Considereu el cost de 0,13 €/kWh).`,
+        category: "organitzacio industrial",
+        text: `Qüestió 1<br>Un tren de fira té una capacitat nominal de 48 passatgers. L'interval entre sortides consecutives és 15 minuts i el temps de trajecte, 5 minuts. Quin nombre màxim de passatgers pot transportar el tren en una hora?`,
         options: [
-            { text: "a) 6923 h", value: "a" },
-            { text: "b) 5769 h", value: "b" },
-            { text: "c) 7524 h", value: "c" },
-            { text: "d) 8654 h", value: "d" }
+            { text: "a) 96", value: "a" },
+            { text: "b) 576", value: "b" },
+            { text: "c) 288", value: "c" },
+            { text: "d) 192", value: "d" }
         ],
         correctAnswer: "d",
         steps: `
-            <strong>1. Estalvi de potència:</strong><br>
-            La diferència de consum entre les dues bombetes és:
-            \\[ P_{estalvi} = 100 \\, W - 20 \\, W = 80 \\, W = 0,08 \\, kW \\]
-            
-            <strong>2. Energia total a estalviar:</strong><br>
-            Perquè l'estalvi econòmic sigui de 90 € amb un preu de 0,13 €/kWh:
-            \\[ E = \\frac{\\text{Estalvi (€)}}{\\text{Preu (€/kWh)}} = \\frac{90}{0,13} = 692,307 \\, kWh \\]
-            
-            <strong>3. Temps de funcionament:</strong><br>
-            Utilitzem la fórmula de l'energia (E = P · t):
-            \\[ t = \\frac{E}{P_{estalvi}} = \\frac{692,307 \\, kWh}{0,08 \\, kW} = 8653,84... \\, h \\]
-            Arrodonint obtenim 8654 h.
-        `
+            <strong>1. Anàlisi de la freqüència de sortides:</strong><br>
+            La capacitat de transport depèn de quantes vegades surt el tren en una hora (60 minuts).
+            \\[ \\text{Sortides per hora} = \\frac{60 \\, \\text{min}}{15 \\, \\text{min/sortida}} = 4 \\, \\text{sortides} \\]
+            <strong>2. Verificació del temps de trajecte:</strong><br>
+            El tren triga 5 minuts. Com que 5 < 15, el tren està llest per a cada sortida.
+            <strong>3. Càlcul de la capacitat total:</strong><br>
+            \\[ 48 \\, \\text{pax/viatge} \\times 4 \\, \\text{viatges/h} = 192 \\, \\text{pax/h} \\]`
     },
     {
         type: "questions",
-        category: "sistemes pneumatics i oleohidraulics",
-        text: `Un cilindre hidràulic ha d'exercir una força de 10 kN en la cursa de retrocés. Si el diàmetre del cilindre és 50 mm i el de la tija, 32 mm, quina pressió ha de proporcionar el grup?`,
+        category: "maquines i sistemes electrics i electrotecnics",
+        text: `Qüestió 2<br>En un circuit elèctric es connecten en sèrie dues resistències de tolerància ±5% i valors nominals 1,1 kΩ i 3,3 kΩ. La resistència equivalent d'aquest circuit és:`,
         options: [
-            { text: "a) 8,626 MPa", value: "a" },
-            { text: "b) 5,093 MPa", value: "b" },
-            { text: "c) 12,43 MPa", value: "c" },
-            { text: "d) 1,894 MPa", value: "d" }
+            { text: "a) (4,4 ± 0,055) kΩ", value: "a" },
+            { text: "b) (4,4 ± 0,11) kΩ", value: "b" },
+            { text: "c) (4,4 ± 0,22) kΩ", value: "c" },
+            { text: "d) (4,4 ± 0,44) kΩ", value: "d" }
         ],
-        correctAnswer: "a",
+        correctAnswer: "c",
         steps: `
-            <strong>1. Secció útil de retrocés:</strong><br>
-            En el retrocés, la pressió actua sobre la corona circular (àrea del pistó menys àrea de la tija):
-            \\[ S_{útil} = \\frac{\\pi \\cdot (D^2 - d^2)}{4} = \\frac{\\pi \\cdot (50^2 - 32^2)}{4} = 1159,25 \\, mm^2 = 1,159 \\cdot 10^{-3} \\, m^2 \\]
-            
-            <strong>2. Càlcul de la pressió:</strong><br>
-            Força F = 10.000 N.
-            \\[ p = \\frac{F}{S_{útil}} = \\frac{10000}{1,159 \\cdot 10^{-3}} = 8.626.267 \\, Pa \\]
-            
-            <strong>3. Resultat en MPa:</strong><br>
-            Dividint per \\( 10^6 \\) obtenim 8,626 MPa.
-        `
+            <strong>1. Resistència Equivalent:</strong>\\[ R_{eq} = 1,1 + 3,3 = 4,4 \\, k\\Omega \\]
+            <strong>2. Determinació de l'Error:</strong><br>
+            L'error del 5% s'aplica al total de la suma:
+            \\[ \\Delta R = 4,4 \\, k\\Omega \\times 0,05 = 0,22 \\, k\\Omega \\]
+            <strong>3. Resultat:</strong>\\[ R = (4,4 \\pm 0,22) \\, k\\Omega \\]`
+    },
+    {
+        type: "questions",
+        category: "material i assaig",
+        text: `Qüestió 3<br>La tensió de ruptura del titani comercial sense aliar és σr = 75 MPa. Si apliquem una força axial de 750 N a una barra d'aquest titani, quina secció mínima ha de tenir perquè no es trenqui?`,
+        options: [
+            { text: "a) 1 mm²", value: "a" },
+            { text: "b) 10 mm²", value: "b" },
+            { text: "c) 100 mm²", value: "c" },
+            { text: "d) 1000 mm²", value: "d" }
+        ],
+        correctAnswer: "b",
+        steps: `
+            <strong>1. Fórmula:</strong>\\[ S = \\frac{F}{\\sigma} \\]
+            <strong>2. Càlcul en unitats SI:</strong>\\[ S = \\frac{750 \\, N}{75 \\cdot 10^6 \\, Pa} = 10^{-5} \\, m^2 \\]
+            <strong>3. Conversió a mm²:</strong>\\[ 10^{-5} \\, m^2 \\times 10^6 = 10 \\, mm^2 \\]`
+    },
+    {
+        type: "questions",
+        category: "energia",
+        text: `Qüestió 4<br>Un cotxe consumeix 7,1 L/100 km. La benzina produeix 2,45 kg de CO2 per litre. En un viatge de 925 km, quina quantitat de CO2 emet?`,
+        options: [
+            { text: "a) 1609 kg", value: "a" },
+            { text: "b) 160,9 kg", value: "b" },
+            { text: "c) 188,1 kg", value: "c" },
+            { text: "d) 1881 kg", value: "d" }
+        ],
+        correctAnswer: "b",
+        steps: `
+            <strong>1. Consum total:</strong>\\[ L = \\frac{7,1}{100} \\times 925 = 65,675 \\, L \\]
+            <strong>2. Emissions:</strong>\\[ Massa \\, CO_2 = 65,675 \\, L \\times 2,45 \\, kg/L = 160,9 \\, kg \\]`
     },
     {
         type: "questions",
         category: "organitzacio industrial",
-        text: `En una botiga hi ha un estoc inicial de 1000 unitats i es demanen 800 unitats més cada vegada que l'estoc arriba a 300 unitats. Si al cap de 100 dies es fa la dotzena comanda (12a), quantes unitats s'han venut en total?`,
+        text: `Qüestió 5<br>La fiabilitat és del 92% per a 2400h. D'un lot de 1400 unitats, quants funcionaran al cap d'aquest temps?`,
         options: [
-            { text: "a) 8800", value: "a" },
-            { text: "b) 9500", value: "b" },
-            { text: "c) 9600", value: "c" },
-            { text: "d) 10900", value: "d" }
+            { text: "a) 1288", value: "a" },
+            { text: "b) 1260", value: "b" },
+            { text: "c) 192", value: "c" },
+            { text: "d) 112", value: "d" }
         ],
-        correctAnswer: "b",
-        steps: `
-            <strong>1. Vendes fins a la primera comanda:</strong><br>
-            Partim de 1000 i la 1a comanda es fa en arribar a 300:
-            \\[ V_1 = 1000 - 300 = 700 \\, \\text{unitats} \\]
-            
-            <strong>2. Vendes en els cicles següents:</strong><br>
-            Després de la 1a comanda, l'estoc puja a \\( 300 + 800 = 1100 \\). Per fer la següent comanda cal tornar a baixar a 300, venent 800 unitats.
-            Des de la 2a fins a la 12a comanda hi ha 11 cicles de venda de 800 unitats:
-            \\[ V_{cicles} = 11 \\cdot 800 = 8800 \\, \\text{unitats} \\]
-            
-            <strong>3. Total de vendes:</strong><br>
-            \\[ V_{total} = 700 + 8800 = 9500 \\, \\text{unitats} \\]
-        `
+        correctAnswer: "a",
+        steps: `\\[ N = 1400 \\times 0,92 = 1288 \\, \\text{unitats} \\]`
     },
+
+    // --- BLOC 2: Exercicis de Desenvolupament ---
     {
-        type: "questions",
-        category: "metrologia i normalitzacio",
-        text: `Un sensor de pressió té un error total màxim de ±2% de la lectura en el rang de temperatures de 0 °C a 50 °C. Si s'està mesurant una pressió de 8 bar a una temperatura de 45 °C, quin és el valor màxim que pot donar el sensor?`,
-        options: [
-            { text: "a) 8,2 bar", value: "a" },
-            { text: "b) 8,14 bar", value: "b" },
-            { text: "c) 8 bar", value: "c" },
-            { text: "d) 8,16 bar", value: "d" }
-        ],
-        correctAnswer: "d",
+        type: "exercicis",
+        category: "fabricacio i materials",
+        text: `Exercici 4 (Sèrie 4)<br>La peça s'ha obtingut d'una planxa d'acer (e = 12 mm, ρ = 7900 kg/m³). Dada: b=625 mm, h=400 mm, r1=100 mm, r2=5 mm. Determineu la massa m de la peça.`,
+        correctAnswer: "",
         steps: `
-            <strong>1. Comprovació del rang:</strong><br>
-            La temperatura de 45 °C està dins del rang de precisió del sensor (0-50 °C), per tant apliquem l'error del ±2%.
-            
-            <strong>2. Càlcul de l'error absolut:</strong><br>
-            L'error és el 2% del valor llegit (8 bar):
-            \\[ \\text{Error} = 8 \\cdot 0,02 = 0,16 \\, bar \\]
-            
-            <strong>3. Valor màxim possible:</strong><br>
-            El valor més alt que pot mostrar el sensor és la pressió real més l'error màxim:
-            \\[ V_{màx} = 8 + 0,16 = 8,16 \\, bar \\]
+            <strong>d) Massa de la peça (m):</strong><br>
+            1. Àrea del rectangle base: \\[ A_{rect} = b \\cdot h = 625 \\cdot 400 = 250.000 \\, mm^2 \\]
+            2. Àrea sobrant de la cantonada (quadrat de costat r1 menys el sector circular):
+            \\[ A_{sobrant} = r_1^2 - \\frac{\\pi \\cdot r_1^2}{4} = 100^2 - \\frac{\\pi \\cdot 100^2}{4} = 2146,02 \\, mm^2 \\]
+            3. Àrea dels 4 forats: \\[ A_{forats} = 4 \\cdot (\\pi \\cdot r_2^2) = 4 \\cdot \\pi \\cdot 5^2 = 314,16 \\, mm^2 \\]
+            4. Àrea neta: \\[ A_{total} = A_{rect} - A_{sobrant} - A_{forats} = 247.539,8 \\, mm^2 = 0,2475 \\, m^2 \\]
+            5. Massa: \\[ m = A_{total} \\cdot e \\cdot \\rho = 0,2475 \\cdot 0,012 \\cdot 7900 = 23,46 \\, kg \\]
         `
     }
 ];
