@@ -536,37 +536,42 @@ const questions = [
         `
     },
     
-    {
+   {
         type: "exercicis",
         category: "maquines i sistemes energetics",
         text: `Exercici 4
-               Un ariet hidràulic és una bomba d’aigua que aprofita l’energia que proporciona un dipòsit subministrador, situat a una altura \\(h_1 = 3 \\, \\text{m}\\), per a elevar una part de l’aigua a un dipòsit receptor, situat a una altura \\(h_2 = 25 \\, \\text{m}\\). La bomba funciona per mitjà del tancament sobtat i periòdic d’una vàlvula de descàrrega. El dipòsit subministrador proporciona un cabal \\(q_1 = 5 \\, \\text{L/s}\\) i el dipòsit receptor rep un cabal \\(q_2 = 0,35 \\, \\text{L/s}\\). Determineu:
-               <br>a) La potència hidràulica, \\(P_{h1}\\), que proporciona el dipòsit subministrador. [1 punt]
-               <br>b) El rendiment, \\(\\eta\\), de la bomba. [1 punt]
-               <br>c) El volum d’aigua, \\(V\\), que ha deixat anar la vàlvula de descàrrega en \\(t = 4 \\, \\text{h}\\) de funcionament. [0,5 punts]`,
+               Un ariet hidràulic és una bomba d’aigua que aprofita l’energia que proporciona un dipòsit subministrador, situat a una altura h1 = 3 m, per a elevar una part de l’aigua a un dipòsit receptor, situat a una altura h2 = 25 m. La bomba funciona per mitjà del tancament sobtat i periòdic d’una vàlvula de descàrrega. El dipòsit subministrador proporciona un cabal q1 = 5 L/s i el dipòsit receptor rep un cabal q2 = 0,35 L/s. Determineu:
+               <br>a) La potència hidràulica, Ph1, que proporciona el dipòsit subministrador. [1 punt]
+               <br>b) El rendiment, η, de la bomba. [1 punt]
+               <br>c) El volum d’aigua, V, que ha deixat anar la vàlvula de descàrrega en t = 4 h de funcionament. [0,5 punts]`,
         correctAnswer: "",
         steps: `
-            <strong>a) Potència hidràulica del dipòsit subministrador (\\(P_{h1}\\)):</strong>
+            <strong>a) Potència hidràulica del dipòsit subministrador (Ph1):</strong>
             <br>
-            La potència hidràulica es calcula amb la fórmula: \\(P = \rho \cdot g \cdot h \cdot q\\).
-            <br>Dades: \\(\rho = 1000 \\, \\text{kg/m}^3\\), \\(g = 9,81 \\, \\text{m/s}^2\\), \\(h_1 = 3 \\, \\text{m}\\), \\(q_1 = 5 \\, \\text{L/s} = 0,005 \\, \\text{m}^3/\\text{s}\\).
+            La potència hidràulica es calcula amb la fórmula: P = ρ * g * h * q
+            <br>Dades: ρ = 1000 kg/m³, g = 9,81 m/s², h1 = 3 m, q1 = 5 L/s = 0,005 m³/s.
             <br><br>
-            \\[ P_{h1} = 1000 \cdot 9,81 \cdot 3 \cdot 0,005 = 147,15 \\, \\text{W} \\]
+            Ph1 = 1000 * 9,81 * 3 * 0,005 = <strong>147,15 W</strong>
+            <br><br>
+            <strong>b) Rendiment de la bomba (η):</strong>
             <br>
-            <strong>b) Rendiment de la bomba (\\(\\eta\\)):</strong>
+            El rendiment és la relació entre la potència útil (receptor) i la potència absorbida (subministrador).
+            <br><br>
+            Potència útil (Ph2):
+            <br>Ph2 = 1000 * 9,81 * 25 * 0,00035 = 85,8375 W
+            <br><br>
+            Càlcul del rendiment:
+            <br>η = Ph2 / Ph1 = 85,8375 / 147,15 = <strong>0,5833 (58,33%)</strong>
+            <br><br>
+            <strong>c) Volum d'aigua de la vàlvula de descàrrega (V):</strong>
             <br>
-            El rendiment és la relació entre la potència útil (la que arriba al dipòsit receptor a \\(h_2\\)) i la potència absorbida (la que dóna el dipòsit subministrador a \\(h_1\\)).
-            <br>Potència útil: \\[ P_{h2} = \rho \cdot g \cdot h_2 \cdot q_2 = 1000 \cdot 9,81 \cdot 25 \cdot 0,00035 = 85,8375 \\, \\text{W} \\]
-            <br>Rendiment:
-            \\[ \eta = \frac{P_{h2}}{P_{h1}} = \frac{85,8375}{147,15} = 0,5833 \rightarrow 58,33 \% \\]
-            <br>
-            <strong>c) Volum d'aigua de la vàlvula de descàrrega (\\(V\\)):</strong>
-            <br>
-            El cabal que surt per la vàlvula de descàrrega (\\(q_d\\)) és la diferència entre el que entra (\\(q_1\\)) i el que puja al dipòsit (\\(q_2\\)):
-            <br>\\[ q_d = q_1 - q_2 = 5 - 0,35 = 4,65 \\, \\text{L/s} \\]
-            <br>En un temps \\(t = 4 \\, \\text{h} = 4 \cdot 3600 = 14400 \\, \\text{s}\\):
-            \\[ V = q_d \cdot t = 4,65 \cdot 14400 = 66960 \\, \\text{L} \\]
-            Convertit a metres cúbics: <strong>66,96 m³</strong>.
+            El cabal de descàrrega (qd) és la diferència entre el que entra i el que s'aprofita:
+            <br>qd = q1 - q2 = 5 - 0,35 = 4,65 L/s
+            <br><br>
+            En un temps t = 4 h (14400 segons):
+            <br>V = qd * t = 4,65 * 14400 = 66960 L
+            <br><br>
+            Convertit a metres cúbics: <strong>66,96 m³</strong>
         `
     }
 ];
