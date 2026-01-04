@@ -396,17 +396,17 @@ const questions = [
         steps: `
             <strong>a) Taula de veritat:</strong><br>
             Condició: El motor s'activa (1) si el pedal ($p_e$) és 1 I (almenys un polsador $p_1$ o $p_2$ és 1).
-            <br>
-            | $p_e$ | $p_1$ | $p_2$ | $m$ |
-            |---|----|----|---|
-            | 0 | 0  | 0  | 0 |
-            | 0 | 0  | 1  | 0 |
-            | 0 | 1  | 0  | 0 |
-            | 0 | 1  | 1  | 0 |
-            | 1 | 0  | 0  | 0 |
-            | 1 | 0  | 1  | 1 |
-            | 1 | 1  | 0  | 1 |
-            | 1 | 1  | 1  | 1 |
+         <br><br>
+            p | p1 | p2 | m<br>
+            --|----|----|---<br>
+            0 | 0  | 0  | 0<br>
+            0 | 0  | 1  | 0<br>
+            0 | 1  | 0  | 0<br>
+            0 | 1  | 1  | 0<br>
+            1 | 0  | 0  | 0<br>
+            1 | 0  | 1  | 1<br>
+            1 | 1  | 0  | 1<br>
+            1 | 1  | 1  | 1<br>
             <br>
             <strong>b) Funció lògica:</strong><br>
             \\[ m = p_e \\cdot (p_1 + p_2) \\]
