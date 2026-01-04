@@ -386,75 +386,107 @@ const questions = [
 {
         type: "exercicis",
         category: "sistemes de control",
-        text: `Exercici 2
-               Una premsa hidràulica es controla amb dos polsadors i un pedal. El motor de la premsa es posa en marxa si s'acciona el pedal i es prem, com a mínim, un dels polsadors. Utilitzant les variables d'estat següents:
-               <br>polsadors: p1, p2 = { 1: premut; 0: no premut ; pedal: p = { 1: accionat; 0: no accionat
-               <br>motor: m = { 1: en marxa; 0: aturat
-               <br>a) Escriviu la taula de veritat del sistema. [1 punt]
-               <br>b) Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
-               <br>c) Dibuixeu l'esquema de portes lògiques equivalent. [0,5 punts]`,
+        text: `Una premsa hidràulica es controla amb dos polsadors i un pedal. El motor de la premsa es posa en marxa si s'acciona el pedal i es prem, com a mínim, un dels polsadors. Utilitzant les variables d'estat següents:
+               <br>polsadors: \\(p_1, p_2 = \\begin{cases} 1: \\text{premut} \\\\ 0: \\text{no premut} \\end{cases}\\) ; pedal: \\(p_e = \\begin{cases} 1: \\text{accionat} \\\\ 0: \\text{no accionat} \\end{cases}\\)
+               <br>motor: \\(m = \\begin{cases} 1: \\text{en marxa} \\\\ 0: \\text{aturat} \\end{cases}\\)
+               <br>a) Escriviu la taula de veritat del sistema.
+               <br>b) Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la.
+               <br>c) Dibuixeu l'esquema de portes lògiques equivalent.`,
         correctAnswer: "",
         steps: `
             <strong>a) Taula de veritat:</strong><br>
-            L'activació del motor (m=1) requereix que el pedal estigui a 1 I que qualsevol dels polsadors (o tots dos) estiguin a 1.
-            <br><br>
-            p | p1 | p2 | m<br>
-            --|----|----|---<br>
-            0 | 0  | 0  | 0<br>
-            0 | 0  | 1  | 0<br>
-            0 | 1  | 0  | 0<br>
-            0 | 1  | 1  | 0<br>
-            1 | 0  | 0  | 0<br>
-            1 | 0  | 1  | 1<br>
-            1 | 1  | 0  | 1<br>
-            1 | 1  | 1  | 1<br>
+            Condició: El motor s'activa (1) si el pedal ($p_e$) és 1 I (almenys un polsador $p_1$ o $p_2$ és 1).
+            <br>
+            | $p_e$ | $p_1$ | $p_2$ | $m$ |
+            |---|----|----|---|
+            | 0 | 0  | 0  | 0 |
+            | 0 | 0  | 1  | 0 |
+            | 0 | 1  | 0  | 0 |
+            | 0 | 1  | 1  | 0 |
+            | 1 | 0  | 0  | 0 |
+            | 1 | 0  | 1  | 1 |
+            | 1 | 1  | 0  | 1 |
+            | 1 | 1  | 1  | 1 |
             <br>
             <strong>b) Funció lògica:</strong><br>
-            La condició lògica s'expressa de la següent manera:<br>
-            m = p * (p1 + p2)<br>
+            \\[ m = p_e \\cdot (p_1 + p_2) \\]
             <br>
-            On el signe (*) representa la multiplicació lògica (porta AND) i el signe (+) representa la suma lògica (porta OR).
-            <br><br>
             <strong>c) Esquema de portes lògiques:</strong><br>
-            Per implementar aquesta funció necessitem:<br>
-            1. Una porta <strong>OR</strong> on connectem les entrades p1 i p2.<br>
-            2. Una porta <strong>AND</strong> on connectem l'entrada p i la sortida de la porta OR anterior.<br>
-            3. La sortida d'aquesta porta AND és el senyal que activa el motor m.
+            Una porta <strong>OR</strong> que suma $p_1$ i $p_2$. La sortida d'aquesta va a una porta <strong>AND</strong> juntament amb l'entrada $p_e$.
         `
     },
-
+    
+    // --- EXERCICI 3 (OPCIÓ A) ---
     {
         type: "exercicis",
         category: "maquines i sistemes energetics",
-        text: `Exercici 3
-               Un vehicle de massa m = 1725 kg accelera, en una superfície horitzontal, de v1 = 0 km/h a v2 = 100 km/h. El combustible que fa servir és gasoil, de poder calorífic pc = 43,25 MJ/kg. El rendiment mitjà del motor, entès com la relació entre l'energia mecànica i l'energia que proporciona el combustible, és η = 20,8%. Durant l'etapa d'acceleració, determineu:
-               <br>a) L'energia mecànica, Em, que adquireix el vehicle. [0,5 punts]
-               <br>b) La quantitat de combustible, mcomb, consumida. [1 punt]
-               <br>Se suposa que el motor proporciona un parell Гmot = 320 N·m constant entre n1 = 2000 min⁻¹ i n2 = 3000 min⁻¹:
-               <br>c) Representeu, de manera aproximada i indicant les escales, la corba de la potència, Pm, que proporciona el motor per a 2000 min⁻¹ ≤ n ≤ 3000 min⁻¹. [1 punt]`,
+        text: `Un vehicle de massa \\(m = 1725 \\, \\text{kg}\\) accelera, en una superfície horitzontal, de \\(v_1 = 0 \\, \\text{km/h}\\) a \\(v_2 = 100 \\, \\text{km/h}\\). El combustible que fa servir és gasoil, de poder calorífic \\(p_c = 43,25 \\, \\text{MJ/kg}\\). El rendiment mitjà del motor, entès com la relació entre l'energia mecànica i l'energia que proporciona el combustible, és \\(\\eta = 20,8 \\%\\). Durant l'etapa d'acceleració, determineu:
+               <br>a) L'energia mecànica, \\(E_m\\), que adquireix el vehicle. [0,5 punts]
+               <br>b) La quantitat de combustible, \\(m_{comb}\\), consumida. [1 punt]
+               <br>Se suposa que el motor proporciona un parell \\(\\Gamma_{mot} = 320 \\, \\text{N}\\cdot\\text{m}\\) constant entre \\(n_1 = 2000 \\, \\text{min}^{-1}\\) i \\(n_2 = 3000 \\, \\text{min}^{-1}\\):
+               <br>c) Representeu, de manera aproximada i indicant les escales, la corba de la potència, \\(P_m\\), que proporciona el motor per a \\(2000 \\, \\text{min}^{-1} \\le n \\le 3000 \\, \\text{min}^{-1}\\). [1 punt]`,
         correctAnswer: "",
         steps: `
-            <strong>a) Energia mecànica (Em):</strong><br>
-            L'energia mecànica adquirida és l'energia cinètica final (ja que v1=0). Primer passem la velocitat a m/s:<br>
-            v2 = 100 km/h = 100 / 3,6 = 27,78 m/s<br>
-            Em = (1/2) * m * v2² = 0,5 * 1725 * (27,78)² = 665.664 J = 665,66 kJ
-            <br><br>
-            <strong>b) Quantitat de combustible (mcomb):</strong><br>
-            L'energia del combustible (Ecomb) es troba dividint l'energia mecànica pel rendiment:<br>
-            Ecomb = Em / η = 665.664 / 0,208 = 3.200.307 J = 3,20 MJ<br>
-            Ara usem el poder calorífic (pc) per trobar la massa:<br>
-            mcomb = Ecomb / pc = 3,20 MJ / 43,25 MJ/kg = 0,074 kg = 74 g
-            <br><br>
-            <strong>c) Representació de la corba de potència (Pm):</strong><br>
-            La potència és P = Г * ω. Com que el parell (Г) és constant, la potència serà una línia recta ascendent.<br>
-            Calculem els punts extrems:<br>
-            1. Per n1 = 2000 min⁻¹:<br>
-            ω1 = 2000 * (2π / 60) = 209,44 rad/s<br>
-            P1 = 320 * 209,44 = 67.020 W = 67,02 kW<br>
-            2. Per n2 = 3000 min⁻¹:<br>
-            ω2 = 3000 * (2π / 60) = 314,16 rad/s<br>
-            P2 = 320 * 314,16 = 100.531 W = 100,53 kW<br>
-            La gràfica és una recta que uneix (2000, 67.02) i (3000, 100.53).
+            <strong>a) Energia mecànica (\\(E_m\\)):</strong><br>
+            \\[ v_2 = 100 \\, \\text{km/h} = 27,78 \\, \\text{m/s} \\]
+            \\[ E_m = \\frac{1}{2} m v_2^2 = 0,5 \\cdot 1725 \\cdot 27,78^2 = 665.548 \\, \\text{J} = 665,55 \\, \\text{kJ} \\]
+            <br>
+            <strong>b) Quantitat de combustible (\\(m_{comb}\\)):</strong><br>
+            \\[ E_{comb} = \\frac{E_m}{\\eta} = \\frac{665,55 \\, \\text{kJ}}{0,208} = 3199,75 \\, \\text{kJ} \\]
+            \\[ m_{comb} = \\frac{E_{comb}}{p_c} = \\frac{3199,75 \\, \\text{kJ}}{43250 \\, \\text{kJ/kg}} = 0,07398 \\, \\text{kg} \\approx 74 \\, \\text{g} \\]
+            <br>
+            <strong>c) Corba de potència:</strong><br>
+            \\[ P = \\Gamma \\cdot \\omega \\]
+            \\[ n_1 = 2000 \\to \\omega_1 = 209,44 \\, \\text{rad/s} \\to P_1 = 320 \\cdot 209,44 = 67,02 \\, \\text{kW} \\]
+            \\[ n_2 = 3000 \\to \\omega_2 = 314,16 \\, \\text{rad/s} \\to P_2 = 320 \\cdot 314,16 = 100,53 \\, \\text{kW} \\]
+            La gràfica és una recta que uneix aquests dos punts.
+        `
+    },
+
+    // --- EXERCICI 4 (OPCIÓ A) - CORREGIT SEGONS FOTO ---
+    {
+        type: "exercicis",
+        category: "fabricacio i materials",
+        text: `La peça de la figura s'ha obtingut a partir d'una planxa d'acer inoxidable de gruix \\(e = 12 \\, \\text{mm}\\) i densitat \\(\\rho = 7900 \\, \\text{kg/m}^3\\). El tall s'ha fet, amb una màquina de tall per doll d'aigua, a una velocitat \\(v = 5 \\, \\text{m/min}\\) i els quatre forats de radi \\(r_2\\), amb un trepant que gira a \\(n = 1060 \\, \\text{min}^{-1}\\). Determineu:
+               <br>a) La longitud del contorn exterior, \\(L_{ext}\\). [0,5 punts]
+               <br>b) El temps, \\(t\\), de tall del perfil. [0,5 punts]
+               <br>c) La velocitat de tall de la broca, \\(v_{tall}\\) (velocitat lineal de la perifèria de la broca). [0,5 punts]
+               <br>d) La massa, \\(m\\), de la peça. [1 punt]
+               <br><br>
+               <em>Dades de la figura: \\(b=625\\) mm, \\(h=400\\) mm, \\(r_1=100\\) mm, \\(r_2=5\\) mm.</em>`,
+        correctAnswer: "",
+        steps: `
+            <strong>a) Longitud del contorn exterior (\\(L_{ext}\\)):</strong><br>
+            El contorn es compon de 4 trams rectes i un arc de 90° (quart de circumferència).
+            <br>- Tram recte superior: \\( b - r_1 = 625 - 100 = 525 \\, \\text{mm} \\)
+            <br>- Tram recte esquerre: \\( h - r_1 = 400 - 100 = 300 \\, \\text{mm} \\)
+            <br>- Tram recte inferior: \\( b = 625 \\, \\text{mm} \\)
+            <br>- Tram recte dret: \\( h = 400 \\, \\text{mm} \\)
+            <br>- Arc de radi \\(r_1\\): \\( \\frac{2 \\cdot \\pi \\cdot r_1}{4} = \\frac{\\pi \\cdot 100}{2} = 157,08 \\, \\text{mm} \\)
+            <br>
+            \\[ L_{ext} = 525 + 300 + 625 + 400 + 157,08 = 2007,08 \\, \\text{mm} \\approx 2,007 \\, \\text{m} \\]
+            <br>
+            <strong>b) Temps de tall (\\(t\\)):</strong><br>
+            \\[ t = \\frac{L_{ext}}{v} = \\frac{2,007 \\, \\text{m}}{5 \\, \\text{m/min}} = 0,4014 \\, \\text{min} \\]
+            En segons: \\( 0,4014 \\cdot 60 = 24,08 \\, \\text{s} \\).
+            <br>
+            <strong>c) Velocitat de tall de la broca (\\(v_{tall}\\)):</strong><br>
+            Radi broca \\(r_2 = 5 \\, \\text{mm}\\) (Diàmetre \\(D = 10 \\, \\text{mm} = 0,01 \\, \\text{m}\\)).
+            \\[ v_{tall} = \\omega \\cdot r_2 = \\left( 1060 \\cdot \\frac{2\\pi}{60} \\right) \\cdot 0,005 \\]
+            \\[ v_{tall} = 111 \\, \\text{rad/s} \\cdot 0,005 \\, \\text{m} = 0,555 \\, \\text{m/s} \\]
+            <br>
+            <strong>d) Massa de la peça (\\(m\\)):</strong><br>
+            1. <strong>Àrea total (sense forats):</strong> Àrea rectangle ($b \\cdot h$) menys la cantonada que falta.
+            La cantonada que falta és un quadrat de costat 100 menys el quart de cercle:
+            \\[ A_{cantonada} = 100^2 - \\frac{\\pi \\cdot 100^2}{4} = 10000 - 7854 = 2146 \\, \\text{mm}^2 \\]
+            \\[ A_{base} = (625 \\cdot 400) - 2146 = 250000 - 2146 = 247854 \\, \\text{mm}^2 \\]
+            2. <strong>Àrea dels forats:</strong> 4 forats de radi 5 mm.
+            \\[ A_{forats} = 4 \\cdot (\\pi \\cdot 5^2) = 4 \\cdot 78,54 = 314,16 \\, \\text{mm}^2 \\]
+            3. <strong>Àrea neta:</strong>
+            \\[ A_{neta} = 247854 - 314,16 = 247539,8 \\, \\text{mm}^2 \\approx 0,24754 \\, \\text{m}^2 \\]
+            4. <strong>Massa:</strong>
+            \\[ Volum = A_{neta} \\cdot e = 0,24754 \\, \\text{m}^2 \\cdot 0,012 \\, \\text{m} = 0,00297 \\, \\text{m}^3 \\]
+            \\[ m = Volum \\cdot \\rho = 0,00297 \\cdot 7900 = 23,47 \\, \\text{kg} \\]
         `
     }
 ];
