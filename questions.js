@@ -574,4 +574,133 @@ const questions = [
             Convertit a metres cúbics: <strong>66,96 m³</strong>
         `
     }
+
+    {
+        type: "questions",
+        category: "maquines i sistemes electrics i electrotecnics",
+        text: `Qüestió 1
+               Un fil de coure de 600 m té una resistència de 1,02 Ω. Si el fil es divideix en dos parts iguals de 300 m i es connecten en paral·lel, quina és la resistència entre els extrems?`,
+        options: [
+            { text: "a) 0,51 Ω", value: "a" },
+            { text: "b) 0,255 Ω", value: "b" },
+            { text: "c) 1,02 Ω", value: "c" },
+            { text: "d) 2,04 Ω", value: "d" }
+        ],
+        correctAnswer: "b",
+        steps: `
+            <strong>1. Resistència de cada meitat:</strong><br>
+            La resistència d'un fil és proporcional a la seva longitud. Si tallem el fil de 600 m (1,02 Ω) per la meitat:
+            \\[ R_{300m} = \\frac{1,02 \\, \\Omega}{2} = 0,51 \\, \\Omega \\]
+            
+            <strong>2. Connexió en paral·lel:</strong><br>
+            Quan connectem dues resistències iguals (R) en paral·lel, la resistència equivalent és la meitat d'una d'elles:
+            \\[ R_{p} = \\frac{R_{300m}}{2} = \\frac{0,51}{2} = 0,255 \\, \\Omega \\]
+            
+            <strong>3. Conclusió:</strong><br>
+            La resistència total del conjunt en paral·lel és de 0,255 Ω.
+        `
+    },
+    {
+        type: "questions",
+        category: "energia",
+        text: `Qüestió 2
+               Se substitueix una bombeta incandescent de 100 W per una bombeta de baix consum de 20 W que produeix una intensitat de llum equivalent. Quant de temps ha de funcionar perquè la substitució produeixi un estalvi de 90 € en el consum? (Considereu el cost de 0,13 €/kWh).`,
+        options: [
+            { text: "a) 6923 h", value: "a" },
+            { text: "b) 5769 h", value: "b" },
+            { text: "c) 7524 h", value: "c" },
+            { text: "d) 8654 h", value: "d" }
+        ],
+        correctAnswer: "d",
+        steps: `
+            <strong>1. Estalvi de potència:</strong><br>
+            La diferència de consum entre les dues bombetes és:
+            \\[ P_{estalvi} = 100 \\, W - 20 \\, W = 80 \\, W = 0,08 \\, kW \\]
+            
+            <strong>2. Energia total a estalviar:</strong><br>
+            Perquè l'estalvi econòmic sigui de 90 € amb un preu de 0,13 €/kWh:
+            \\[ E = \\frac{\\text{Estalvi (€)}}{\\text{Preu (€/kWh)}} = \\frac{90}{0,13} = 692,307 \\, kWh \\]
+            
+            <strong>3. Temps de funcionament:</strong><br>
+            Utilitzem la fórmula de l'energia (E = P · t):
+            \\[ t = \\frac{E}{P_{estalvi}} = \\frac{692,307 \\, kWh}{0,08 \\, kW} = 8653,84... \\, h \\]
+            Arrodonint obtenim 8654 h.
+        `
+    },
+    {
+        type: "questions",
+        category: "sistemes pneumatics i oleohidraulics",
+        text: `Qüestió 3
+               Un cilindre hidràulic ha d'exercir una força de 10 kN en la cursa de retrocés. Si el diàmetre del cilindre és 50 mm i el de la tija, 32 mm, quina pressió ha de proporcionar el grup?`,
+        options: [
+            { text: "a) 8,626 MPa", value: "a" },
+            { text: "b) 5,093 MPa", value: "b" },
+            { text: "c) 12,43 MPa", value: "c" },
+            { text: "d) 1,894 MPa", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>1. Secció útil de retrocés:</strong><br>
+            En el retrocés, la pressió actua sobre la corona circular (àrea del pistó menys àrea de la tija):
+            \\[ S_{útil} = \\frac{\\pi \\cdot (D^2 - d^2)}{4} = \\frac{\\pi \\cdot (50^2 - 32^2)}{4} = 1159,25 \\, mm^2 = 1,159 \\cdot 10^{-3} \\, m^2 \\]
+            
+            <strong>2. Càlcul de la pressió:</strong><br>
+            Força F = 10.000 N.
+            \\[ p = \\frac{F}{S_{útil}} = \\frac{10000}{1,159 \\cdot 10^{-3}} = 8.626.267 \\, Pa \\]
+            
+            <strong>3. Resultat en MPa:</strong><br>
+            Dividint per \\( 10^6 \\) obtenim 8,626 MPa.
+        `
+    },
+    {
+        type: "questions",
+        category: "organitzacio industrial",
+        text: `Qüestió 4
+               En una botiga hi ha un estoc inicial de 1000 unitats i es demanen 800 unitats més cada vegada que l'estoc arriba a 300 unitats. Si al cap de 100 dies es fa la dotzena comanda (12a), quantes unitats s'han venut en total?`,
+        options: [
+            { text: "a) 8800", value: "a" },
+            { text: "b) 9500", value: "b" },
+            { text: "c) 9600", value: "c" },
+            { text: "d) 10900", value: "d" }
+        ],
+        correctAnswer: "b",
+        steps: `
+            <strong>1. Vendes fins a la primera comanda:</strong><br>
+            Partim de 1000 i la 1a comanda es fa en arribar a 300:
+            \\[ V_1 = 1000 - 300 = 700 \\, \\text{unitats} \\]
+            
+            <strong>2. Vendes en els cicles següents:</strong><br>
+            Després de la 1a comanda, l'estoc puja a \\( 300 + 800 = 1100 \\). Per fer la següent comanda cal tornar a baixar a 300, venent 800 unitats.
+            Des de la 2a fins a la 12a comanda hi ha 11 cicles de venda de 800 unitats:
+            \\[ V_{cicles} = 11 \\cdot 800 = 8800 \\, \\text{unitats} \\]
+            
+            <strong>3. Total de vendes:</strong><br>
+            \\[ V_{total} = 700 + 8800 = 9500 \\, \\text{unitats} \\]
+        `
+    },
+    {
+        type: "questions",
+        category: "metrologia i normalitzacio",
+        text: `Qüestió 5
+               Un sensor de pressió té un error total màxim de ±2% de la lectura en el rang de temperatures de 0 °C a 50 °C. Si s'està mesurant una pressió de 8 bar a una temperatura de 45 °C, quin és el valor màxim que pot donar el sensor?`,
+        options: [
+            { text: "a) 8,2 bar", value: "a" },
+            { text: "b) 8,14 bar", value: "b" },
+            { text: "c) 8 bar", value: "c" },
+            { text: "d) 8,16 bar", value: "d" }
+        ],
+        correctAnswer: "d",
+        steps: `
+            <strong>1. Comprovació del rang:</strong><br>
+            La temperatura de 45 °C està dins del rang de precisió del sensor (0-50 °C), per tant apliquem l'error del ±2%.
+            
+            <strong>2. Càlcul de l'error absolut:</strong><br>
+            L'error és el 2% del valor llegit (8 bar):
+            \\[ \\text{Error} = 8 \\cdot 0,02 = 0,16 \\, bar \\]
+            
+            <strong>3. Valor màxim possible:</strong><br>
+            El valor més alt que pot mostrar el sensor és la pressió real més l'error màxim:
+            \\[ V_{màx} = 8 + 0,16 = 8,16 \\, bar \\]
+        `
+    }
 ];
