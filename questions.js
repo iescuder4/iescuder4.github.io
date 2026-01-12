@@ -205,7 +205,8 @@ const questions = [
                <br>a) La potència subministrada, \\(P_1\\), pel rotor al multiplicador. [0,5 punts]
                <br>b) El parell màxim a l'eix d'entrada, \\(\\Gamma_1\\), i a l'eix de sortida, \\(\\Gamma_2\\), del multiplicador. [1 punt]
                <br>c) La potència dissipada en el multiplicador, \\(P_{mult}\\), i en el generador, \\(P_{gen}\\). [1 punt]
-               <br><br><img src="images/201206s3p3b.jpg" alt="Esquema aerogenerador" style="max-width:100%; height:auto;">`,
+               <br><br>
+               <img src="images/201206s3p3b.jpg" alt="Imatge relacionada amb la pregunta">`,
         correctAnswer: "",
         steps: `
             
