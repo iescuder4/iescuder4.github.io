@@ -715,7 +715,8 @@ const questions = [
     text: `Una lluminària decorativa està formada per quatre files de n bombetes iguals, de potència \\(P_{bombeta}=5~W\\) connectades segons l'esquema de la figura. Per a fer-la atractiva, els interruptors canvien d'estat cíclicament cada \\(t_{c}=0,5~s\\) de manera que sempre hi ha una sola fila de bombetes enceses. Quan la lluminària es connecta a \\(U=230~V\\) consumeix \\(P=360~W\\). Determineu:
            <br>a) El nombre total de bombetes, \\(n_{total}\\), de la lluminària. [0,5 punts]
            <br>b) El corrent, I, que circula per una bombeta encesa i la resistència interna, R, corresponent. [1 punt]
-           <br>c) El consum total, \\(E_{total}\\), i el consum per bombeta, \\(E_{bombeta}\\), si la lluminària funciona durant \\(t=6~h\\). [1 punt]`,
+           <br>c) El consum total, \\(E_{total}\\), i el consum per bombeta, \\(E_{bombeta}\\), si la lluminària funciona durant \\(t=6~h\\). [1 punt]
+           <img src="images/201206s4p3a.jpg">`,
     correctAnswer: "",
     steps: `
         <strong>a) Nombre total de bombetes (\\(n_{total}\\)):</strong><br>
