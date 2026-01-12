@@ -206,7 +206,7 @@ const questions = [
                <br>b) El parell màxim a l'eix d'entrada, \\(\\Gamma_1\\), i a l'eix de sortida, \\(\\Gamma_2\\), del multiplicador. [1 punt]
                <br>c) La potència dissipada en el multiplicador, \\(P_{mult}\\), i en el generador, \\(P_{gen}\\). [1 punt]
                <br><br>
-               <img src="images/201206s3p3b.jpg" alt="Imatge relacionada amb la pregunta">`,
+               <img src="images/201206s3p3b.jpg">`,
         correctAnswer: "",
         steps: `
             
@@ -458,7 +458,7 @@ const questions = [
                <br>d) La massa, \\(m\\), de la peça. [1 punt]
                <br><br>
                <em>Dades de la figura: \\(b=625\\) mm, \\(h=400\\) mm, \\(r_1=100\\) mm, \\(r_2=5\\) mm.</em>`
-             <img src="images/201206s1p4a.jpg" alt="Imatge relacionada amb la pregunta">`,
+             <img src="images/201206s1p4a.jpg">`,
         correctAnswer: "",
         steps: `
             <strong>a) Longitud del contorn exterior (\\(L_{ext}\\)):</strong><br>
