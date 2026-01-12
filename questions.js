@@ -784,7 +784,8 @@ const questions = [
            <br>a) L'energia, E, necessària per a fer pujar la cistella. [0,5 punts]
            <br>b) El temps, t, que tarda a pujar la cistella amb el motor funcionant en règim nominal. [0,5 punts]
            <br>c) La longitud de cable, L, que s'ha enrotllat. [0,5 punts]
-           <br>d) L'energia elèctrica consumida, \\(E_{electr}\\), i l'energia dissipada, \\(E_{diss}.\\) [1 punt]`,
+           <br>d) L'energia elèctrica consumida, \\(E_{electr}\\), i l'energia dissipada, \\(E_{diss}.\\) [1 punt]
+           <img src="images/201206s4p3b.jpg">`,
     correctAnswer: "",
     steps: `
         <strong>a) Energia necessària (E):</strong><br>
