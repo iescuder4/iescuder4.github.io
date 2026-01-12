@@ -22,6 +22,7 @@ const questions = [
             Multipliquem la capacitat de cada viatge pel nombre de sortides:
             \\[ 48 \\, \\text{passatgers/viatge} \\times 4 \\, \\text{viatges/h} = 192 \\, \\text{passatgers/h} \\]
         `
+         <img src="" alt="Imatge relacionada amb la resposta">`,
     },
     
     {
