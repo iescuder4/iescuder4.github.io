@@ -177,7 +177,8 @@ const questions = [
                <br>a) La massa, \\(m\\), de la persiana. [0,5 punts]
                <br>b) El parell, \\(\\Gamma_{s}\\), a l'eix de sortida. [0,5 punts]
                <br>c) El rendiment electromecànic, \\(\\eta\\), del motor reductor. [0,5 punts]
-               <br>d) L'energia elèctrica consumida, \\(E_{electr}\\), i l'energia dissipada en el motor, \\(E_{diss}\\), si funciona durant un temps \\(t=20\\) s en règim nominal. [1 punt]`,
+               <br>d) L'energia elèctrica consumida, \\(E_{electr}\\), i l'energia dissipada en el motor, \\(E_{diss}\\), si funciona durant un temps \\(t=20\\) s en règim nominal. [1 punt]
+                 <img src="images/201206s3p4a.jpg">`,
         correctAnswer: "",
         steps: `
             <strong>a) Massa de la persiana:</strong>
