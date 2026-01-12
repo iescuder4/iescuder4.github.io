@@ -674,7 +674,7 @@ const questions = [
     steps: `
         <strong>a) Taula de veritat:</strong>
         <br>
-        El motor funciona (m=1) si la velocitat és superior a 3 km/h (v=1). Si la velocitat és inferior (v=0), el motor només funciona si la bateria és baixa (b=0) O la temperatura és baixa (t=0)[cite: 262, 370].
+        El motor funciona (m=1) si la velocitat és superior a 3 km/h (v=1). Si la velocitat és inferior (v=0), el motor només funciona si la bateria és baixa (b=0) O la temperatura és baixa (t=0).
         <br><br>
         <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
             <tr style="background-color: #f2f2f2;">
@@ -692,13 +692,13 @@ const questions = [
         <br>
         <strong>b) Funció lògica:</strong>
         <br>
-        El motor s'atura només quan es compleixen tres condicions alhora: velocitat baixa (\\(\\overline{v}\\)), bateria carregada (\\(b\\)) i temperatura alta (\\(t\\)). Per tant, l'estat de funcionament és el contrari d'aquesta aturada[cite: 372]:
+        El motor s'atura només quan es compleixen tres condicions alhora: velocitat baixa (\\(\\overline{v}\\)), bateria carregada (\\(b\\)) i temperatura alta (\\(t\\)). Per tant, l'estat de funcionament és el contrari d'aquesta aturada:
         <br>
         \\[ m = \\overline{\\overline{v} \\cdot b \\cdot t} = v + \\overline{b} + \\overline{t} \\]
         <br>
         <strong>c) Esquema de contactes equivalent:</strong>
         <br>
-        L'esquema simplificat correspon a tres contactes en paral·lel: un contacte normalment obert per a la velocitat (v) i dos contactes normalment tancats per a la bateria (b) i la temperatura (t)[cite: 376, 377].
+        L'esquema simplificat correspon a tres contactes en paral·lel: un contacte normalment obert per a la velocitat (v) i dos contactes normalment tancats per a la bateria (b) i la temperatura (t).
         <br>
                 `
 },
@@ -706,30 +706,30 @@ const questions = [
     {
     type: "exercicis",
     category: "maquines i sistemes electrics i electrotecnics",
-    text: `Exercici 3<br>Una lluminària decorativa està formada per quatre files de n bombetes iguals, de potència \\(P_{bombeta}=5~W\\) connectades segons l'esquema de la figura. Per a fer-la atractiva, els interruptors canvien d'estat cíclicament cada \\(t_{c}=0,5~s\\) de manera que sempre hi ha una sola fila de bombetes enceses. Quan la lluminària es connecta a \\(U=230~V\\) consumeix \\(P=360~W\\). Determineu:
+    text: `<br>Una lluminària decorativa està formada per quatre files de n bombetes iguals, de potència \\(P_{bombeta}=5~W\\) connectades segons l'esquema de la figura. Per a fer-la atractiva, els interruptors canvien d'estat cíclicament cada \\(t_{c}=0,5~s\\) de manera que sempre hi ha una sola fila de bombetes enceses. Quan la lluminària es connecta a \\(U=230~V\\) consumeix \\(P=360~W\\). Determineu:
            <br>a) El nombre total de bombetes, \\(n_{total}\\), de la lluminària. [0,5 punts]
            <br>b) El corrent, I, que circula per una bombeta encesa i la resistència interna, R, corresponent. [1 punt]
            <br>c) El consum total, \\(E_{total}\\), i el consum per bombeta, \\(E_{bombeta}\\), si la lluminària funciona durant \\(t=6~h\\). [1 punt]`,
     correctAnswer: "",
     steps: `
         <strong>a) Nombre total de bombetes (\\(n_{total}\\)):</strong><br>
-        Com que sempre hi ha només una fila encesa i la potència total consumida és de 360 W, calculem primer el nombre de bombetes per fila (n)[cite: 281, 283]:
+        Com que sempre hi ha només una fila encesa i la potència total consumida és de 360 W, calculem primer el nombre de bombetes per fila (n):
         \\[ n = \\frac{P}{P_{bombeta}} = \\frac{360 \\, W}{5 \\, W} = 72 \\, \\text{bombetes/fila} \\]
-        Atès que hi ha 4 files iguals en total[cite: 281, 381]:
+        Atès que hi ha 4 files iguals en total:
         \\[ n_{total} = 4 \\times 72 = 288 \\, \\text{bombetes} \\]
         
         <strong>b) Corrent (I) i resistència interna (R):</strong><br>
-        El corrent que circula per la fila encesa és el mateix que circula per cada bombeta individual, ja que estan en sèrie dins de la fila[cite: 381, 386]:
+        El corrent que circula per la fila encesa és el mateix que circula per cada bombeta individual, ja que estan en sèrie dins de la fila:
         \\[ I = \\frac{P}{U} = \\frac{360 \\, W}{230 \\, V} = 1,565 \\, A \\]
-        La resistència de cada bombeta es calcula a partir de la seva potència nominal i el corrent que la travessa[cite: 387]:
+        La resistència de cada bombeta es calcula a partir de la seva potència nominal i el corrent que la travessa:
         \\[ R = \\frac{P_{bombeta}}{I^2} = \\frac{5 \\, W}{(1,565 \\, A)^2} = 2,041 \\, \\Omega \\]
         (També es pot calcular com \\( R = \\frac{U_{bombeta}}{I} \\) on \\( U_{bombeta} = \\frac{230 \\, V}{72} \\)).
         
         <strong>c) Consum d'energia (\\(E_{total}\\) i \\(E_{bombeta}\\)):</strong><br>
-        L'energia total consumida per la lluminària en 6 hores és[cite: 389]:
+        L'energia total consumida per la lluminària en 6 hores és:
         \\[ E_{total} = P \\cdot t = 360 \\, W \\times 6 \\, h = 2160 \\, Wh = 2,16 \\, kWh \\]
         En unitats del SI: \\[ 2,16 \\, kWh \\times 3600 = 7776 \\, kJ \\]
-        L'energia consumida per cada bombeta individualment depèn del temps real que està encesa (només 1/4 del temps total)[cite: 390]:
+        L'energia consumida per cada bombeta individualment depèn del temps real que està encesa (només 1/4 del temps total):
         \\[ E_{bombeta} = \\frac{E_{total}}{n_{total}} = \\frac{7776 \\, kJ}{288} = 27 \\, kJ \\]
         O en unitats d'energia elèctrica: \\[ E_{bombeta} = \\frac{2,16 \\, kWh}{288} = 0,0075 \\, kWh = 7,5 \\, Wh \\]`
 },
@@ -737,7 +737,7 @@ const questions = [
  {
     type: "exercicis",
     category: "energia",
-    text: `Exercici 4<br>[2,5 punts]<br>Per a estudiar l'impacte en el consum i en l'emissió de \\(CO_{2}\\) d'un vehicle a diferents velocitats, considerem un vehicle de massa \\(m=1~300~kg\\) que utilitza com a combustible gasolina de densitat \\(\\rho=0,68~kg/L\\) i de poder calorífic \\(p_{c}=47,1~MJ/kg\\). El rendiment del motor és \\(\\eta=0,23\\). Es realitzen dos desplaçaments de \\(d=25~km\\) en terreny horitzontal a les velocitats constants \\(v_{1}=80~km/h\\) i \\(v_{2}=120~km/h,\\) respectivament. La resistència a l'avanç del vehicle es pot aproximar mitjançant una força, l'expressió de la qual és la següent: \\(F_{res}=0,42v^{2}~N,\\) on v està expressat en \\(m/s.\\) Determineu:
+    text: `[2,5 punts]<br>Per a estudiar l'impacte en el consum i en l'emissió de \\(CO_{2}\\) d'un vehicle a diferents velocitats, considerem un vehicle de massa \\(m=1~300~kg\\) que utilitza com a combustible gasolina de densitat \\(\\rho=0,68~kg/L\\) i de poder calorífic \\(p_{c}=47,1~MJ/kg\\). El rendiment del motor és \\(\\eta=0,23\\). Es realitzen dos desplaçaments de \\(d=25~km\\) en terreny horitzontal a les velocitats constants \\(v_{1}=80~km/h\\) i \\(v_{2}=120~km/h,\\) respectivament. La resistència a l'avanç del vehicle es pot aproximar mitjançant una força, l'expressió de la qual és la següent: \\(F_{res}=0,42v^{2}~N,\\) on v està expressat en \\(m/s.\\) Determineu:
            <br>a) Els temps de durada, \\(t_{1}\\) i \\(t_{2}\\), dels dos desplaçaments a velocitats \\(v_{1}\\) i \\(v_{2}.\\) [0,5 punts]
            <br>b) L'expressió de la potència que ha de vèncer el motor per a avançar. [0,5 punts]
            <br>c) La quantitat de combustible, \\(m_{comb1}\\) i \\(m_{comb2}\\) consumida a les velocitats \\(v_{1}\\) i \\(v_{2}.\\) [1 punt]
@@ -804,7 +804,7 @@ const questions = [
 {
     type: "exercicis",
     category: "material i assaig",
-    text: `Exercici 4<br>[2,5 punts]<br>La barra AB de la figura, de massa \\(m=60~kg\\) i longitud \\(L=2,5~m\\), està penjada de dos cables iguals i de massa negligible. Per a desplaçar la barra horitzontalment s'empeny amb una força, F, horitzontal. Si es desplaça \\(s=0,45~m\\) respecte de la posició de repòs, i en aquesta nova posició la barra està en equilibri, determineu:
+    text: `[2,5 punts]<br>La barra AB de la figura, de massa \\(m=60~kg\\) i longitud \\(L=2,5~m\\), està penjada de dos cables iguals i de massa negligible. Per a desplaçar la barra horitzontalment s'empeny amb una força, F, horitzontal. Si es desplaça \\(s=0,45~m\\) respecte de la posició de repòs, i en aquesta nova posició la barra està en equilibri, determineu:
            <br>a) L'angle \\(\alpha\\) que formen els cables amb la vertical. [0,5 punts]
            <br>b) El valor de la força F. [0,5 punts]
            <br>c) La tensió, T, de cada un dels cables. [0,5 punts]
