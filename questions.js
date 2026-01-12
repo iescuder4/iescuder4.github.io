@@ -152,6 +152,7 @@ const questions = [
                <br>d) El rendiment, \\(\\eta\\), del cilindre. [0,5 punts]`,
         correctAnswer: "",
         steps: `
+          <img src="images/201206s3p3a.png"><br>
             <strong>a) Pressió relativa (\\(p_{int}\\)):</strong>
             \\[ F = m \\cdot g = 980 \\cdot 9,807 = 9611 \\, \\text{N} \\]
             \\[ S_{int} = \\frac{\\pi \\cdot 0,094^2}{4} = 6,94 \\cdot 10^{-3} \\, \\text{m}^2 \\]
