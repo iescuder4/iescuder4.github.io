@@ -502,7 +502,8 @@ const questions = [
                <br>a) La resistència inicial del circuit, \\(R_{\\text{in}}\\), quan es connecta la cafetera. [0,5 punts]
                <br>b) El corrent, \\(I\\), consumit quan es connecta la cafetera. [0,5 punts]
                <br>c) El valor de les dues potències, \\(P_1\\) i \\(P_2\\), que consumeix la cafetera quan els interruptors 1 i 2 estan tancats i quan només ho està l’interruptor 2. [1 punt]
-               <br>d) El valor que ha de tenir la resistència \\(R_3\\) perquè la potència consumida quan es manté el cafè calent sigui \\(P_3=300 \\, \\text{W}\\). [0,5 punts]`,
+               <br>d) El valor que ha de tenir la resistència \\(R_3\\) perquè la potència consumida quan es manté el cafè calent sigui \\(P_3=300 \\, \\text{W}\\). [0,5 punts]<br>
+                <img src="images/201206s1p3b.jpg"`,
         correctAnswer: "",
         steps: `
             <strong>a) Resistència inicial del circuit (\\(R_{\\text{in}}\\)):</strong><br>
