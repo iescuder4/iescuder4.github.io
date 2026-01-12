@@ -106,7 +106,7 @@ const questions = [
     {
     type: "exercicis",
     category: "control",
-    text: `Exercici 2<br>En una explotació vinícola es controla regularment el grau alcohòlic i l'acidesa de les vinyes per a iniciar la verema. Per a elaborar un vi negre de qualitat cal que el raïm estigui veremat i tingui un grau alcohòlic superior al 12% vol. Utilitzant les variables d'estat següents:
+    text: `En una explotació vinícola es controla regularment el grau alcohòlic i l'acidesa de les vinyes per a iniciar la verema. Per a elaborar un vi negre de qualitat cal que el raïm estigui veremat i tingui un grau alcohòlic superior al 12% vol. Utilitzant les variables d'estat següents:
            <br>acidesa: \\(ac\\) {1: raïm veremat, 0: raïm no veremat};
            <br>grau alcohòlic: \\(g_{12}\\) {1: superior al 12% vol., 0: inferior al 12% vol.};
            <br>grau alcohòlic: \\(g_{15}\\) {1: superior al 15% vol., 0: inferior al 15% vol.};
@@ -204,7 +204,8 @@ const questions = [
         text: `Un aerogenerador consta, bàsicament, d'un rotor amb pales, d'un multiplicador de la velocitat de gir i d'un generador. Considerem que el rendiment del multiplicador, \\(\\eta_{mult}\\), i el del generador, \\(\\eta_{gen}\\), són constants. L'aerogenerador de la figura té una relació de transmissió \\(\\tau = \\omega_2 / \\omega_1 = 73\\) i un sistema de control que permet que la potència elèctrica generada es mantingui constant en \\(P_{electr} = 750 \\, \\text{kW}\\) per a una velocitat de gir del rotor \\(15 \\, \\text{min}^{-1} \\le n \\le 35 \\, \\text{min}^{-1}\\). Determineu:
                <br>a) La potència subministrada, \\(P_1\\), pel rotor al multiplicador. [0,5 punts]
                <br>b) El parell màxim a l'eix d'entrada, \\(\\Gamma_1\\), i a l'eix de sortida, \\(\\Gamma_2\\), del multiplicador. [1 punt]
-               <br>c) La potència dissipada en el multiplicador, \\(P_{mult}\\), i en el generador, \\(P_{gen}\\). [1 punt]`,
+               <br>c) La potència dissipada en el multiplicador, \\(P_{mult}\\), i en el generador, \\(P_{gen}\\). [1 punt]`
+        <img src="images/201206s3p3b.jpg" alt="Imatge relacionada amb la pregunta">`,
         correctAnswer: "",
         steps: `
             <strong>a) Potència subministrada pel rotor (\\(P_1\\)):</strong><br>
