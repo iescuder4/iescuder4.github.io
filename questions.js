@@ -706,7 +706,7 @@ const questions = [
     {
     type: "exercicis",
     category: "electrics",
-    text: `<br>Una lluminària decorativa està formada per quatre files de n bombetes iguals, de potència \\(P_{bombeta}=5~W\\) connectades segons l'esquema de la figura. Per a fer-la atractiva, els interruptors canvien d'estat cíclicament cada \\(t_{c}=0,5~s\\) de manera que sempre hi ha una sola fila de bombetes enceses. Quan la lluminària es connecta a \\(U=230~V\\) consumeix \\(P=360~W\\). Determineu:
+    text: `Una lluminària decorativa està formada per quatre files de n bombetes iguals, de potència \\(P_{bombeta}=5~W\\) connectades segons l'esquema de la figura. Per a fer-la atractiva, els interruptors canvien d'estat cíclicament cada \\(t_{c}=0,5~s\\) de manera que sempre hi ha una sola fila de bombetes enceses. Quan la lluminària es connecta a \\(U=230~V\\) consumeix \\(P=360~W\\). Determineu:
            <br>a) El nombre total de bombetes, \\(n_{total}\\), de la lluminària. [0,5 punts]
            <br>b) El corrent, I, que circula per una bombeta encesa i la resistència interna, R, corresponent. [1 punt]
            <br>c) El consum total, \\(E_{total}\\), i el consum per bombeta, \\(E_{bombeta}\\), si la lluminària funciona durant \\(t=6~h\\). [1 punt]`,
@@ -737,7 +737,7 @@ const questions = [
  {
     type: "exercicis",
     category: "energia",
-    text: `[2,5 punts]<br>Per a estudiar l'impacte en el consum i en l'emissió de \\(CO_{2}\\) d'un vehicle a diferents velocitats, considerem un vehicle de massa \\(m=1~300~kg\\) que utilitza com a combustible gasolina de densitat \\(\\rho=0,68~kg/L\\) i de poder calorífic \\(p_{c}=47,1~MJ/kg\\). El rendiment del motor és \\(\\eta=0,23\\). Es realitzen dos desplaçaments de \\(d=25~km\\) en terreny horitzontal a les velocitats constants \\(v_{1}=80~km/h\\) i \\(v_{2}=120~km/h,\\) respectivament. La resistència a l'avanç del vehicle es pot aproximar mitjançant una força, l'expressió de la qual és la següent: \\(F_{res}=0,42v^{2}~N,\\) on v està expressat en \\(m/s.\\) Determineu:
+    text: `Per a estudiar l'impacte en el consum i en l'emissió de \\(CO_{2}\\) d'un vehicle a diferents velocitats, considerem un vehicle de massa \\(m=1~300~kg\\) que utilitza com a combustible gasolina de densitat \\(\\rho=0,68~kg/L\\) i de poder calorífic \\(p_{c}=47,1~MJ/kg\\). El rendiment del motor és \\(\\eta=0,23\\). Es realitzen dos desplaçaments de \\(d=25~km\\) en terreny horitzontal a les velocitats constants \\(v_{1}=80~km/h\\) i \\(v_{2}=120~km/h,\\) respectivament. La resistència a l'avanç del vehicle es pot aproximar mitjançant una força, l'expressió de la qual és la següent: \\(F_{res}=0,42v^{2}~N,\\) on v està expressat en \\(m/s.\\) Determineu:
            <br>a) Els temps de durada, \\(t_{1}\\) i \\(t_{2}\\), dels dos desplaçaments a velocitats \\(v_{1}\\) i \\(v_{2}.\\) [0,5 punts]
            <br>b) L'expressió de la potència que ha de vèncer el motor per a avançar. [0,5 punts]
            <br>c) La quantitat de combustible, \\(m_{comb1}\\) i \\(m_{comb2}\\) consumida a les velocitats \\(v_{1}\\) i \\(v_{2}.\\) [1 punt]
@@ -773,7 +773,7 @@ const questions = [
     {
     type: "exercicis",
     category: "electrics",
-    text: `[2,5 punts]<br>La figura mostra les posicions desplegada i plegada d'una cistella de bàsquet que penja del sostre. El mecanisme s'acciona per mitjà d'un cable que s'enrotlla a una politja, de radi \\(R=0,1~m\\), moguda per un motor reductor elèctric. El motor reductor té, en règim de funcionament nominal, un rendiment \\(\\eta=0,30\\); proporciona a l'eix de sortida un gir \\(n=14~min^{-1}\\) i una potència \\(P_{s}=200~W.\\) Totes les masses es consideren negligibles excepte la massa del tauler, que és \\(m=115~kg.\\) Determineu:
+    text: `La figura mostra les posicions desplegada i plegada d'una cistella de bàsquet que penja del sostre. El mecanisme s'acciona per mitjà d'un cable que s'enrotlla a una politja, de radi \\(R=0,1~m\\), moguda per un motor reductor elèctric. El motor reductor té, en règim de funcionament nominal, un rendiment \\(\\eta=0,30\\); proporciona a l'eix de sortida un gir \\(n=14~min^{-1}\\) i una potència \\(P_{s}=200~W.\\) Totes les masses es consideren negligibles excepte la massa del tauler, que és \\(m=115~kg.\\) Determineu:
            <br>a) L'energia, E, necessària per a fer pujar la cistella. [0,5 punts]
            <br>b) El temps, t, que tarda a pujar la cistella amb el motor funcionant en règim nominal. [0,5 punts]
            <br>c) La longitud de cable, L, que s'ha enrotllat. [0,5 punts]
@@ -804,7 +804,7 @@ const questions = [
 {
     type: "exercicis",
     category: "materials",
-    text: `[2,5 punts]<br>La barra AB de la figura, de massa \\(m=60~kg\\) i longitud \\(L=2,5~m\\), està penjada de dos cables iguals i de massa negligible. Per a desplaçar la barra horitzontalment s'empeny amb una força, F, horitzontal. Si es desplaça \\(s=0,45~m\\) respecte de la posició de repòs, i en aquesta nova posició la barra està en equilibri, determineu:
+    text: `La barra AB de la figura, de massa \\(m=60~kg\\) i longitud \\(L=2,5~m\\), està penjada de dos cables iguals i de massa negligible. Per a desplaçar la barra horitzontalment s'empeny amb una força, F, horitzontal. Si es desplaça \\(s=0,45~m\\) respecte de la posició de repòs, i en aquesta nova posició la barra està en equilibri, determineu:
            <br>a) L'angle \\(\alpha\\) que formen els cables amb la vertical. [0,5 punts]
            <br>b) El valor de la força F. [0,5 punts]
            <br>c) La tensió, T, de cada un dels cables. [0,5 punts]
