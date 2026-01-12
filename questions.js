@@ -801,10 +801,10 @@ const questions = [
         `
 },
    
- {
+{
     type: "exercicis",
     category: "material i assaig",
-    text: `Exercici 4<br>[2,5 punts]<br>La barra AB de la figura, de massa \\(m=60~kg\\) està penjada de dos cables iguals i de massa negligible. Per a desplaçar la barra horitzontalment s'empeny amb una força, F, horitzontal. Si es desplaça \\(s=0,45~m\\) respecte de la posició de repòs, i en aquesta nova posició la barra està en equilibri, determineu:
+    text: `Exercici 4<br>[2,5 punts]<br>La barra AB de la figura, de massa \\(m=60~kg\\) i longitud \\(L=2,5~m\\), està penjada de dos cables iguals i de massa negligible. Per a desplaçar la barra horitzontalment s'empeny amb una força, F, horitzontal. Si es desplaça \\(s=0,45~m\\) respecte de la posició de repòs, i en aquesta nova posició la barra està en equilibri, determineu:
            <br>a) L'angle \\(\alpha\\) que formen els cables amb la vertical. [0,5 punts]
            <br>b) El valor de la força F. [0,5 punts]
            <br>c) La tensió, T, de cada un dels cables. [0,5 punts]
@@ -812,24 +812,25 @@ const questions = [
            <br>d) El coeficient de seguretat, n, de la instal·lació en aquesta posició. [1 punt]`,
     correctAnswer: "",
     steps: `
+        
         <strong>a) Angle \\(\alpha\\) dels cables:</strong><br>
         Utilitzant la trigonometria en el triangle format pel cable (longitud \\(L=2,5~m\\)) i el desplaçament horitzontal (\\(s=0,45~m\\)):
-        \\[ \sin \alpha = \frac{s}{L} = \frac{0,45}{2,5} = 0,18 \implies \alpha = \arcsin(0,18) = 10,37^\circ \\]
+        \\[ \\sin \\alpha = \\frac{s}{L} = \\frac{0,45}{2,5} = 0,18 \\implies \\alpha = \\arcsin(0,18) = 10,37^\\circ \\]
 
         <strong>b) Valor de la força F:</strong><br>
-        En equilibri, el sumatori de moments o forces ens diu que la força F es relaciona amb el pes (P) i l'angle:
+        En equilibri, el sumatori de forces ens diu que la força F es relaciona amb el pes (P) i l'angle:
         \\[ P = m \\cdot g = 60 \\, kg \\cdot 9,81 \\, m/s^2 = 588,6 \\, N \\]
-        \\[ F = P \\cdot \tan \alpha = 588,6 \\cdot \tan(10,37^\circ) = 107,7 \\, N \\]
+        \\[ F = P \\cdot \\tan \\alpha = 588,6 \\cdot \\tan(10,37^\\circ) = 107,7 \\, N \\]
 
         <strong>c) Tensió de cada cable (T):</strong><br>
-        La força vertical total és el pes, i es reparteix entre els dos cables (la component vertical de cada tensió és \\(T \cos \alpha\\)):
-        \\[ 2 \\cdot T \\cdot \cos \alpha = P \implies T = \frac{P}{2 \\cdot \cos \alpha} \\]
-        \\[ T = \frac{588,6}{2 \\cdot \cos(10,37^\circ)} = 299,2 \\, N \\]
+        La força vertical total és el pes, i es reparteix entre els dos cables (la component vertical de cada tensió és \\(T \\cos \\alpha\\)):
+        \\[ 2 \\cdot T \\cdot \\cos \\alpha = P \\implies T = \\frac{P}{2 \\cdot \\cos \\alpha} \\]
+        \\[ T = \\frac{588,6}{2 \\cdot \\cos(10,37^\\circ)} = 299,2 \\, N \\]
 
         <strong>d) Coeficient de seguretat (n):</strong><br>
-        Primer calculem la tensió de treball o real (\\(\sigma\\)) en el cable:
-        \\[ \sigma = \frac{T}{A} = \frac{299,2 \\, N}{1,5 \\, mm^2} = 199,5 \\, MPa \\]
+        Primer calculem la tensió de treball o real (\\(\\sigma\\)) en el cable:
+        \\[ \\sigma = \\frac{T}{A} = \\frac{299,2 \\, N}{1,5 \\, mm^2} = 199,5 \\, MPa \\]
         El coeficient de seguretat és la relació entre el límit elàstic i la tensió real:
-        \\[ n = \frac{\sigma_e}{\sigma} = \frac{250 \\, MPa}{199,5 \\, MPa} = 1,253 \\]`
+        \\[ n = \\frac{\\sigma_e}{\\sigma} = \\frac{250 \\, MPa}{199,5 \\, MPa} = 1,253 \\]`
 }
 ];
