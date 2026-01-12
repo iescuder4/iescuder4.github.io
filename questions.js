@@ -817,7 +817,8 @@ const questions = [
            <br>b) El valor de la força F. [0,5 punts]
            <br>c) La tensió, T, de cada un dels cables. [0,5 punts]
            <br>Si els cables són d'acer, de secció \\(A=1,5~mm^{2}\\) i el límit elàstic de l'acer és \\(\sigma_{e}=250~MPa\\), determineu:
-           <br>d) El coeficient de seguretat, n, de la instal·lació en aquesta posició. [1 punt]`,
+           <br>d) El coeficient de seguretat, n, de la instal·lació en aquesta posició. [1 punt]
+           <img src="images/201206s4p4b.jpg">`,
     correctAnswer: "",
     steps: `
         
