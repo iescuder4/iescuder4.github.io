@@ -21,8 +21,7 @@ const questions = [
             <strong>3. Càlcul de la capacitat total:</strong><br>
             Multipliquem la capacitat de cada viatge pel nombre de sortides:
             \\[ 48 \\, \\text{passatgers/viatge} \\times 4 \\, \\text{viatges/h} = 192 \\, \\text{passatgers/h} \\]
-<br><br>
-         <img src="images/202206s3p5r.jpg" alt="Imatge relacionada amb la resposta">`,
+            `
     },
     
     {
