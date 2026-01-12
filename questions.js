@@ -1,7 +1,7 @@
 const questions = [
     {
         type: "questions",
-        category: "organitzacio industrial",
+        category: "organitzacio",
         text: `Un tren de fira té una capacitat nominal de 48 passatgers. L'interval entre sortides consecutives és 15 minuts i el temps de trajecte, 5 minuts. Quin nombre màxim de passatgers pot transportar el tren en una hora?`,
         options: [
             { text: "96", value: "a" },
@@ -27,7 +27,7 @@ const questions = [
     
     {
         type: "questions",
-        category: "maquines i sistemes electrics i electrotecnics",
+        category: "electrics",
         text: `En un circuit elèctric es connecten en sèrie dues resistències de tolerància ±5% i valors nominals 1,1 kΩ i 3,3 kΩ. La resistència equivalent d'aquest circuit és`,
         options: [
             { text: "(4,4 ± 0,055) kΩ", value: "a" },
@@ -51,7 +51,7 @@ const questions = [
     
     {
         type: "questions",
-        category: "material i assaig",
+        category: "materials",
         text: `La tensió de ruptura del titani comercial sense aliar és \\(\\sigma_{r} = 75\\) MPa. Si apliquem una força axial de 750 N a una barra d'aquest titani, quina secció mínima ha de tenir perquè no es trenqui?`,
         options: [
             { text: "1 mm²", value: "a" },
@@ -87,7 +87,7 @@ const questions = [
     
     {
         type: "questions",
-        category: "organitzacio industrial",
+        category: "organitzacio",
         text: `La fiabilitat d'un artefacte, entesa com la probabilitat que funcioni sense avaries durant un cert temps, és del 92% per a 2400h. D'un lot inicial de 1400 unitats, quants artefactes és probable que continuïn funcionant al cap de 2400h?`,
         options: [
             { text: "1288", value: "a" },
@@ -105,7 +105,7 @@ const questions = [
 
     {
     type: "exercicis",
-    category: "control logic i funcions logiques",
+    category: "control",
     text: `Exercici 2<br>En una explotació vinícola es controla regularment el grau alcohòlic i l'acidesa de les vinyes per a iniciar la verema. Per a elaborar un vi negre de qualitat cal que el raïm estigui veremat i tingui un grau alcohòlic superior al 12% vol. Utilitzant les variables d'estat següents:
            <br>acidesa: \\(ac\\) {1: raïm veremat, 0: raïm no veremat};
            <br>grau alcohòlic: \\(g_{12}\\) {1: superior al 12% vol., 0: inferior al 12% vol.};
@@ -142,7 +142,7 @@ const questions = [
     
     {
         type: "exercicis",
-        category: "sistemes pneumatics i oleohidraulics",
+        category: "pneumatica",
         text: `Un ascensor hidràulic d'acció directa funciona mitjançant un cilindre hidràulic connectat directament a la cabina de l'ascensor. El cilindre té un diàmetre interior \\(d_{int}=94\\) mm i el diàmetre de la tija és \\(d_{tija}=60\\) mm. La massa de la cabina, la tija i la càrrega és \\(m=980\\) kg. Si el cilindre hidràulic manté en repòs la cabina, determineu:
                <br>a) La pressió relativa, \\(p_{int}\\), a l'interior del cilindre. [1 punt]
                <br>b) La tensió normal a compressió, \\(\\sigma_{tija}\\), de la tija. [0,5 punts]
@@ -172,7 +172,7 @@ const questions = [
     
     {
         type: "exercicis",
-        category: "motors reductors",
+        category: "motors",
         text: `Una persiana d'amplària \\(a=3,2\\) m i alçària \\(h=2,2\\) m és feta d'un material de densitat superficial \\(\\sigma=12\\) kg/m². La persiana s'acciona mitjançant un motor reductor elèctric que s'alimenta a \\(U=230\\) V i pel qual circula un corrent \\(I=1,7\\) A. En règim de funcionament nominal, el motor reductor proporciona una potència \\(P_{s}=100\\) W a l'eix de sortida, que gira a \\(n=12\\) min⁻¹. Determineu:
                <br>a) La massa, \\(m\\), de la persiana. [0,5 punts]
                <br>b) El parell, \\(\\Gamma_{s}\\), a l'eix de sortida. [0,5 punts]
@@ -200,7 +200,7 @@ const questions = [
     
    {
         type: "exercicis",
-        category: "maquines i sistemes energetics",
+        category: "maquines",
         text: `Un aerogenerador consta, bàsicament, d'un rotor amb pales, d'un multiplicador de la velocitat de gir i d'un generador. Considerem que el rendiment del multiplicador, \\(\\eta_{mult}\\), i el del generador, \\(\\eta_{gen}\\), són constants. L'aerogenerador de la figura té una relació de transmissió \\(\\tau = \\omega_2 / \\omega_1 = 73\\) i un sistema de control que permet que la potència elèctrica generada es mantingui constant en \\(P_{electr} = 750 \\, \\text{kW}\\) per a una velocitat de gir del rotor \\(15 \\, \\text{min}^{-1} \\le n \\le 35 \\, \\text{min}^{-1}\\). Determineu:
                <br>a) La potència subministrada, \\(P_1\\), pel rotor al multiplicador. [0,5 punts]
                <br>b) El parell màxim a l'eix d'entrada, \\(\\Gamma_1\\), i a l'eix de sortida, \\(\\Gamma_2\\), del multiplicador. [1 punt]
@@ -230,7 +230,7 @@ const questions = [
     
     {
         type: "exercicis",
-        category: "termodinamica",
+        category: "energia",
         text: `Una cafetera elèctrica escalfa l'aigua en dues fases. En la primera fase, escalfa l'aigua fins a \\(T_1 = 105 \\, ^\\circ\\text{C}\\) mitjançant dues resistències que proporcionen una potència \\(P_1 = 850 \\, \\text{W}\\). En la segona fase, es desconnecta una de les resistències per a obtenir una potència \\(P_2 = 500 \\, \\text{W}\\) i escalfa l'aigua fins a \\(T_2 = 125 \\, ^\\circ\\text{C}\\). Un cop el cafè ja està fet, una tercera resistència proporciona una potència mitjana \\(P_3 = 250 \\, \\text{W}\\) per a mantenir-lo calent. La cafetera escalfa mig litre d'aigua, que inicialment està a temperatura \\(T_0 = 25 \\, ^\\circ\\text{C}\\). Tenint en compte que la calor específica de l'aigua és \\(c_e = 4,18 \\, \\text{kJ/(kg} \\cdot ^\\circ\\text{C)}\\) i el cost de l'energia elèctrica és \\(c_{electr} = 0,125 \\, \\text{€/(kWh)}\\), determineu:
                <br>a) Les energies, \\(E_1\\) i \\(E_2\\), necessàries per a escalfar l'aigua en les dues fases. [1 punt]
                <br>b) Els temps de durada, \\(t_1\\) i \\(t_2\\), de cadascuna de les dues fases. [0,5 punts]
@@ -258,7 +258,7 @@ const questions = [
 
  {
         type: "questions",
-        category: "metrologia i normalitzacio",
+        category: "metrologia",
         text: `En un plànol s'especifica que la longitud d'una peça ha de ser (146 ± 0,8) mm. S'acceptaran totes les peces de longitud`,
         options: [
             { text: "a) superior a 146,8 mm.", value: "a" },
@@ -281,7 +281,7 @@ const questions = [
     },
     {
         type: "questions",
-        category: "maquines i sistemes electrics i electrotecnics",
+        category: "electrics",
         text: `Un fil de coure de 5 mm² de secció té una resistència de 0,05 Ω. La resistivitat del coure és ρ = 0,0171 μΩ·m. Quina és la longitud del fil?`,
         options: [
             { text: "a) 0,324 m", value: "a" },
@@ -305,7 +305,7 @@ const questions = [
     },
     {
         type: "questions",
-        category: "material i assaig",
+        category: "materials",
         text: `L'acer inoxidable AISI 316 que s'utilitza en pròtesis mèdiques té una tensió de ruptura σr = 620 MPa. Quina és la força axial màxima que es pot aplicar a una barra massissa de 12 mm de diàmetre sense que es trenqui?`,
         options: [
             { text: "a) 70,12 kN", value: "a" },
@@ -329,7 +329,7 @@ const questions = [
     },
     {
         type: "questions",
-        category: "sistemes pneumatics i oleohidraulics",
+        category: "pneumatica",
         text: `Un cilindre hidràulic, d'una sola tija, ha d'exercir una força de 20 kN en la cursa d'avanç. Si el diàmetre del cilindre és 50 mm i el de la tija, 32 mm, quina pressió ha de proporcionar el grup hidràulic?`,
         options: [
             { text: "a) 3,79 MPa", value: "a" },
@@ -353,7 +353,7 @@ const questions = [
     },
     {
         type: "questions",
-        category: "organitzacio industrial",
+        category: "organitzacio",
         text: `Un sistema de pintatge automatitzat permet obtenir un màxim de 130 unitats per hora. Sobre cada unitat es realitzen dues operacions simultànies de t1 = 23 i t2 = 15 s de durada. Quin és el temps mitjà que transcorre entre que s'acaba una unitat i que la unitat següent està preparada per a ser pintada?`,
         options: [
             { text: "a) 4,69 s", value: "a" },
@@ -379,7 +379,7 @@ const questions = [
 
 {
         type: "exercicis",
-        category: "sistemes de control",
+        category: "control",
         text: `Una premsa hidràulica es controla amb dos polsadors i un pedal. El motor de la premsa es posa en marxa si s'acciona el pedal i es prem, com a mínim, un dels polsadors. Utilitzant les variables d'estat següents:
                <br>polsadors: \\(p_1, p_2 = \\begin{cases} 1: \\text{premut} \\\\ 0: \\text{no premut} \\end{cases}\\) ; pedal: \\(p_e = \\begin{cases} 1: \\text{accionat} \\\\ 0: \\text{no accionat} \\end{cases}\\)
                <br>motor: \\(m = \\begin{cases} 1: \\text{en marxa} \\\\ 0: \\text{aturat} \\end{cases}\\)
@@ -421,7 +421,7 @@ const questions = [
     
     {
         type: "exercicis",
-        category: "maquines i sistemes energetics",
+        category: "energia",
         text: `Un vehicle de massa \\(m = 1725 \\, \\text{kg}\\) accelera, en una superfície horitzontal, de \\(v_1 = 0 \\, \\text{km/h}\\) a \\(v_2 = 100 \\, \\text{km/h}\\). El combustible que fa servir és gasoil, de poder calorífic \\(p_c = 43,25 \\, \\text{MJ/kg}\\). El rendiment mitjà del motor, entès com la relació entre l'energia mecànica i l'energia que proporciona el combustible, és \\(\\eta = 20,8 \\%\\). Durant l'etapa d'acceleració, determineu:
                <br>a) L'energia mecànica, \\(E_m\\), que adquireix el vehicle. [0,5 punts]
                <br>b) La quantitat de combustible, \\(m_{comb}\\), consumida. [1 punt]
@@ -447,7 +447,7 @@ const questions = [
 
     {
         type: "exercicis",
-        category: "fabricacio i materials",
+        category: "materials",
         text: `La peça de la figura s'ha obtingut a partir d'una planxa d'acer inoxidable de gruix \\(e = 12 \\, \\text{mm}\\) i densitat \\(\\rho = 7900 \\, \\text{kg/m}^3\\). El tall s'ha fet, amb una màquina de tall per doll d'aigua, a una velocitat \\(v = 5 \\, \\text{m/min}\\) i els quatre forats de radi \\(r_2\\), amb un trepant que gira a \\(n = 1060 \\, \\text{min}^{-1}\\). Determineu:
                <br>a) La longitud del contorn exterior, \\(L_{ext}\\). [0,5 punts]
                <br>b) El temps, \\(t\\), de tall del perfil. [0,5 punts]
@@ -493,7 +493,7 @@ const questions = [
 
     {
         type: "exercicis",
-        category: "maquines i sistemes electrics i electrotecnics",
+        category: "electrics",
         text: `En la figura es mostra el circuit elèctric d’una cafetera. Quan es connecta la cafetera, els dos interruptors termostàtics estan tancats. L’interruptor 1 s’obre quan la temperatura de l’aigua arriba als 105 °C i l’interruptor 2, quan la temperatura arriba als 125 °C. La resistència \\(R_3\\), que és variable, serveix per a mantenir el cafè calent. Les altres dues resistències tenen valors \\(R_1=145 \\, \\Omega\\) i \\(R_2=100 \\, \\Omega\\) i el circuit s’alimenta a una tensió \\(U=230 \\, \\text{V}\\). Determineu:
                <br>a) La resistència inicial del circuit, \\(R_{\\text{in}}\\), quan es connecta la cafetera. [0,5 punts]
                <br>b) El corrent, \\(I\\), consumit quan es connecta la cafetera. [0,5 punts]
@@ -532,7 +532,7 @@ const questions = [
     
    {
         type: "exercicis",
-        category: "maquines i sistemes energetics",
+        category: "energia",
         text: `Exercici 4
                Un ariet hidràulic és una bomba d’aigua que aprofita l’energia que proporciona un dipòsit subministrador, situat a una altura h1 = 3 m, per a elevar una part de l’aigua a un dipòsit receptor, situat a una altura h2 = 25 m. La bomba funciona per mitjà del tancament sobtat i periòdic d’una vàlvula de descàrrega. El dipòsit subministrador proporciona un cabal q1 = 5 L/s i el dipòsit receptor rep un cabal q2 = 0,35 L/s. Determineu:
                <br>a) La potència hidràulica, Ph1, que proporciona el dipòsit subministrador. [1 punt]
@@ -571,7 +571,7 @@ const questions = [
 
    {
         type: "questions",
-        category: "maquines i sistemes electrics i electrotecnics",
+        category: "electrics",
         text: `Un fil de coure de 600 m de longitud té una resistència de 1,02 Ω. Si el fil es divideix en dues parts iguals de 300 m i aquestes es connecten en paral·lel, quina és la resistència entre els extrems?`,
         options: [
             { text: "a) 0,51 Ω", value: "a" },
@@ -609,7 +609,7 @@ const questions = [
     },
     {
         type: "questions",
-        category: "sistemes pneumatics i oleohidraulics",
+        category: "pneumatica",
         text: `Un cilindre hidràulic de doble efecte té un diàmetre de cilindre D = 50 mm i un diàmetre de tija d = 32 mm. Quina pressió ha de proporcionar el grup hidràulic per a exercir una força de 10 kN en la cursa de retrocés?`,
         options: [
             { text: "a) 8,626 MPa", value: "a" },
@@ -626,7 +626,7 @@ const questions = [
     },
     {
         type: "questions",
-        category: "organitzacio industrial",
+        category: "organitzacio",
         text: `Un magatzem té un estoc inicial de 1000 unitats d'un producte. Quan l'estoc arriba a 300 unitats, es fa una comanda de 800 unitats que s'incorporen immediatament al magatzem. Si al cap de 100 dies s'efectua la dotzena (12a) comanda, quantes unitats d'aquest producte s'han venut?`,
         options: [
             { text: "a) 8800", value: "a" },
@@ -646,7 +646,7 @@ const questions = [
     },
     {
         type: "questions",
-        category: "metrologia i normalitzacio",
+        category: "metrologia",
         text: `Un sensor de pressió té un error total màxim del ±2% de la lectura. Si en una mesura a 45 °C el sensor indica 8 bar, quin és el valor màxim que pot tenir la pressió real?`,
         options: [
             { text: "a) 8,02 bar", value: "a" },
@@ -663,7 +663,7 @@ const questions = [
     },
     {
     type: "exercicis",
-    category: "sistemes de control",
+    category: "control",
     text: `Un sistema dissenyat per a reduir el consum de combustible en els cotxes atura completament el motor quan el vehicle va a una velocitat inferior a 3 km/h llevat que la bateria tingui un baix nivell de càrrega o la temperatura exterior sigui inferior a 3 °C. Utilitzant les variables d'estat següents:
            <br>velocitat del cotxe: \\(v = \\begin{cases} 1: \\text{superior a 3 km/h} \\\\ 0: \\text{inferior a 3 km/h} \\end{cases}\\) ; bateria: \\(b = \\begin{cases} 1: \\text{carregada} \\\\ 0: \\text{baixa} \\end{cases}\\)
            <br>temperatura exterior: \\(t = \\begin{cases} 1: \\text{superior a 3 °C} \\\\ 0: \\text{inferior a 3 °C} \\end{cases}\\) ; motor: \\(m = \\begin{cases} 1: \\text{en funcionament} \\\\ 0: \\text{aturat} \\end{cases}\\)
@@ -705,7 +705,7 @@ const questions = [
 
     {
     type: "exercicis",
-    category: "maquines i sistemes electrics i electrotecnics",
+    category: "electrics",
     text: `<br>Una lluminària decorativa està formada per quatre files de n bombetes iguals, de potència \\(P_{bombeta}=5~W\\) connectades segons l'esquema de la figura. Per a fer-la atractiva, els interruptors canvien d'estat cíclicament cada \\(t_{c}=0,5~s\\) de manera que sempre hi ha una sola fila de bombetes enceses. Quan la lluminària es connecta a \\(U=230~V\\) consumeix \\(P=360~W\\). Determineu:
            <br>a) El nombre total de bombetes, \\(n_{total}\\), de la lluminària. [0,5 punts]
            <br>b) El corrent, I, que circula per una bombeta encesa i la resistència interna, R, corresponent. [1 punt]
@@ -772,7 +772,7 @@ const questions = [
    
     {
     type: "exercicis",
-    category: "maquines i sistemes electrics i electrotecnics",
+    category: "electrics",
     text: `[2,5 punts]<br>La figura mostra les posicions desplegada i plegada d'una cistella de bàsquet que penja del sostre. El mecanisme s'acciona per mitjà d'un cable que s'enrotlla a una politja, de radi \\(R=0,1~m\\), moguda per un motor reductor elèctric. El motor reductor té, en règim de funcionament nominal, un rendiment \\(\\eta=0,30\\); proporciona a l'eix de sortida un gir \\(n=14~min^{-1}\\) i una potència \\(P_{s}=200~W.\\) Totes les masses es consideren negligibles excepte la massa del tauler, que és \\(m=115~kg.\\) Determineu:
            <br>a) L'energia, E, necessària per a fer pujar la cistella. [0,5 punts]
            <br>b) El temps, t, que tarda a pujar la cistella amb el motor funcionant en règim nominal. [0,5 punts]
@@ -803,7 +803,7 @@ const questions = [
    
 {
     type: "exercicis",
-    category: "material i assaig",
+    category: "materials",
     text: `[2,5 punts]<br>La barra AB de la figura, de massa \\(m=60~kg\\) i longitud \\(L=2,5~m\\), està penjada de dos cables iguals i de massa negligible. Per a desplaçar la barra horitzontalment s'empeny amb una força, F, horitzontal. Si es desplaça \\(s=0,45~m\\) respecte de la posició de repòs, i en aquesta nova posició la barra està en equilibri, determineu:
            <br>a) L'angle \\(\alpha\\) que formen els cables amb la vertical. [0,5 punts]
            <br>b) El valor de la força F. [0,5 punts]
