@@ -457,7 +457,7 @@ const questions = [
                <br>c) La velocitat de tall de la broca, \\(v_{tall}\\) (velocitat lineal de la perifèria de la broca). [0,5 punts]
                <br>d) La massa, \\(m\\), de la peça. [1 punt]
                <br><br>
-               <em>Dades de la figura: \\(b=625\\) mm, \\(h=400\\) mm, \\(r_1=100\\) mm, \\(r_2=5\\) mm.</em>`
+               <em>Dades de la figura: \\(b=625\\) mm, \\(h=400\\) mm, \\(r_1=100\\) mm, \\(r_2=5\\) mm.</em>
              <img src="images/201206s1p4a.jpg">`,
         correctAnswer: "",
         steps: `
