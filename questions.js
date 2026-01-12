@@ -198,24 +198,25 @@ const questions = [
         `
     },
     
-   {
+ {
         type: "exercicis",
         category: "maquines",
         text: `Un aerogenerador consta, bàsicament, d'un rotor amb pales, d'un multiplicador de la velocitat de gir i d'un generador. Considerem que el rendiment del multiplicador, \\(\\eta_{mult}\\), i el del generador, \\(\\eta_{gen}\\), són constants. L'aerogenerador de la figura té una relació de transmissió \\(\\tau = \\omega_2 / \\omega_1 = 73\\) i un sistema de control que permet que la potència elèctrica generada es mantingui constant en \\(P_{electr} = 750 \\, \\text{kW}\\) per a una velocitat de gir del rotor \\(15 \\, \\text{min}^{-1} \\le n \\le 35 \\, \\text{min}^{-1}\\). Determineu:
                <br>a) La potència subministrada, \\(P_1\\), pel rotor al multiplicador. [0,5 punts]
                <br>b) El parell màxim a l'eix d'entrada, \\(\\Gamma_1\\), i a l'eix de sortida, \\(\\Gamma_2\\), del multiplicador. [1 punt]
-               <br>c) La potència dissipada en el multiplicador, \\(P_{mult}\\), i en el generador, \\(P_{gen}\\). [1 punt]`
-        <img src="images/201206s3p3b.jpg" alt="Imatge relacionada amb la pregunta">`,
+               <br>c) La potència dissipada en el multiplicador, \\(P_{mult}\\), i en el generador, \\(P_{gen}\\). [1 punt]
+               <br><br><img src="images/201206s3p3b.jpg" alt="Esquema aerogenerador" style="max-width:100%; height:auto;">`,
         correctAnswer: "",
         steps: `
+            
             <strong>a) Potència subministrada pel rotor (\\(P_1\\)):</strong><br>
             La potència elèctrica és el resultat de la potència d'entrada multiplicada pels rendiments de la cadena:
             \\[ P_{electr} = P_1 \\cdot \\eta_{mult} \\cdot \\eta_{gen} \\]
-            [cite_start]Segons la figura[cite: 116]: \\(\\eta_{mult} = 0,68\\) i \\(\\eta_{gen} = 0,87\\).
+            Segons la figura (PAU 2012): \\(\\eta_{mult} = 0,68\\) i \\(\\eta_{gen} = 0,87\\).
             \\[ P_1 = \\frac{P_{electr}}{\\eta_{mult} \\cdot \\eta_{gen}} = \\frac{750}{0,68 \\cdot 0,87} = 1267,75 \\, \\text{kW} \\]
             <br>
             <strong>b) Parell màxim (\\(\\Gamma_1\\) i \\(\\Gamma_2\\)):</strong><br>
-            [cite_start]El parell és màxim quan la velocitat de gir és mínima (\\(n_{min} = 15 \\, \\text{min}^{-1}\\))[cite: 119]:
+            El parell és màxim quan la velocitat de gir és mínima (\\(n_{min} = 15 \\, \\text{min}^{-1}\\)):
             \\[ \\omega_1 = 15 \\cdot \\frac{2\\pi}{60} = 1,5708 \\, \\text{rad/s} \\]
             \\[ \\Gamma_1 = \\frac{P_1}{\\omega_1} = \\frac{1267,75 \\cdot 10^3}{1,5708} = 807.073 \\, \\text{Nm} \\]
             Per a l'eix de sortida (eix 2):
