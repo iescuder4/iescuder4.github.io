@@ -16,7 +16,8 @@ const questions = [
             \\[ \\text{Sortides per hora} = \\frac{60 \\, \\text{min}}{15 \\, \\text{min/sortida}} = 4 \\, \\text{sortides} \\]
 
             <strong>2. Verificació del temps de trajecte:</strong><br>
-            El tren triga 5 minuts a fer el recorregut. Com que 5 minuts és menor que l'interval de 15 minuts, el tren té temps suficient per anar, tornar i estar llest per a la següent sortida. <br>
+            El tren triga 5 minuts a fer el recorregut. Com que 5 minuts és menor que l'interval de 15 minuts, el tren té temps suficient per anar, tornar i estar llest per a la següent sortida.
+            <br><br>
 
             <strong>3. Càlcul de la capacitat total:</strong><br>
             Multipliquem la capacitat de cada viatge pel nombre de sortides:
