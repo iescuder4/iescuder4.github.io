@@ -149,10 +149,10 @@ const questions = [
                <br><br>
                Si una bomba subministra un cabal d'oli \\(q=2,3\\) L/s al cilindre, a una pressió \\(p=1,7\\) MPa, i l'ascensor puja a una velocitat constant \\(v=0,33\\) m/s, determineu:
                <br>c) La potència, \\(P_{h}\\), proporcionada per la bomba. [0,5 punts]
-               <br>d) El rendiment, \\(\\eta\\), del cilindre. [0,5 punts]`,
+               <br>d) El rendiment, \\(\\eta\\), del cilindre. [0,5 punts] <br>
+               <img src="images/201206s3p3a.png">`,
         correctAnswer: "",
         steps: `
-          <img src="images/201206s3p3a.png"><br>
             <strong>a) Pressió relativa (\\(p_{int}\\)):</strong>
             \\[ F = m \\cdot g = 980 \\cdot 9,807 = 9611 \\, \\text{N} \\]
             \\[ S_{int} = \\frac{\\pi \\cdot 0,094^2}{4} = 6,94 \\cdot 10^{-3} \\, \\text{m}^2 \\]
