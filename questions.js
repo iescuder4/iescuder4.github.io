@@ -418,8 +418,8 @@ const questions = [
             <br>
             <strong>c) Esquema de portes lògiques:</strong>
             <br>
-            L'esquema requereix una porta OR per als polsadors i una porta AND per multiplicar pel pedal.
-            `,
+            L'esquema requereix una porta OR per als polsadors i una porta AND per multiplicar pel pedal. <br>
+            <img src="images/201206s1p2.png">`,
     },
     
     {
