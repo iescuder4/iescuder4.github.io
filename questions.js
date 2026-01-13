@@ -421,8 +421,7 @@ const questions = [
             <strong>c) Esquema de portes lògiques:</strong>
             <br>
             L'esquema requereix una porta OR per als polsadors i una porta AND per multiplicar pel pedal.
-            <br>
-             <img src="images/201206s4p2.png">`,
+            `,
     },
     
     {
@@ -710,7 +709,7 @@ const questions = [
         <br>
         L'esquema simplificat correspon a tres contactes en paral·lel: un contacte normalment obert per a la velocitat (v) i dos contactes normalment tancats per a la bateria (b) i la temperatura (t).
         <br>
-                `
+         <img src="images/201206s4p2.png">`,
 },
 
     {
