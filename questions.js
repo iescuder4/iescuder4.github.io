@@ -242,6 +242,7 @@ const questions = [
                <br>c) L'energia elèctrica consumida, \\(E_{electr}\\), en kWh, i el cost econòmic, \\(c_{econ}\\), de tot el procés si, un cop fet, el cafè es manté calent durant \\(t_3 = 4 \\, \\text{h}\\). [1 punt]`,
         correctAnswer: "",
         steps: `
+         <img src="images/201206s3p4bs.JPG"><br>
             <strong>a) Energies (\\(E_1\\) i \\(E_2\\)):</strong><br>
             [cite_start]Massa d'aigua (\\(m\\)) = 0,5 kg (mig litre)[cite: 129].
             \\[ E_1 = m \\cdot c_e \\cdot (T_1 - T_0) = 0,5 \\cdot 4,18 \\cdot (105 - 25) = 167,2 \\, \\text{kJ} \\]
