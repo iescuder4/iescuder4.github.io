@@ -210,8 +210,7 @@ const questions = [
                <br><br>
                <img src="images/201206s3p3b.jpg">`,
         correctAnswer: "",
-        steps: `
-            
+        steps: ` 
             <strong>a) Potència subministrada pel rotor (\\(P_1\\)):</strong><br>
             La potència elèctrica és el resultat de la potència d'entrada multiplicada pels rendiments de la cadena:
             \\[ P_{electr} = P_1 \\cdot \\eta_{mult} \\cdot \\eta_{gen} \\]
@@ -244,7 +243,7 @@ const questions = [
         steps: `
          <img src="images/201206s3p4bs.JPG"><br>
             <strong>a) Energies (\\(E_1\\) i \\(E_2\\)):</strong><br>
-            [cite_start]Massa d'aigua (\\(m\\)) = 0,5 kg (mig litre)[cite: 129].
+            Massa d'aigua (\\(m\\)) = 0,5 kg (mig litre).
             \\[ E_1 = m \\cdot c_e \\cdot (T_1 - T_0) = 0,5 \\cdot 4,18 \\cdot (105 - 25) = 167,2 \\, \\text{kJ} \\]
             \\[ E_2 = m \\cdot c_e \\cdot (T_2 - T_1) = 0,5 \\cdot 4,18 \\cdot (125 - 105) = 41,8 \\, \\text{kJ} \\]
             <br>
