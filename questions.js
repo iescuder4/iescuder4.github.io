@@ -107,13 +107,11 @@ const questions = [
     type: "exercicis",
     category: "control",
     text: `En una explotació vinícola es controla regularment el grau alcohòlic i l'acidesa de les vinyes per a iniciar la verema. Per a elaborar un vi negre de qualitat cal que el raïm estigui veremat i tingui un grau alcohòlic superior al 12% vol. Utilitzant les variables d'estat següents:
-           <br>acidesa: \\(ac\\) {1: raïm veremat, 0: raïm no veremat};
-           <br>grau alcohòlic: \\(g_{12}\\) {1: superior al 12% vol., 0: inferior al 12% vol.};
-           <br>grau alcohòlic: \\(g_{15}\\) {1: superior al 15% vol., 0: inferior al 15% vol.};
-           <br>raïm: \\(r\\) {1: vi de qualitat, 0: altres usos}.
+           <br>acidesa: \\(ac = \\begin{cases} 1: \\text{raïm veremat} \\\\ 0: \\text{raïm no veremat} \\end{cases}\\) ; grau alcohòlic: \\(g_{12} = \\begin{cases} 1: \\text{superior al 12% vol.} \\\\ 0: \\text{inferior al 12% vol.} \\end{cases}\\)
+           <br>grau alcohòlic: \\(g_{15} = \\begin{cases} 1: \\text{superior al 15% vol.} \\\\ 0: \\text{inferior al 15% vol.} \\end{cases}\\) ; raïm: \\(r = \\begin{cases} 1: \\text{vi de qualitat} \\\\ 0: \\text{altres usos} \\end{cases}\\)
            <br>a) Escriviu la taula de veritat del sistema. [1 punt]
-           <br>b) Determineu la funció lògica simplificada. [1 punt]
-           <br>c) Dibuixeu l'esquema de portes lògiques. [0,5 punts]`,
+           <br>b) Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
+           <br>c) Dibuixeu l'esquema de portes lògiques equivalent. [0,5 punts]`,
     correctAnswer: "",
     steps: `
         <strong>a) Taula de veritat:</strong><br>
