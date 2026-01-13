@@ -138,7 +138,7 @@ const questions = [
         \\[ r = ac \\cdot g_{12} \\]
         <br>
         <strong>c) Esquema:</strong> Una única porta AND de dues entrades (ac i g12).<br>
-         <img src="images/201206s3p2s.JPG">`
+         <img src="images/201206s3p2s.jpg">`
 },
     
     {
