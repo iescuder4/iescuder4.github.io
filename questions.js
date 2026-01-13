@@ -422,7 +422,7 @@ const questions = [
             <br>
             L'esquema requereix una porta OR per als polsadors i una porta AND per multiplicar pel pedal.
             <br>
-                    `
+             <img src="images/201206s4p2.png">`,
     },
     
     {
