@@ -542,7 +542,9 @@ const questions = [
         type: "exercicis",
         category: "energia",
         text: `Un ariet hidràulic és una bomba d’aigua que aprofita l’energia que proporciona un dipòsit subministrador, situat a una altura h1 = 3 m, per a elevar una part de l’aigua a un dipòsit receptor, situat a una altura h2 = 25 m. La bomba funciona per mitjà del tancament sobtat i periòdic d’una vàlvula de descàrrega. El dipòsit subministrador proporciona un cabal q1 = 5 L/s i el dipòsit receptor rep un cabal q2 = 0,35 L/s. Determineu:
-               <br><img src="images/201206s1p4b.jpg"><br>
+               <br>
+               <img src="images/201206s1p4b.jpg">
+               <br>
                <br>a) La potència hidràulica, Ph1, que proporciona el dipòsit subministrador. [1 punt]
                <br>b) El rendiment, η, de la bomba. [1 punt]
                <br>c) El volum d’aigua, V, que ha deixat anar la vàlvula de descàrrega en t = 4 h de funcionament. [0,5 punts]`,
