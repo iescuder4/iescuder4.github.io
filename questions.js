@@ -137,7 +137,8 @@ const questions = [
         Simplificant per Karnaugh o observació, la variable \\(g_{15}\\) no afecta el resultat si \\(g_{12}\\) ja és 1:
         \\[ r = ac \\cdot g_{12} \\]
         <br>
-        <strong>c) Esquema:</strong> Una única porta AND de dues entrades (ac i g12).`
+        <strong>c) Esquema:</strong> Una única porta AND de dues entrades (ac i g12).<br>
+         <img src="images/201206s3p2s.JPG">`
 },
     
     {
