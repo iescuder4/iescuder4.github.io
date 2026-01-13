@@ -506,7 +506,7 @@ const questions = [
                <br>b) El corrent, \\(I\\), consumit quan es connecta la cafetera. [0,5 punts]
                <br>c) El valor de les dues potències, \\(P_1\\) i \\(P_2\\), que consumeix la cafetera quan els interruptors 1 i 2 estan tancats i quan només ho està l’interruptor 2. [1 punt]
                <br>d) El valor que ha de tenir la resistència \\(R_3\\) perquè la potència consumida quan es manté el cafè calent sigui \\(P_3=300 \\, \\text{W}\\). [0,5 punts]<br>
-                <img src="images/201206s1p3b.jpg"`,
+                <img src="images/201206s1p3b.jpg">`,
         correctAnswer: "",
         steps: `
             <strong>a) Resistència inicial del circuit (\\(R_{\\text{in}}\\)):</strong><br>
@@ -543,6 +543,7 @@ const questions = [
         category: "energia",
         text: `Exercici 4
                Un ariet hidràulic és una bomba d’aigua que aprofita l’energia que proporciona un dipòsit subministrador, situat a una altura h1 = 3 m, per a elevar una part de l’aigua a un dipòsit receptor, situat a una altura h2 = 25 m. La bomba funciona per mitjà del tancament sobtat i periòdic d’una vàlvula de descàrrega. El dipòsit subministrador proporciona un cabal q1 = 5 L/s i el dipòsit receptor rep un cabal q2 = 0,35 L/s. Determineu:
+               <br><img src="images/201206s1p4b.jpg"><br>
                <br>a) La potència hidràulica, Ph1, que proporciona el dipòsit subministrador. [1 punt]
                <br>b) El rendiment, η, de la bomba. [1 punt]
                <br>c) El volum d’aigua, V, que ha deixat anar la vàlvula de descàrrega en t = 4 h de funcionament. [0,5 punts]`,
