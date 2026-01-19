@@ -669,7 +669,7 @@ const questions = [
             <strong>2. Pressió màxima possible:</strong><br>
             \\[ 8 + 0,16 = 8,16 \\, \\text{bar} \\]`
     },
-    {
+{
     type: "exercicis",
     category: "control",
     text: `Un sistema dissenyat per a reduir el consum de combustible en els cotxes atura completament el motor quan el vehicle va a una velocitat inferior a 3 km/h llevat que la bateria tingui un baix nivell de càrrega o la temperatura exterior sigui inferior a 3 °C. Utilitzant les variables d'estat següents:
@@ -680,9 +680,8 @@ const questions = [
            <br>c) Dibuixeu l'esquema de contactes equivalent. [0,5 punts]`,
     correctAnswer: "",
     steps: `
-        <strong>a) Taula de veritat:</strong>
-        <br>
-        El motor funciona (m=1) si la velocitat és superior a 3 km/h (v=1). Si la velocitat és inferior (v=0), el motor només funciona si la bateria és baixa (b=0) O la temperatura és baixa (t=0).
+                <strong>a) Taula de veritat:</strong><br>
+        El motor s'atura (m=0) només quan la velocitat és baixa (v=0) I la bateria està carregada (b=1) I la temperatura és superior a 3°C (t=1). En tota la resta de casos, el motor roman en funcionament (m=1).
         <br><br>
         <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
             <tr style="background-color: #f2f2f2;">
@@ -698,17 +697,19 @@ const questions = [
             <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
         </table>
         <br>
-        <strong>b) Funció lògica:</strong>
-        <br>
-        El motor s'atura només quan es compleixen tres condicions alhora: velocitat baixa (\\(\\overline{v}\\)), bateria carregada (\\(b\\)) i temperatura alta (\\(t\\)). Per tant, l'estat de funcionament és el contrari d'aquesta aturada:
-        <br>
+        <strong>b) Funció lògica:</strong><br>
+        Identifiquem l'estat d'aturada (m=0) com \\(\\overline{v} \\cdot b \\cdot t\\). Per tant, la funció del motor (m=1) és el seu complementari. Aplicant les lleis de De Morgan:
         \\[ m = \\overline{\\overline{v} \\cdot b \\cdot t} = v + \\overline{b} + \\overline{t} \\]
         <br>
-        <strong>c) Esquema de contactes equivalent:</strong>
+        <strong>c) Esquema de contactes:</strong><br>
+        L'expressió simplificada ens indica que el circuit consta de tres branques en paral·lel:
+        <ul>
+            <li>Un contacte normalment obert (NA) per a la velocitat (\\(v\\)).</li>
+            <li>Un contacte normalment tancat (NC) per a la bateria (\\(b\\)).</li>
+            <li>Un contacte normalment tancat (NC) per a la temperatura (\\(t\\)).</li>
+        </ul>
         <br>
-        L'esquema simplificat correspon a tres contactes en paral·lel: un contacte normalment obert per a la velocitat (v) i dos contactes normalment tancats per a la bateria (b) i la temperatura (t).
-        <br>
-         <img src="images/201206s4p2.png">`,
+        <img src="images/201206s4p2r.png" alt="Esquema de contactes cotxe" style="max-width:100%; height:auto;">`
 },
 
     {
