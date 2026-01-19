@@ -139,7 +139,7 @@ const questions = [
         S'utilitza una porta AND de tres entrades. L'entrada \\(g_{15}\\) s'ha d'invertir (negar) abans d'entrar a la porta (indicat amb un petit cercle o una porta NOT prèvia).
         <br>
         <img src="images/201206s3p2r.png" alt="Solució esquema lògic" style="max-width:100%; height:auto;">`
-}
+},
     
     {
         type: "exercicis",
