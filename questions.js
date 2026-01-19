@@ -103,7 +103,7 @@ const questions = [
         `
     },
 
-    {
+{
     type: "exercicis",
     category: "control",
     text: `En una explotació vinícola es controla regularment el grau alcohòlic i l'acidesa de les vinyes per a iniciar la verema. Per a elaborar un vi negre de qualitat cal que el raïm estigui veremat i tingui un grau alcohòlic superior al 12% vol. Utilitzant les variables d'estat següents:
@@ -114,30 +114,32 @@ const questions = [
            <br>c) Dibuixeu l'esquema de portes lògiques equivalent. [0,5 punts]`,
     correctAnswer: "",
     steps: `
-        <strong>a) Taula de veritat:</strong><br>
-        El vi és de qualitat (r=1) sempre que estigui veremat (ac=1) i el grau sigui superior al 12% (g12=1), independentment de si supera el 15% o no.
+                <strong>a) Taula de veritat:</strong><br>
+        S'han de tenir en compte els estats impossibles (no pot ser superior a 15% i inferior a 12% simultàniament). A més, segons la solució, si supera el 15%, no es considera vi de la qualitat definida (r=0).
         <br><br>
         <table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
             <tr style="background-color: #f2f2f2;">
                 <td>\\(ac\\)</td><td>\\(g_{12}\\)</td><td>\\(g_{15}\\)</td><td>\\(r\\)</td>
             </tr>
             <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>0</td><td>1</td><td>X</td></tr>
+            <tr><td>0</td><td>0</td><td>1</td><td>X (Impossible)</td></tr>
             <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
             <tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
             <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>1</td><td>0</td><td>1</td><td>X</td></tr>
+            <tr><td>1</td><td>0</td><td>1</td><td>X (Impossible)</td></tr>
             <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
-            <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+            <tr><td>1</td><td>1</td><td>1</td><td>0</td></tr>
         </table>
         <br>
         <strong>b) Funció lògica:</strong><br>
-        Simplificant per Karnaugh o observació, la variable \\(g_{15}\\) no afecta el resultat si \\(g_{12}\\) ja és 1:
-        \\[ r = ac \\cdot g_{12} \\]
+        Considerant els estats impossibles (X) com a 0 per a la simplificació, l'única combinació que dóna 1 és quan està veremat, supera els 12% però no supera els 15%.
+        \\[ r = ac \\cdot g_{12} \\cdot \\overline{g_{15}} \\]
         <br>
-        <strong>c) Esquema:</strong> Una única porta AND de dues entrades (ac i g12).<br>
-         <img src="images/201206s3p2s.JPG">`,
-},
+        <strong>c) Esquema:</strong><br>
+        S'utilitza una porta AND de tres entrades. L'entrada \\(g_{15}\\) s'ha d'invertir (negar) abans d'entrar a la porta (indicat amb un petit cercle o una porta NOT prèvia).
+        <br>
+        <img src="images/201206s3p2r.png" alt="Solució esquema lògic" style="max-width:100%; height:auto;">`
+}
     
     {
         type: "exercicis",
